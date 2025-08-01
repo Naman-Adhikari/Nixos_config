@@ -1,0 +1,17 @@
+[pyprland]
+plugins = [
+ "expose",
+ "magnify"
+]
+
+[pyprland.variables]
+
+[scratchpads.term]
+animation = "fromTop"
+command = "[term_classed] main-dropterm"
+class = "main-dropterm"
+size = "75% 60%"
+max_size = "1920px 100%"
+
+
+
