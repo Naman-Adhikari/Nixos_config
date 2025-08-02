@@ -46,7 +46,6 @@
     hyprlock
     hypridle
     waypaper
-    neovim
     python311
     gcc
     lua-language-server
@@ -90,9 +89,9 @@
   programs.neovim.enable = true;
 
   xdg.configFile."nvim" = {
-    source = ./modules/nvim;
-    recursive = true; 
-  };
+  source = config.lib.file.mkOutOfStoreSymlink "/home/lostfromlight/.dotfiles/modules/nvim";
+  recursive = true;
+};
 
   nixpkgs.config.allowUnfree = true;
 
