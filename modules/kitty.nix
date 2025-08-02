@@ -1,14 +1,13 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 
 {
-
   xdg.configFile."kitty/kitty.conf".text = ''
     bold_font auto
     bold_italic_font auto
     allow_remote_control yes
     background_image ${config.home.homeDirectory}/.dotfiles/home/aiblame2.png
     background_image_layout scaled
-    background_opacity 0.5
+    background_opacity 1.0
 
     font_size 10
     disable_ligatures never
