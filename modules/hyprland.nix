@@ -217,8 +217,8 @@
   };
 
   xdg.configFile."hypr/hyprpaper.conf".text = ''
-    preload = ${config.home.homeDirectory}/NMN/Luminarium/mountholo.jpg
-    wallpaper = ,${config.home.homeDirectory}/NMN/Luminarium/mountholo.jpg
+    preload = ${config.home.homeDirectory}/.dotfiles/home/mountholo.jpg
+    wallpaper = ,${config.home.homeDirectory}/.dotfiles/home/mountholo.jpg
     splash = false
   '';
 
@@ -237,7 +237,7 @@
 
     background {
         monitor = 
-        path = /home/lostfromlight/NMN/Luminarium/emoergo.jpg 
+        path = ${config.home.homeDirectory}/.dotfiles/home/emoergo.jpg
         color = rgba(0, 0, 0, 0) 
         blur_passes = 0 
         noise = 2.0 
