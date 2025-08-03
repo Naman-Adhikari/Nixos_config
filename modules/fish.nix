@@ -47,6 +47,7 @@
 		qwen = "ollama run qwen2.5-coder:1.5b";
 		bluetooth = "python3 ~/Programming/python/pyscripts/bluetooth.py";
 		tlp = "sudo tlp start";
+		rmgen = "home-manager remove-generations";
 	  };
 
 	  functions = {

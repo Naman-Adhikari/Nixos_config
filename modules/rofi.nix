@@ -5,110 +5,194 @@
     enable = true;
     package = pkgs.rofi-wayland;
     
-    # Proper .rasi theme format
     theme = let
       rofiTheme = ''
-        * {
-    font: "Figtree 13";
-    g-spacing: 10px;
-    g-margin: 0;
-    b-color: #000000FF;
-    fg-color: #000000FF;
-    fgp-color: #888888FF;
-    b-radius: 8px;
-    g-padding: 8px;
-    hl-color: #000000FF;
-    hlt-color: #000000FF;
-    alt-color: #111111FF;
-    wbg-color: #000000CC;
-    w-border: 2px solid;
-    w-border-color: #FFFFFFFF;
-    w-padding: 12px;
-}
 
 configuration {
-    modi: "drun";
-    show-icons: true;
-    display-drun: "";
+	modi:                       "drun,run,filebrowser,window";
+    show-icons:                 false;
+    display-drun:               "";
+    display-run:                "";
+    display-filebrowser:        "";
+    display-window:             "";
+	drun-display-format:        "{name}";
+	window-format:              "{w} · {c} · {t}";
 }
 
-listview {
-    columns: 1;
-    lines: 7;
-    fixed-height: true;
-    fixed-columns: true;
-    cycle: false;
-    scrollbar: false;
-    border: 0px solid;
+* {
+    font:                        "JetBrains Mono Nerd Font 10";
+    background:                  #080c07;
+    background-alt:              #252525;
+    foreground:                  #FFFFFF;
+    selected:                    #505050;
+    active:                      #909090;
+    urgent:                      #707070;
 }
 
 window {
-    transparency: "real";
-    width: 450px;
-    border-radius: @b-radius;
-    background-color: @wbg-color;
-    border: @w-border;
-    border-color: @w-border-color;
-    padding: @w-padding;
-}
+    transparency:                "real";
+    location:                    center;
+    anchor:                      center;
+    fullscreen:                  false;
+    width:                       400px;
+    x-offset:                    0px;
+    y-offset:                    0px;
 
-prompt {
-    text-color: @fg-color;
-}
-
-inputbar {
-    children: ["prompt", "entry"];
-    spacing: @g-spacing;
-}
-
-entry {
-    placeholder: "Search Apps";
-    text-color: @fg-color;
-    placeholder-color: @fgp-color;
+    /* properties for all widgets */
+    enabled:                     true;
+    border-radius:               20px;
+    cursor:                      "default";
+    background-color:            @background;
 }
 
 mainbox {
-    spacing: @g-spacing;
-    margin: @g-margin;
-    padding: @g-padding;
-    children: ["inputbar", "listview", "message"];
+    enabled:                     true;
+    spacing:                     0px;
+    background-color:            transparent;
+    orientation:                 vertical;
+    children:                    [ "inputbar", "listbox" ];
+}
+
+listbox {
+    spacing:                     20px;
+    padding:                     20px;
+    background-color:            transparent;
+    orientation:                 vertical;
+    children:                    [ "message", "listview", "mode-switcher" ];
+}
+
+inputbar {
+    enabled:                     true;
+    spacing:                     10px;
+    padding:                     100px 40px;
+    background-color:            transparent;
+    background-image:            url("~/.dotfiles/home/lordmongrel.jpg", width);
+    text-color:                  @foreground;
+    orientation:                 horizontal;
+    children:                    [ "textbox-prompt-colon", "entry" ];
+}
+textbox-prompt-colon {
+    enabled:                     true;
+    expand:                      false;
+    str:                         "";
+    padding:                     12px 15px;
+    border-radius:               100%;
+    background-color:            @background-alt;
+    text-color:                  inherit;
+}
+entry {
+    enabled:                     true;
+    expand:                      true;
+    padding:                     12px 16px;
+    border-radius:               100%;
+    background-color:            @background-alt;
+    text-color:                  inherit;
+    cursor:                      text;
+    placeholder:                 "Search";
+    placeholder-color:           inherit;
+}
+
+mode-switcher{
+    enabled:                     true;
+    spacing:                     10px;
+    background-color:            transparent;
+    text-color:                  @foreground;
+}
+button {
+    padding:                     12px;
+    border-radius:               100%;
+    background-color:            @background-alt;
+    text-color:                  inherit;
+    cursor:                      pointer;
+}
+button selected {
+    background-color:            @selected;
+    text-color:                  @foreground;
+}
+
+listview {
+    enabled:                     true;
+    columns:                     1;
+    lines:                       5;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+    
+    spacing:                     10px;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    cursor:                      "default";
 }
 
 element {
-    spacing: @g-spacing;
-    margin: @g-margin;
-    padding: @g-padding;
-    border: 0px solid;
-    border-radius: @b-radius;
-    border-color: @b-color;
-    background-color: transparent;
-    text-color: @fg-color;
+    enabled:                     true;
+    spacing:                     10px;
+    padding:                     12px;
+    border-radius:               100%;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    cursor:                      pointer;
 }
-
 element normal.normal {
-	background-color: transparent;
-	text-color: @fg-color;
+    background-color:            inherit;
+    text-color:                  inherit;
 }
-
-element alternate.normal {
-	background-color: @alt-color;
-	text-color: @fg-color;
+element normal.urgent {
+    background-color:            @urgent;
+    text-color:                  @foreground;
 }
-
-element selected.active {
-	background-color: @hl-color;
-	text-color: @hlt-color;
+element normal.active {
+    background-color:            @active;
+    text-color:                  @foreground;
 }
-
 element selected.normal {
-	background-color: @hl-color;
-	text-color: @hlt-color;
+    background-color:            @selected;
+    text-color:                  @foreground;
+}
+element selected.urgent {
+    background-color:            @urgent;
+    text-color:                  @foreground;
+}
+element selected.active {
+    background-color:            @urgent;
+    text-color:                  @foreground;
+}
+element-icon {
+    background-color:            transparent;
+    text-color:                  inherit;
+    size:                        32px;
+    cursor:                      inherit;
+}
+element-text {
+    background-color:            transparent;
+    text-color:                  inherit;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
 }
 
 message {
-    background-color: red;
-    border: 0px solid;
-}      '';
+    background-color:            transparent;
+}
+textbox {
+    padding:                     12px;
+    border-radius:               100%;
+    background-color:            @background-alt;
+    text-color:                  @foreground;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+}
+error-message {
+    padding:                     15px;
+    border-radius:               0px;
+    background-color:            @background;
+    text-color:                  @foreground;
+}
+      '';
     in "${pkgs.writeText "rofi-theme.rasi" rofiTheme}";
 
     extraConfig = {
