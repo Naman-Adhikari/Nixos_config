@@ -22,6 +22,7 @@
     gimp
     audacity
     vlc
+	ani-cli
     obsidian
     libreoffice-qt6
     mpv
