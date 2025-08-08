@@ -7,9 +7,22 @@
       ./hardware-configuration.nix
     ];
 
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+#  boot.loader.systemd-boot.enable = true;
+ # boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelParams = ["mem_sleep_default=deep"];
+  boot.loader = {
+    efi.canTouchEfiVariables = true;
+    grub = {
+      enable = true;
+      efiSupport = true;
+      device = "nodev";
+      useOSProber = true;
+      
+      theme = "/etc/grub-themes/lain";
+      
+      gfxmodeEfi = "1920x1080";
+    };
+  };
 
   networking.hostName = "proxy-pc"; 
   system.stateVersion = "25.05";
@@ -175,6 +188,7 @@ hardware.bluetooth.enable = true;
     ollama
     glib
     mpd
+	os-prober
 
 
 
