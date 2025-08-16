@@ -100,7 +100,7 @@
       # █░█ ██▄ ░█░ █▄█ █ █░▀█ █▄▀
       bind = SUPER SHIFT, W, exec, bash/./hyprpaper.sh
       bind = SUPER , N, exec, hyprsunset --temperature 5000
-      bind = SUPER SHIFT , N, exec, hyprsunset --identity
+      bind = SUPER SHIFT , N, exec, pkill hyprsunset 
       bind = SUPER, A, exec, pkill rofi || rofi -show drun
       bind = SUPER, W, exec, pkill waybar || waybar &
       bind = SUPER, X, exec, ghostty
