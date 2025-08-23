@@ -16,6 +16,8 @@
   ];
 
   home.packages = with pkgs; [
+	zathura
+	texliveMedium
     waybar
     kitty
     hyprsunset
@@ -84,6 +86,25 @@
     BROWSER = "app.zen_browser.zen";
     DEFAULT_BROWSER = "app.zen_browser.zen";
     NIXOS_OZONE_WL = "1";
+  };
+
+  xdg.mimeApps = {
+    enable = true;
+    defaultApplications = {
+      "application/pdf" = "org.pwmt.zathura.desktop";
+      
+      "x-scheme-handler/http" = "floorp.desktop";
+      "x-scheme-handler/https" = "floorp.desktop";
+      "x-scheme-handler/chrome" = "floorp.desktop";
+      "text/html" = "floorp.desktop";
+      "application/x-extension-htm" = "floorp.desktop";
+      "application/x-extension-html" = "floorp.desktop";
+      "application/x-extension-shtml" = "floorp.desktop";
+      "application/xhtml+xml" = "floorp.desktop";
+      "application/x-extension-xhtml" = "floorp.desktop";
+      "application/x-extension-xht" = "floorp.desktop";
+      "x-scheme-handler/unityhub" = "unityhub.desktop";
+    };
   };
 
   programs.home-manager.enable = true;
