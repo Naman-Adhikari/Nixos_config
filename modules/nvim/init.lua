@@ -33,6 +33,7 @@ vim.opt.fillchars = {
   foldclose = "", 
 }
 
+vim.api.nvim_set_keymap('n', 'tc', '<cmd>VimtexTocToggle<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<F5>', '', { noremap = true, silent = true, callback = function()
   local filetype = vim.bo.filetype
   local filename = vim.fn.expand('%')

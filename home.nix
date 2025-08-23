@@ -16,6 +16,7 @@
   ];
 
   home.packages = with pkgs; [
+	caligula
 	zathura
 	texliveMedium
     waybar
