@@ -30,14 +30,17 @@
 
   networking.networkmanager.enable = true;
   networking.networkmanager = {
-    dns = "none";  
+    dns = "default";  
   };
 
-  environment.etc."resolv.conf".text = ''
-    nameserver 1.1.1.1
-    nameserver 8.8.8.8
-    options edns0
-  '';
+# environment.etc."resolv.conf".text = ''
+#    nameserver 192.168.1.1
+#	nameserver 2407:1400:0:5::
+#	nameserver 1.1.1.1
+#	nameserver 8.8.8.8
+#	nameserver 2407:1400:1:5::
+ #   options edns0
+  #'';
 
  services.passSecretService.enable = true;
  

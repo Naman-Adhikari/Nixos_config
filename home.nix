@@ -16,6 +16,7 @@
   ];
 
   home.packages = with pkgs; [
+	qbittorrent
 	caligula
 	zathura
 	texliveMedium
