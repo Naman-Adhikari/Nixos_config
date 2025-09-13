@@ -14,15 +14,13 @@ if [[ "$target" == *"style1.css" ]]; then
 else
     ln -sf "$CONFIG_DIR/style1.css" "$ACTIVE_STYLE"
 fi
-sleep 1
-pkill waybar && setsid waybar >/dev/null 2>&1 &
 
 # --------------------------
 # Wallpaper toggle
 # --------------------------
 
-WALLPAPER1="$HOME/.dotfiles/home/hakutori.png"
-WALLPAPER2="$HOME/.dotfiles/home/aiblame2.png"
+WALLPAPER1="$HOME/.dotfiles/home/ghost.jpg"
+WALLPAPER2="$HOME/.dotfiles/home/ponyo.jpg"
 ACTIVE_FILE="$HOME/.config/hypr/active_wallpaper"
 
 mkdir -p "$HOME/.config/hypr"
@@ -54,3 +52,6 @@ if command -v swww >/dev/null 2>&1; then
 else
     echo "swww not installed. Please install it for reliable wallpaper switching."
 fi
+
+sleep 0.5
+pkill waybar && setsid waybar >/dev/null 2>&1 &

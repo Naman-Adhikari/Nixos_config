@@ -1,167 +1,94 @@
 * {
-    border: none;
-    border-radius: 12px;
-    font-family: JetBrainsMono Nerd Font, monospace;
-    font-size: 13px;
-    min-height: 0;
+  border: none;
+  border-radius: 0;
+  font-family: JetBrainsMono Nerd Font, monospace;
+  font-size: 14px;
+  min-height: 0px;
 }
 
 window#waybar {
-    background: rgba(255, 255, 255, 0.85);
-    color: #2e3440;
-    transition: background-color 0.3s ease;
+  background: transparent;
 }
 
 window#waybar.hidden {
-    opacity: 0.6;
+  opacity: 0.2;
 }
 
-#workspaces {
-    background: linear-gradient(90deg, rgba(136,192,208,0.8) 0%, rgba(163,190,140,0.8) 100%);
-    margin: 4px 2px;
-    padding: 0 8px;
-    border-radius: 16px;
+/* ---------------- General module style ---------------- */
+#custom-updates, #workspaces, #custom-spotify, #clock, 
+#network, #pulseaudio, #backlight, #battery, #tray, #custom-recorder {
+  margin: 0 4px;
+  padding: 2px 6px;
+  border-radius: 5px 20px 5px 20px; /* restore the alternating rounded edges */
+  border: solid 1px #80c0ff;
+  color: #ffffff;
+  background: rgba(128, 192, 255, 0.1); 
+  transition: all 0.3s ease; /* restore smooth animations */
 }
 
+/* ---------------- Hover effects ---------------- */
+#custom-updates:hover, #workspaces:hover, #custom-spotify:hover, #clock:hover,
+#network:hover, #pulseaudio:hover, #backlight:hover, #battery:hover,
+#tray:hover, #custom-recorder:hover {
+  border-color: #a0d0ff;
+  color: #a0e0ff;
+  border-radius: 20px 5px 20px 5px; /* animate edge shape on hover */
+}
+
+/* ---------------- Workspaces ---------------- */
 #workspaces button {
-    padding: 0 6px;
-    color: rgba(46, 52, 64, 0.7);
-    background: transparent;
-    border-radius: 12px;
-    margin: 4px 2px;
+  padding: 0 5px;
+  color: inherit;
+  background: transparent;
+  border: none;
 }
-
 #workspaces button.active {
-    color: #2e3440;
-    background: rgba(255, 255, 255, 0.5);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  color: #80ffea;
+  text-shadow: 0 0 3px #80ffea;
 }
 
-#workspaces button:hover {
-    background: rgba(255, 255, 255, 0.3);
-    color: #2e3440;
+/* ---------------- Clock ---------------- */
+#clock:hover {
+  color: #ffffff;
+  border-radius: 20px 20px 5px 5px;
 }
 
-#custom-updates {
-    background: linear-gradient(90deg, rgba(191,97,106,0.8) 0%, rgba(208,135,112,0.8) 100%);
-    color: #fff;
-    padding: 0 12px;
-    margin: 4px 2px;
-    border-radius: 16px;
-}
-
-#clock {
-    background: linear-gradient(90deg, rgba(136,192,208,0.8) 0%, rgba(129,161,193,0.8) 100%);
-    color: #fff;
-    padding: 0 16px;
-    margin: 4px 2px;
-    border-radius: 16px;
-    font-weight: bold;
-}
-
-#network {
-    background: linear-gradient(90deg, rgba(163,190,140,0.8) 0%, rgba(143,188,187,0.8) 100%);
-    color: #fff;
-    padding: 0 12px;
-    margin: 4px 2px;
-    border-radius: 16px;
-}
-
-#pulseaudio {
-    background: linear-gradient(90deg, rgba(208,135,112,0.8) 0%, rgba(180,142,173,0.8) 100%);
-    color: #fff;
-    padding: 0 12px;
-    margin: 4px 2px;
-    border-radius: 16px;
-}
-
-#backlight {
-    background: linear-gradient(90deg, rgba(235,203,139,0.8) 0%, rgba(236,179,101,0.8) 100%);
-    color: #2e3440;
-    padding: 0 12px;
-    margin: 4px 2px;
-    border-radius: 16px;
-}
-
-#battery {
-    background: linear-gradient(90deg, rgba(143,188,187,0.8) 0%, rgba(136,192,208,0.8) 100%);
-    color: #fff;
-    padding: 0 12px;
-    margin: 4px 2px;
-    border-radius: 16px;
-}
-
+/* ---------------- Battery ---------------- */
 #battery.charging {
-    background: linear-gradient(90deg, rgba(163,190,140,0.8) 0%, rgba(143,188,187,0.8) 100%);
+  border-color: #80ff80;
 }
-
 #battery.warning:not(.charging) {
-    background: rgba(235,203,139,0.8);
-    color: #2e3440;
+  border-color: #ffd080;
+  color: #ffd080;
 }
-
 #battery.critical:not(.charging) {
-    background: rgba(191,97,106,0.8);
-    color: #fff;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+  border-color: #ff7070;
+  color: #ff7070;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
-#tray {
-    background: rgba(180,142,173,0.8);
-    color: #fff;
-    padding: 0 12px;
-    margin: 4px 2px;
-    border-radius: 16px;
-}
-
-#custom-spotify {
-    background: linear-gradient(90deg, rgba(163,190,140,0.8) 0%, rgba(143,188,187,0.8) 100%);
-    color: #fff;
-    padding: 0 12px;
-    margin: 4px 2px;
-    border-radius: 16px;
-}
-
-#custom-cava {
-    background: rgba(129,161,193,0.8);
-    color: #fff;
-    padding: 0 12px;
-    margin: 4px 2px;
-    border-radius: 16px;
-}
-
-#custom-recorder {
-    background: rgba(191,97,106,0.8);
-    color: #fff;
-    padding: 0 12px;
-    margin: 4px 2px;
-    border-radius: 16px;
-}
-
+/* ---------------- Recorder ---------------- */
 #custom-recorder.recording {
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
+/* ---------------- Tooltip ---------------- */
+#tooltip {
+  background-color: rgba(30, 30, 30, 0.8);
+  color: #ffffff;
+}
+
+/* ---------------- Keyframes ---------------- */
 @keyframes blink {
-    to {
-        background-color: rgba(191,97,106,0.4);
-    }
+  to {
+    background-color: #80c0ff;
+    color: #ffffff;
+  }
 }
 
-tooltip {
-    background: rgba(255, 255, 255, 0.9);
-    border: 1px solid rgba(136,192,208,0.5);
-    border-radius: 12px;
-}
-
-tooltip label {
-    color: #2e3440;
-}

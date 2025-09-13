@@ -108,6 +108,14 @@
       "application/x-extension-xhtml" = "floorp.desktop";
       "application/x-extension-xht" = "floorp.desktop";
       "x-scheme-handler/unityhub" = "unityhub.desktop";
+	  "image/png" = "imv.desktop";
+      "image/jpeg" = "imv.desktop";
+      "image/jpg" = "imv.desktop";
+      "image/gif" = "imv.desktop";
+      "image/bmp" = "imv.desktop";
+      "image/svg+xml" = "imv.desktop";
+      "image/webp" = "imv.desktop";
+      "image/tiff" = "imv.desktop";
     };
   };
 

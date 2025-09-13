@@ -113,7 +113,7 @@
       bind = SUPER, S, exec, com.spotify.Client
       bind = SUPER, escape, exec, shutdown now
       bind = SUPER, L, exec, ${config.home.homeDirectory}/.dotfiles/home/scripts/lock.sh
-      bind = SUPER, T,  exec, ${config.home.homeDirectory}/.dotfiles/home/scripts/ricetoggle.sh
+      bind = SUPER, 0,  exec, ${config.home.homeDirectory}/.dotfiles/home/scripts/ricetoggle.sh
       bind = SUPER, C, exec, bash/./config.sh
       bind = SUPER, U, exec, dbus-run-session -- steam-run $(which unityhub)
       bind = SUPER, F, fullscreen,

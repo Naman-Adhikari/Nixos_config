@@ -18,9 +18,10 @@ window#waybar.hidden {
   padding-left: 10px;
   padding-right: 10px;
   border-radius: 5px 20px 5px 20px;
-  border: solid 3px;
+  border: solid 2px;
   border-color: #484a4a;
-  transition: background 0.3s ease, color 0.3s ease, border-radius 0.3s ease;
+  border-bottom: 4px solid #84051c;
+  transition: background 0.3s ease, color 0.3s ease, border-radius 0.3s ease, border-bottom 0.3s ease;
   color: #ffffff;
   background: #090a08;
 }
@@ -28,6 +29,7 @@ window#waybar.hidden {
 #custom-updates:hover {
   border-radius: 20px 5px 20px 5px;
   color: #090a08;
+  border-bottom: 4px solid #034f1c;
   background: linear-gradient(
     to bottom,
     #090a08 0%,
@@ -45,8 +47,9 @@ window#waybar.hidden {
   padding-left: 10px;
   padding-right: 10px;
   border-radius: 5px 20px 5px 20px;
-  border: solid 3px;
+  border: solid 2px;
   border-color: #484a4a;
+  border-bottom: 4px solid #84051c;
   transition: all 0.3s ease-in-out;
   color: #ffffff;
   background: #090a08;
@@ -72,6 +75,7 @@ window#waybar.hidden {
 #workspaces:hover {
   border-radius: 20px 5px 20px 5px;
   color: #090a08;
+  border-bottom: 4px solid #034f1c;
   background: linear-gradient(
     to bottom,
     #090a08 0%,
@@ -89,9 +93,10 @@ window#waybar.hidden {
   padding-left: 10px;
   padding-right: 10px;
   border-radius: 5px 20px 5px 20px;
-  border: solid 3px;
+  border: solid 2px;
   border-color: #484a4a;
-  transition: background 0.3s ease-in-out, color 0.3s ease, border-radius 0.3s ease-in-out;
+  border-bottom: 4px solid #84051c;
+  transition: background 0.3s ease-in-out, color 0.3s ease, border-radius 0.3s ease-in-out, border-bottom 0.3s ease;
   color: #ffffff;
   background: #090a08;
 }
@@ -99,6 +104,7 @@ window#waybar.hidden {
 #custom-spotify:hover {
   border-radius: 20px 5px 20px 5px;
   color: #090a08;
+  border-bottom: 4px solid #034f1c;
   background: linear-gradient(
     to bottom,
     #090a08 0%,
@@ -115,9 +121,10 @@ window#waybar.hidden {
   padding-left: 16px;
   padding-right: 16px;
   border-radius: 5px 5px 20px 20px;
-  border: solid 3px;
+  border: solid 2px;
   border-color: #484a4a;
-  transition: background 0.3s ease, color 0.3s ease, border-radius 0.3s ease;
+  border-bottom: 4px solid #84051c;
+  transition: background 0.3s ease, color 0.3s ease, border-radius 0.3s ease, border-bottom 0.3s ease;
   color: #ffffff;
   background: #090a08;
 }
@@ -125,6 +132,7 @@ window#waybar.hidden {
 #clock:hover {
   border-radius: 20px 20px 5px 5px;
   color: #090a08;
+  border-bottom: 4px solid #034f1c;
   background: linear-gradient(
     to bottom,
     #090a08 0%,
@@ -146,9 +154,10 @@ window#waybar.hidden {
   padding-right: 15px;
   padding-left: 15px;
   border-radius: 20px 5px 20px 5px;
-  border: solid 3px;
+  border: solid 2px;
   border-color: #484a4a;
-  transition: background 0.3s ease, color 0.3s ease, border-radius 0.3s ease;
+  border-bottom: 4px solid #84051c;
+  transition: background 0.3s ease, color 0.3s ease, border-radius 0.3s ease, border-bottom 0.3s ease;
   color: #ffffff;
   background: #090a08;
 }
@@ -156,6 +165,7 @@ window#waybar.hidden {
 #network:hover {
   border-radius: 5px 20px 5px 20px;
   color: #090a08;
+  border-bottom: 4px solid #034f1c;
   background: linear-gradient(
     to bottom,
     #090a08 0%,
@@ -173,9 +183,10 @@ window#waybar.hidden {
   border-radius: 20px 5px 20px 5px;
   padding-left: 0px;
   padding-right: 0px;
-  border: solid 3px;
+  border: solid 2px;
   border-color: #484a4a;
-  transition: background 0.3s ease, color 0.3s ease, border-radius 0.3s ease;
+  border-bottom: 4px solid #84051c;
+  transition: background 0.3s ease, color 0.3s ease, border-radius 0.3s ease, border-bottom 0.3s ease;
   color: #ffffff;
   background: #090a08;
 }
@@ -183,6 +194,7 @@ window#waybar.hidden {
 #pulseaudio:hover {
   border-radius: 5px 20px 5px 20px;
   color: #090a08;
+  border-bottom: 4px solid #034f1c;
   background: linear-gradient(
     to bottom,
     #090a08 0%,
@@ -200,9 +212,10 @@ window#waybar.hidden {
   padding-left: 10px;
   padding-right: 10px;
   border-radius: 20px 5px 20px 5px;
-  border: solid 3px;
+  border: solid 2px;
   border-color: #484a4a;
-  transition: background 0.3s ease, color 0.3s ease, border-radius 0.3s ease;
+  border-bottom: 4px solid #84051c;
+  transition: background 0.3s ease, color 0.3s ease, border-radius 0.3s ease, border-bottom 0.3s ease;
   color: #ffffff;
   background: #090a08;
 }
@@ -210,6 +223,7 @@ window#waybar.hidden {
 #backlight:hover {
   border-radius: 5px 20px 5px 20px;
   color: #090a08;
+  border-bottom: 4px solid #034f1c;
   background: linear-gradient(
     to bottom,
     #090a08 0%,
@@ -227,9 +241,10 @@ window#waybar.hidden {
   padding-left: 1px;
   padding-right: 1px;
   border-radius: 20px 5px 20px 5px;
-  border: solid 3px;
+  border: solid 2px;
   border-color: #484a4a;
-  transition: background 0.3s ease, color 0.3s ease, border-radius 0.3s ease;
+  border-bottom: 4px solid #84051c;
+  transition: background 0.3s ease, color 0.3s ease, border-radius 0.3s ease, border-bottom 0.3s ease;
   color: #ffffff;
   background: #090a08;
 }
@@ -237,6 +252,7 @@ window#waybar.hidden {
 #battery:hover {
   border-radius: 5px 20px 5px 20px;
   color: #090a08;
+  border-bottom: 4px solid #034f1c;
   background: linear-gradient(
     to bottom,
     #090a08 0%,
@@ -254,7 +270,7 @@ window#waybar.hidden {
   padding-right: 9px;
   padding-left: 9px;
   background-color: #0f1c17;
-  border: solid 3px;
+  border: solid 2px;
   border-color: #484a4a;
 }
 
@@ -284,9 +300,10 @@ window#waybar.hidden {
   padding-right: 16px;
   margin-right: 8px;
   border-radius: 20px 10px 10px 5px;
-  border: solid 3px;
+  border: solid 2px;
   border-color: #484a4a;
-  transition: background 0.3s ease, color 0.3s ease, border-radius 0.3s ease;
+  border-bottom: 4px solid #84051c;
+  transition: background 0.3s ease, color 0.3s ease, border-radius 0.3s ease, border-bottom 0.3s ease;
   color: #ffffff;
   background: #090a08;
 }
@@ -294,6 +311,7 @@ window#waybar.hidden {
 #tray:hover {
   border-radius: 5px 20px 5px 20px;
   color: #090a08;
+  border-bottom: 4px solid #034f1c;
   background: linear-gradient(
     to bottom,
     #090a08 0%,
@@ -310,8 +328,9 @@ window#waybar.hidden {
   padding-left: 10px;
   padding-right: 10px;
   border-radius: 20px 20px 20px 20px;
-  border: solid 3px;
+  border: solid 2px;
   border-color: #484a4a;
+  border-bottom: 4px solid #84051c;
   color: #ffffff;
   background: #090a08;
 }
