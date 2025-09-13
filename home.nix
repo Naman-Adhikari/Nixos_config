@@ -9,13 +9,14 @@
     ./modules/fish.nix
     ./modules/ghostty.nix
     ./modules/kitty.nix
-    ./modules/waybar.nix
+    ./modules/waybar/waybar.nix
     ./modules/rofi.nix
     ./modules/fastfetch.nix
     ./modules/hyprland.nix
   ];
 
   home.packages = with pkgs; [
+	ffmpeg
 	qbittorrent
 	caligula
 	zathura
