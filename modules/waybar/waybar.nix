@@ -102,9 +102,9 @@
       };
     };
 
-    style = "$HOME/.config/waybar/style.css";
 
   };
+
   home.file.".config/waybar/style1.css".source = ./style1.css;
   home.file.".config/waybar/style2.css".source = ./style2.css;
 

@@ -1,4 +1,6 @@
 #!/bin/sh
+
+
 CONFIG_DIR="$HOME/.config/waybar"
 ACTIVE_STYLE="$CONFIG_DIR/style.css"
 
@@ -12,6 +14,43 @@ if [[ "$target" == *"style1.css" ]]; then
 else
     ln -sf "$CONFIG_DIR/style1.css" "$ACTIVE_STYLE"
 fi
-
+sleep 1
 pkill waybar && setsid waybar >/dev/null 2>&1 &
 
+# --------------------------
+# Wallpaper toggle
+# --------------------------
+
+WALLPAPER1="$HOME/.dotfiles/home/hakutori.png"
+WALLPAPER2="$HOME/.dotfiles/home/aiblame2.png"
+ACTIVE_FILE="$HOME/.config/hypr/active_wallpaper"
+
+mkdir -p "$HOME/.config/hypr"
+
+if [ ! -f "$ACTIVE_FILE" ]; then
+    echo "$WALLPAPER1" > "$ACTIVE_FILE"
+    current="$WALLPAPER1"
+else
+    current=$(cat "$ACTIVE_FILE")
+fi
+
+if [[ "$current" == "$WALLPAPER1" ]]; then
+    next="$WALLPAPER2"
+    echo "$WALLPAPER2" > "$ACTIVE_FILE"
+else
+    next="$WALLPAPER1"
+    echo "$WALLPAPER1" > "$ACTIVE_FILE"
+fi
+
+if command -v swww >/dev/null 2>&1; then
+    if ! pgrep -x swww >/dev/null; then
+        swww init
+        sleep 1
+    fi
+    
+    swww img "$next" --transition-type grow \
+        --transition-step 25  --transition-fps 155
+    echo "Switched to: $(basename "$next")"
+else
+    echo "swww not installed. Please install it for reliable wallpaper switching."
+fi

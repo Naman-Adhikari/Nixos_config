@@ -1,3 +1,7 @@
+#---------------------------NOTE-------------------------------
+# The wallpaper (swww) is being managed and toggled by the ricetoggle.sh script
+
+#--------------------------------------------------------------
 { config, pkgs, ... }:
 
 {
@@ -108,7 +112,8 @@
       bind = SUPER, B, exec, app.zen_browser.zen
       bind = SUPER, S, exec, com.spotify.Client
       bind = SUPER, escape, exec, shutdown now
-      bind = SUPER, L, exec, ${config.home.homeDirectory}/.dotfiles/home/lock.sh
+      bind = SUPER, L, exec, ${config.home.homeDirectory}/.dotfiles/home/scripts/lock.sh
+      bind = SUPER, T,  exec, ${config.home.homeDirectory}/.dotfiles/home/scripts/ricetoggle.sh
       bind = SUPER, C, exec, bash/./config.sh
       bind = SUPER, U, exec, dbus-run-session -- steam-run $(which unityhub)
       bind = SUPER, F, fullscreen,
@@ -216,12 +221,11 @@
 
   };
 
-  xdg.configFile."hypr/hyprpaper.conf".text = ''
-    preload = ${config.home.homeDirectory}/.dotfiles/home/mountholo.jpg
-    wallpaper = ,${config.home.homeDirectory}/.dotfiles/home/mountholo.jpg
-    splash = false
-  '';
-
+#xdg.configFile."hypr/hyprpaper.conf".text = ''
+#  preload = ${config.home.homeDirectory}/.dotfiles/home/mountholo.jpg
+#  wallpaper = ,${config.home.homeDirectory}/.dotfiles/home/mountholo.jpg
+#  splash = false
+#'';
     xdg.configFile."hypr/pyprland.toml" = let
     pyprlandToml = ../home/pyprland.toml; 
   in if builtins.pathExists pyprlandToml then {
