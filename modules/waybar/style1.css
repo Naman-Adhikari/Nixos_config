@@ -272,6 +272,7 @@ window#waybar.hidden {
   background-color: #0f1c17;
   border: solid 2px;
   border-color: #484a4a;
+  border-bottom: 4px solid #84051c;
 }
 
 #battery.warning:not(.charging) {
