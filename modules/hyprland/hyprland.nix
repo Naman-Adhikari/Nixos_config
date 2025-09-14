@@ -49,7 +49,7 @@
         gaps_out= 10
         border_size= 1
         resize_on_border = true
-        col.active_border = rgba(ffffffff) rgba(ffffffff) 90deg
+        col.active_border = rgba(068787ff) rgba(6b0104ff) 90deg
         col.inactive_border = rgba(000000aa)
         allow_tearing = false 
         layout = dwindle
@@ -182,7 +182,6 @@
       bind = SUPER, 7, workspace, 7
       bind = SUPER, 8, workspace, 8
       bind = SUPER, 9, workspace, 9
-      bind = SUPER, 0, workspace, 10
       bind = SUPER ALT, up, workspace, e+1
       bind = SUPER ALT, down, workspace, e-1
 

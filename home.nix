@@ -6,13 +6,13 @@
   home.stateVersion = "25.05"; 
 
   imports = [
-    ./modules/fish.nix
-    ./modules/ghostty.nix
-    ./modules/kitty.nix
+    ./modules/fish/fish.nix
+    ./modules/ghostty/ghostty.nix
+    ./modules/kitty/kitty.nix
     ./modules/waybar/waybar.nix
-    ./modules/rofi.nix
-    ./modules/fastfetch.nix
-    ./modules/hyprland.nix
+    ./modules/rofi/rofi.nix
+    ./modules/fastfetch/fastfetch.nix
+    ./modules/hyprland/hyprland.nix
   ];
 
   home.packages = with pkgs; [

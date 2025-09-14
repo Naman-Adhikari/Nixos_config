@@ -14,77 +14,235 @@ window#waybar.hidden {
   opacity: 0.2;
 }
 
-/* ---------------- General module style ---------------- */
-#custom-updates, #workspaces, #custom-spotify, #clock, 
-#network, #pulseaudio, #backlight, #battery, #tray, #custom-recorder {
-  margin: 0 4px;
-  padding: 2px 6px;
-  border-radius: 5px 20px 5px 20px; /* restore the alternating rounded edges */
+#custom-updates {
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px 20px 5px 20px;
   border: solid 1px #80c0ff;
+  border-bottom : solid 3px #80c0ff;
+  transition: all 0.3s ease;
   color: #ffffff;
-  background: rgba(128, 192, 255, 0.1); 
-  transition: all 0.3s ease; /* restore smooth animations */
+  background: rgba(128, 192, 255, 0.1);
 }
 
-/* ---------------- Hover effects ---------------- */
-#custom-updates:hover, #workspaces:hover, #custom-spotify:hover, #clock:hover,
-#network:hover, #pulseaudio:hover, #backlight:hover, #battery:hover,
-#tray:hover, #custom-recorder:hover {
+#custom-updates:hover {
+  border-radius: 20px 5px 20px 5px;
   border-color: #a0d0ff;
   color: #a0e0ff;
-  border-radius: 20px 5px 20px 5px; /* animate edge shape on hover */
 }
 
-/* ---------------- Workspaces ---------------- */
+#workspaces {
+  margin-left: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px 20px 5px 20px;
+  border: solid 1px #80c0ff;
+  border-bottom : solid 3px #80c0ff;
+  transition: all 0.3s ease-in-out;
+  color: #ffffff;
+  background: rgba(128, 192, 255, 0.1);
+}
+
 #workspaces button {
   padding: 0 5px;
   color: inherit;
   background: transparent;
   border: none;
 }
+
 #workspaces button.active {
   color: #80ffea;
   text-shadow: 0 0 3px #80ffea;
 }
 
-/* ---------------- Clock ---------------- */
-#clock:hover {
+#workspaces button:hover {
+  color: #a0e0ff;
+}
+
+#workspaces:hover {
+  border-radius: 20px 5px 20px 5px;
+  border-color: #a0d0ff;
+  color: #a0e0ff;
+}
+
+#custom-spotify {
+  margin-left: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px 20px 5px 20px;
+  border: solid 1px #80c0ff;
+  border-bottom : solid 3px #80c0ff;
+  transition: all 0.3s ease-in-out;
   color: #ffffff;
+  background: rgba(128, 192, 255, 0.1);
+}
+
+#custom-spotify:hover {
+  border-radius: 20px 5px 20px 5px;
+  border-color: #a0d0ff;
+  color: #a0e0ff;
+}
+
+#clock {
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 5px 5px 20px 20px;
+  border: solid 1px #80c0ff;
+  border-bottom : solid 3px #80c0ff;
+  transition: all 0.3s ease;
+  color: #ffffff;
+  background: rgba(128, 192, 255, 0.1);
+}
+
+#clock:hover {
   border-radius: 20px 20px 5px 5px;
+  border-color: #a0d0ff;
+  color: #ffffff;
 }
 
-/* ---------------- Battery ---------------- */
+#custom-cava {
+  margin-left: 8px;
+}
+
+#network {
+  margin-right: 8px;
+  padding-right: 15px;
+  padding-left: 15px;
+  border-radius: 20px 5px 20px 5px;
+  border: solid 1px #80c0ff;
+  border-bottom : solid 3px #80c0ff;
+  transition: all 0.3s ease;
+  color: #ffffff;
+  background: rgba(128, 192, 255, 0.1);
+}
+
+#network:hover {
+  border-radius: 5px 20px 5px 20px;
+  border-color: #a0d0ff;
+  color: #a0e0ff;
+}
+
+#pulseaudio {
+  margin-right: 8px;
+  border-radius: 20px 5px 20px 5px;
+  padding-left: 0px;
+  padding-right: 0px;
+  border: solid 1px #80c0ff;
+  border-bottom : solid 3px #80c0ff;
+  transition: all 0.3s ease;
+  color: #ffffff;
+  background: rgba(128, 192, 255, 0.1);
+}
+
+#pulseaudio:hover {
+  border-radius: 5px 20px 5px 20px;
+  border-color: #a0d0ff;
+  color: #a0e0ff;
+}
+
+#backlight {
+  margin-right: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 20px 5px 20px 5px;
+  border: solid 1px #80c0ff;
+  border-bottom : solid 3px #80c0ff;
+  transition: all 0.3s ease;
+  color: #ffffff;
+  background: rgba(128, 192, 255, 0.1);
+}
+
+#backlight:hover {
+  border-radius: 5px 20px 5px 20px;
+  border-color: #a0d0ff;
+  color: #a0e0ff;
+}
+
+#battery {
+  margin-right: 8px;
+  padding-left: 1px;
+  padding-right: 1px;
+  border-radius: 20px 5px 20px 5px;
+  border: solid 1px #80c0ff;
+  border-bottom : solid 3px #80c0ff;
+  transition: all 0.3s ease;
+  color: #ffffff;
+  background: rgba(128, 192, 255, 0.1);
+}
+
+#battery:hover {
+  border-radius: 5px 20px 5px 20px;
+  border-color: #a0d0ff;
+  color: #a0e0ff;
+}
+
 #battery.charging {
-  border-color: #80ff80;
+  color: #ffffff;
+  padding-right: 9px;
+  padding-left: 9px;
+  background: rgba(128, 192, 255, 0.1);
+  border: solid 1px #80ff80;
+  border-bottom : solid 3px #80c0ff;
 }
+
 #battery.warning:not(.charging) {
-  border-color: #ffd080;
+  background-color: rgba(30, 30, 30, 0.2);
   color: #ffd080;
+  border-color: #ffd080;
 }
+
 #battery.critical:not(.charging) {
-  border-color: #ff7070;
+  background-color: rgba(30, 30, 30, 0.2);
   color: #ff7070;
+  border-color: #ff7070;
   animation-name: blink;
   animation-duration: 0.5s;
+  animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
 
-/* ---------------- Recorder ---------------- */
-#custom-recorder.recording {
-  animation-name: blink;
-  animation-duration: 0.5s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-
-/* ---------------- Tooltip ---------------- */
 #tooltip {
   background-color: rgba(30, 30, 30, 0.8);
   color: #ffffff;
 }
 
-/* ---------------- Keyframes ---------------- */
+#tray {
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-right: 8px;
+  border-radius: 20px 10px 10px 5px;
+  border: solid 1px #80c0ff;
+  border-bottom : solid 3px #80c0ff;
+  transition: all 0.3s ease;
+  color: #ffffff;
+  background: rgba(128, 192, 255, 0.1);
+}
+
+#tray:hover {
+  border-radius: 5px 20px 5px 20px;
+  border-color: #a0d0ff;
+  color: #a0e0ff;
+}
+
+#custom-recorder {
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 20px 20px 20px 20px;
+  border: solid 1px #80c0ff;
+  border-bottom : solid 3px #80c0ff;
+  color: #ffffff;
+  background: rgba(128, 192, 255, 0.1);
+}
+
+#custom-recorder.recording {
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
 @keyframes blink {
   to {
     background-color: #80c0ff;
