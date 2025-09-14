@@ -21,9 +21,10 @@ fi
 
 WALLPAPER1="$HOME/.dotfiles/home/ghost.jpg"
 WALLPAPER2="$HOME/.dotfiles/home/ponyo.jpg"
-GIAS="$HOME/.dotfiles/home/gias.png"
-ACTIVE_FILE="$HOME/.config/hypr/active_wallpaper"
 CURRENT_FILE="$HOME/.config/fastfetch/current.png"
+GIAS="$HOME/.dotfiles/home/gias.png"
+TOTORO="$HOME/.dotfiles/home/totoro.png"
+ACTIVE_FILE="$HOME/.config/hypr/active_wallpaper"
 
 mkdir -p "$HOME/.config/hypr"
 mkdir -p "$(dirname "$CURRENT_FILE")"
@@ -36,15 +37,13 @@ else
     current=$(cat "$ACTIVE_FILE")
 fi
 
-# Determine next wallpaper
+# Determine next wallpaper and set current.png accordingly
 if [[ "$current" == "$WALLPAPER1" ]]; then
     next="$WALLPAPER2"
-    # For WALLPAPER1, symlink current.png to gias.png
-    ln -sf "$GIAS" "$CURRENT_FILE"
+    ln -sf "$TOTORO" "$CURRENT_FILE"    # Wallpaper2 -> totoro.png
 else
     next="$WALLPAPER1"
-    # For WALLPAPER2, copy ponyo.jpg to current.png (overwrite previous symlink)
-    cp "$WALLPAPER2" "$CURRENT_FILE"
+    ln -sf "$GIAS" "$CURRENT_FILE"      # Wallpaper1 -> gias.png
 fi
 
 # Update ACTIVE_FILE
