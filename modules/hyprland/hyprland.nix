@@ -325,5 +325,5 @@
     }
   '';
 
-  home.file.".config/hypr/mongrel.jpg".source = ../home/mongrel.jpg;
+  home.file.".config/hypr/mongrel.jpg".source = ../../home/mongrel.jpg;
 }

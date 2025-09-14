@@ -1,3 +1,5 @@
+#Here the current.png changes symlinks to different images when switching rice with ricetoggle.sh
+
 { pkgs, ... }:
 
 {
@@ -9,9 +11,9 @@
       
       logo = {
         type = "kitty-direct";
-        source = "~/.dotfiles/home/eldritch.png";
+        source = "~/.config/fastfetch/current.png";
         width = 27;
-        height = 16;
+        height = 20;
         padding = {
           right = 5;
           left = 5;
@@ -123,7 +125,7 @@
   };
 
   home.file.".config/fastfetch/eldritch.png" = {
-    source = ../home/eldritch.png;
+    source = ../../home/eldritch.png;
     recursive = true;
   };
 }

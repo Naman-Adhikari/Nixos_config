@@ -13,33 +13,33 @@ in {
     selection-background  = #2a2a2a
     selection-foreground  = #e6e6e6
 
-    palette=0=#1a1a1a
-    palette=1=#444444
-    palette=2=#555555
-    palette=3=#666666
-    palette=4=#777777
-    palette=5=#888888
-    palette=6=#999999
-    palette=7=#aaaaaa
-    palette=8=#bbbbbb
-    palette=9=#cccccc
-    palette=10=#dddddd
-    palette=11=#e5e5e5
-    palette=12=#ebebeb
-    palette=13=#f2f2f2
-    palette=14=#f7f7f7
-    palette=15=#ffffff
+	palette=0=#0b1c2c
+	palette=1=#1f3a50
+	palette=2=#2e5c7f
+	palette=3=#3f7aa0
+	palette=4=#53a0c3
+	palette=5=#68c2e0
+	palette=6=#8be1ff
+	palette=7=#b3f0ff
+	palette=8=#d0f7ff
+	palette=9=#e0fbff
+	palette=10=#e6fdff
+	palette=11=#f0ffff
+	palette=12=#f5ffff
+	palette=13=#f8ffff
+	palette=14=#fbffff
+	palette=15=#ffffff
 
     window-titlebar-background = #000000
-    background-opacity = 1
-    background-blur-radius = 20
-    mouse-hide-while-typing = true
-    window-decoration = false
-    confirm-close-surface = false
+    background-opacity         = 0
+    background-blur-radius     = 20
+    mouse-hide-while-typing    = true
+    window-decoration          = false
+    confirm-close-surface      = false
 
     # Uncomment if needed:
     # custom-shader-animation = always
-    # custom-shader = ${shaderPath}
+    # custom-shader           = ${shaderPath}
 
     ## KEYBINDS ##
     keybind = ctrl+s=new_split:right
@@ -61,7 +61,5 @@ in {
     keybind = ctrl+shift+plus=increase_font_size:1
     keybind = ctrl+shift+minus=decrease_font_size:1
   '';
-
-
-
 }
+
