@@ -7,8 +7,8 @@
 
   imports = [
     ./modules/fish/fish.nix
-    ./modules/ghostty/ghostty.nix
     ./modules/kitty/kitty.nix
+    ./modules/ghostty/ghostty.nix
     ./modules/waybar/waybar.nix
     ./modules/rofi/rofi.nix
     ./modules/fastfetch/fastfetch.nix

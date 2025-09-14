@@ -124,8 +124,8 @@
     };
   };
 
-  home.file.".config/fastfetch/eldritch.png" = {
-    source = ../../home/eldritch.png;
+  home.file.".config/fastfetch/current.png" = {
+    source = ../../home/current.png;
     recursive = true;
   };
 }

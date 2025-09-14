@@ -5,7 +5,7 @@
     bold_font auto
     bold_italic_font auto
     allow_remote_control yes
-    background_image ${config.home.homeDirectory}/.dotfiles/home/aiblame2.png
+    background_image ${config.home.homeDirectory}/.dotfiles/home/emoergo.png
     background_image_layout scaled
     background_opacity 1.0
 

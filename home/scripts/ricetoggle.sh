@@ -34,24 +34,45 @@ fi
 
 if [[ "$current" == "$WALLPAPER1" ]]; then
     next="$WALLPAPER2"
-    echo "$WALLPAPER2" > "$ACTIVE_FILE"
 else
     next="$WALLPAPER1"
-    echo "$WALLPAPER1" > "$ACTIVE_FILE"
 fi
+
+echo "$next" > "$ACTIVE_FILE"
 
 if command -v swww >/dev/null 2>&1; then
     if ! pgrep -x swww >/dev/null; then
         swww init
         sleep 1
     fi
-    
-    swww img "$next" --transition-type grow \
-        --transition-step 25  --transition-fps 155
-    echo "Switched to: $(basename "$next")"
+    swww img "$next" --transition-type grow --transition-step 25 --transition-fps 155
+    echo "Switched wallpaper to: $(basename "$next")"
 else
     echo "swww not installed. Please install it for reliable wallpaper switching."
 fi
 
+# --------------------------
+# Ghostty theme toggle
+# --------------------------
+CONFIG_DIR="$HOME/.config/ghostty"
+COLOR1="colors1.conf"
+COLOR2="colors2.conf"
+ACTIVE_COLOR_FILE="$CONFIG_DIR/active_color"
+
+if [[ "$next" == "$WALLPAPER1" ]]; then
+    theme="$COLOR1"
+else
+    theme="$COLOR2"
+fi
+
+echo "$theme" > "$ACTIVE_COLOR_FILE"
+
+# Combine base + theme (plain text)
+cat "$CONFIG_DIR/config.template" "$CONFIG_DIR/$theme" > "$CONFIG_DIR/config"
+echo "Applied Ghostty theme: $theme"
+
+# --------------------------
+# Restart Waybar
+# --------------------------
 sleep 0.5
 pkill waybar && setsid waybar >/dev/null 2>&1 &
