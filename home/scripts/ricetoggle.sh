@@ -21,10 +21,14 @@ fi
 
 WALLPAPER1="$HOME/.dotfiles/home/ghost.jpg"
 WALLPAPER2="$HOME/.dotfiles/home/ponyo.jpg"
+GIAS="$HOME/.dotfiles/home/gias.png"
 ACTIVE_FILE="$HOME/.config/hypr/active_wallpaper"
+CURRENT_FILE="$HOME/.config/fastfetch/current.png"
 
 mkdir -p "$HOME/.config/hypr"
+mkdir -p "$(dirname "$CURRENT_FILE")"
 
+# Initialize ACTIVE_FILE if missing
 if [ ! -f "$ACTIVE_FILE" ]; then
     echo "$WALLPAPER1" > "$ACTIVE_FILE"
     current="$WALLPAPER1"
@@ -32,14 +36,21 @@ else
     current=$(cat "$ACTIVE_FILE")
 fi
 
+# Determine next wallpaper
 if [[ "$current" == "$WALLPAPER1" ]]; then
     next="$WALLPAPER2"
+    # For WALLPAPER1, symlink current.png to gias.png
+    ln -sf "$GIAS" "$CURRENT_FILE"
 else
     next="$WALLPAPER1"
+    # For WALLPAPER2, copy ponyo.jpg to current.png (overwrite previous symlink)
+    cp "$WALLPAPER2" "$CURRENT_FILE"
 fi
 
+# Update ACTIVE_FILE
 echo "$next" > "$ACTIVE_FILE"
 
+# Apply wallpaper via swww
 if command -v swww >/dev/null 2>&1; then
     if ! pgrep -x swww >/dev/null; then
         swww init
@@ -51,28 +62,7 @@ else
     echo "swww not installed. Please install it for reliable wallpaper switching."
 fi
 
-# --------------------------
-# Ghostty theme toggle
-# --------------------------
-CONFIG_DIR="$HOME/.config/ghostty"
-COLOR1="colors1.conf"
-COLOR2="colors2.conf"
-ACTIVE_COLOR_FILE="$CONFIG_DIR/active_color"
-
-if [[ "$next" == "$WALLPAPER1" ]]; then
-    theme="$COLOR1"
-else
-    theme="$COLOR2"
-fi
-
-echo "$theme" > "$ACTIVE_COLOR_FILE"
-
-# Combine base + theme (plain text)
-cat "$CONFIG_DIR/config.template" "$CONFIG_DIR/$theme" > "$CONFIG_DIR/config"
-echo "Applied Ghostty theme: $theme"
-
-# --------------------------
 # Restart Waybar
-# --------------------------
 sleep 0.5
 pkill waybar && setsid waybar >/dev/null 2>&1 &
+
