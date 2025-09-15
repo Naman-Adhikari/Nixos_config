@@ -7,32 +7,34 @@ in {
     font-family = JetbrainsMono
     font-size = 14
 
-    background            = #000000
-    foreground            = #f0f0f0
-    cursor-color          = #ffffff
-    selection-background  = #2a2a2a
-    selection-foreground  = #e6e6e6
+	background            = #0a0a0a
+	foreground            = #e0e0e0
+	cursor-color          = #ffffff
+	selection-background  = #303030
+	selection-foreground  = #ffffff
 
-	palette=0=#0b1c2c
-	palette=1=#1f3a50
-	palette=2=#2e5c7f
-	palette=3=#3f7aa0
-	palette=4=#53a0c3
-	palette=5=#68c2e0
-	palette=6=#8be1ff
-	palette=7=#b3f0ff
-	palette=8=#d0f7ff
-	palette=9=#e0fbff
-	palette=10=#e6fdff
-	palette=11=#f0ffff
-	palette=12=#f5ffff
-	palette=13=#f8ffff
-	palette=14=#fbffff
+	palette=0=#1b1b1b
+	palette=1=#ff5555
+	palette=2=#50fa7b
+	palette=3=#f1fa8c
+	palette=4=#bd93f9
+	palette=5=#ff79c6
+	palette=6=#8be9fd
+	palette=7=#f8f8f2
+	palette=8=#661111
+	palette=9=#ff6e6e
+	palette=10=#69ff94
+	palette=11=#ffffa5
+	palette=12=#d6acff
+	palette=13=#ff92df
+	palette=14=#ff4444
 	palette=15=#ffffff
 
+
+
     window-titlebar-background = #000000
-    background-opacity         = 0
-    background-blur-radius     = 20
+    background-opacity         = 0.2
+    background-blur-radius     = 70
     mouse-hide-while-typing    = true
     window-decoration          = false
     confirm-close-surface      = false

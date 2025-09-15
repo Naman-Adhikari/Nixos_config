@@ -124,8 +124,4 @@
     };
   };
 
-  home.file.".config/fastfetch/current.png" = {
-    source = ../../home/current.png;
-    recursive = true;
-  };
 }
