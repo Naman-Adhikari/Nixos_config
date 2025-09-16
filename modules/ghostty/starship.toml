@@ -1,0 +1,96 @@
+format = """
+[╭](fg:line)\
+$os\
+$directory\
+$git_branch\
+$git_status\
+$fill\
+$nodejs\
+$bun\
+$deno\
+$aws\
+$cmd_duration\
+$shell\
+$time\
+$username\
+$line_break\
+$character\
+"""
+
+palette = 'noctech'
+add_newline = true
+
+[palettes.noctech]
+foreground = "#f4f4f4"
+background = "#000000"
+current_line = "#333333"
+primary = "#111111"
+box = "#1e1e1e"
+gray = "#7f8c8d"
+highlight = "#ffffff"
+dim = "#444444"
+subtle = "#b0b0b0"
+
+[os]
+format = "(fg:current_line)[](fg:gray)[$symbol ](fg:primary bg:gray)[](fg:gray)"
+disabled = false
+[os.symbols]
+NixOS = ""
+
+[directory]
+format = "[─](fg:current_line)[](fg:foreground)[󰷏 ](fg:primary bg:highlight)[](fg:foreground bg:box)[ $read_only$truncation_symbol$path](fg:foreground bg:box)[](fg:box)"
+home_symbol = " ~/"
+truncation_symbol = " "
+truncation_length = 2
+read_only = "󱧵 "
+read_only_style = ""
+
+[git_branch]
+format = "[─](fg:current_line)[](fg:gray)[$symbol](fg:primary bg:gray)[](fg:gray bg:box)[ $branch](fg:foreground bg:box)"
+
+[git_status]
+format = "[( $all_status)](fg:foreground bg:box)[](fg:box)"
+
+[nodejs]
+format = "[─](fg:current_line)[](fg:gray)[$symbol](fg:primary bg:gray)[](fg:gray bg:box)[ $version](fg:foreground bg:box)[](fg:box)"
+
+[bun]
+format = "[─](fg:current_line)[](fg:gray)[$symbol](fg:primary bg:gray)[](fg:gray bg:box)[ $version](fg:foreground bg:box)[](fg:box)"
+symbol = "🥟"
+
+[deno]
+format = "[─](fg:current_line)[](fg:gray)[$symbol](fg:primary bg:gray)[](fg:gray bg:box)[ $version](fg:foreground bg:box)[](fg:box)"
+symbol = "🦕"
+
+[aws]
+format = "[─](fg:current_line)[](fg:gray)[☁️](fg:primary bg:gray)[](fg:gray bg:box)[ $profile](fg:foreground bg:box)[](fg:box)"
+symbol = "☁️"
+
+[fill]
+symbol = "━"
+style = "fg:current_line"
+
+[cmd_duration]
+min_time = 500
+format = "[─](fg:current_line)[](fg:dim)[ ](fg:primary bg:dim)[](fg:dim bg:box)[ $duration ](fg:foreground bg:box)[](fg:box)"
+
+[shell]
+format = "[─](fg:current_line)[](fg:gray)[ ](fg:primary bg:gray)[](fg:gray bg:box)[ $indicator](fg:foreground bg:box)[](fg:box)"
+disabled = true
+
+[time]
+format = "[─](fg:current_line)[](fg:gray)[󰦖 ](fg:primary bg:gray)[](fg:gray bg:box)[ $time](fg:foreground bg:box)[](fg:box)"
+time_format = "%H:%M"
+disabled = false
+
+[username]
+format = "[─](fg:current_line)[](fg:gray)[〠](fg:primary bg:gray)[](fg:gray bg:box)[ $user](fg:foreground bg:box)[](fg:box)"
+show_always = true
+
+[character]
+format = """
+[│](fg:current_line)
+[╰─$symbol](fg:current_line) """
+success_symbol = "[](fg:#e4e4e4)"
+error_symbol = "[](fg:#ff6666)"
+
