@@ -85,6 +85,7 @@
   ];
 
   home.sessionVariables = {
+	wallpaper = "/home/lostfromlight/NMN/Luminarium";
     EDITOR = "nvim";
     VISUAL = "nvim";
     BROWSER = "app.zen_browser.zen";
