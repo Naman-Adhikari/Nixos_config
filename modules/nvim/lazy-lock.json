@@ -18,5 +18,6 @@
   "plenary.nvim": { "branch": "master", "commit": "b9fd5226c2f76c951fc8ed5923d85e4de065e509" },
   "smear-cursor.nvim": { "branch": "main", "commit": "4b86df8a0c5f46e708616b21a02493bb0e47ecbd" },
   "telescope.nvim": { "branch": "master", "commit": "a0bbec21143c7bc5f8bb02e0005fa0b982edc026" },
+  "transparent.nvim": { "branch": "main", "commit": "8ac59883de84e9cd1850ea25cf087031c5ba7d54" },
   "vimtex": { "branch": "master", "commit": "c74d9927d9ac2fd24f965634ab56fc5d3c0a60a7" }
 }

@@ -63,6 +63,6 @@ in {
     keybind = ctrl+shift+plus=increase_font_size:1
     keybind = ctrl+shift+minus=decrease_font_size:1
   '';
-home.file.".config/starship.toml".source = ./modules/ghostty/starship.toml;
+home.file.".config/starship.toml".source = ./starship.toml;
 
 }

@@ -34,6 +34,8 @@ vim.opt.fillchars = {
 }
 
 vim.api.nvim_set_keymap('n', 'tc', '<cmd>VimtexTocToggle<CR>', {noremap = true, silent = true})
+vim.keymap.set("n", "<A-t>", ":TransparentToggle<CR>", { noremap = true, silent = true, desc = "Toggle transparency" })
+
 vim.api.nvim_set_keymap('n', '<F5>', '', { noremap = true, silent = true, callback = function()
   local filetype = vim.bo.filetype
   local filename = vim.fn.expand('%')
