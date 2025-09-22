@@ -122,6 +122,7 @@
 
   programs.home-manager.enable = true;
   programs.neovim.enable = true;
+  programs.fish.enable = true;
 
   xdg.configFile."nvim" = {
   source = config.lib.file.mkOutOfStoreSymlink "/home/lostfromlight/.dotfiles/modules/nvim";
