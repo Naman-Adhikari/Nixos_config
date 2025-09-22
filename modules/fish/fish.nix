@@ -49,7 +49,6 @@
 		imgsort = "python3 ~/Programming/python/pyprojects/imagesorter/imagesorter.py";
 		tlp = "sudo tlp start";
 		rmgen = "python3 ~/Programming/python/pyprojects/homgenremover/homgenremover.py";
-		bongocat = "bongocat --config ~/.config/wayland-bongocat/bongocat.conf &";
 	  };
 
 	  functions = {
