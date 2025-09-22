@@ -45,10 +45,11 @@
 		ais = "sudo systemctl stop ollama.service";
 		ai = "sudo systemctl start ollama.service";
 		qwen = "ollama run qwen2.5-coder:1.5b";
-		bluetooth = "python3 ~/Programming/python/pyprojects/bluetooth.py";
-		imgsort = "python3 ~/Programming/python/pyprojects/imagesorter.py";
+		bluetooth = "python3 ~/Programming/python/pyprojects/bluetooth/bluetooth.py";
+		imgsort = "python3 ~/Programming/python/pyprojects/imagesorter/imagesorter.py";
 		tlp = "sudo tlp start";
-		rmgen = "home-manager remove-generations";
+		rmgen = "python3 ~/Programming/python/pyprojects/homgenremover/homgenremover.py";
+		bongocat = "bongocat --config ~/.config/wayland-bongocat/bongocat.conf &";
 	  };
 
 	  functions = {
