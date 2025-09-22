@@ -228,7 +228,7 @@
 #  splash = false
 #'';
     xdg.configFile."hypr/pyprland.toml" = let
-    pyprlandToml = ../home/pyprland.toml; 
+    pyprlandToml = ../../home/pyprland.toml; 
   in if builtins.pathExists pyprlandToml then {
     source = pyprlandToml;
   } else {
