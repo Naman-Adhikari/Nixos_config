@@ -50,6 +50,12 @@ vim.api.nvim_set_keymap('n', '<F5>', '', { noremap = true, silent = true, callba
   elseif filetype == "python" then
     vim.cmd('w') 
     vim.cmd('split | terminal python3 ' .. filename)
+  elseif filetype == "rust" then
+	  vim.cmd('w')
+	  local dir = vim.fn.expand('%:p:h')  
+	  local base_name = vim.fn.expand('%:t:r')  
+  
+	  vim.cmd('split | terminal cd ' .. dir .. ' && rustc ' .. filename .. ' -o ' .. base_name .. ' && ./' .. base_name)
   elseif filetype == "tex" then
     vim.cmd('w')
     vim.cmd('VimtexCompile')
@@ -60,3 +66,10 @@ vim.api.nvim_set_keymap('n', '<F5>', '', { noremap = true, silent = true, callba
     print("F5: No run command set for filetype: " .. filetype)
   end
 end})
+
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = "*.rs",
+  callback = function()
+    vim.cmd("RustFmt")
+  end
+})

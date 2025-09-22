@@ -1,7 +1,7 @@
 return {
   {
     "williamboman/mason.nvim",
-	commit = "00f14f787c71d060db9fa9b0db44c6cf12b64f61",	
+    commit = "00f14f787c71d060db9fa9b0db44c6cf12b64f61",	
     lazy = false,
     priority = 1000,
     config = function()
@@ -10,14 +10,26 @@ return {
   },
   {
     "williamboman/mason-lspconfig.nvim",
-	commit = "1a634d623f16bba0f2f5746c75882d28f47a9c7f",	
+    commit = "1a634d623f16bba0f2f5746c75882d28f47a9c7f",	
     dependencies = { "williamboman/mason.nvim" },
+    config = function()
+      require("mason-lspconfig").setup({
+        ensure_installed = {
+          "lua_ls",
+          "vtsls",
+          "html",
+          "cssls",
+          "pylsp",
+          "rust_analyzer", 
+        },
+      })
+    end,
   },
   {
     "neovim/nvim-lspconfig",
     dependencies = {
       "williamboman/mason-lspconfig.nvim",
-      "hrsh7th/cmp-nvim-lsp", -- ensure this is installed too
+      "hrsh7th/cmp-nvim-lsp",
     },
     config = function()
       local lspconfig = require("lspconfig")
@@ -35,8 +47,6 @@ return {
         lua_ls = {},
         vtsls = {},
         html = {},
-		ast_grep = {},		
-	    dartls  = {},
         cssls = {},
         pylsp = {
           settings = {
@@ -53,6 +63,16 @@ return {
             },
           }
         },
+		rust_analyzer = {
+  cmd = { "/nix/store/13irk3d1x0qihfhz2c1jv3d170p9sbnc-rust-analyzer-2025-08-25/bin/rust-analyzer" },
+  settings = {
+    ["rust-analyzer"] = {
+      cargo = { allFeatures = true },
+      checkOnSave = true,  
+    },
+  },
+},
+
       }
 
       for server, config in pairs(servers) do
@@ -63,6 +83,3 @@ return {
     end,
   },
 }
-
-
-

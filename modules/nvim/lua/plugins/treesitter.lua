@@ -6,13 +6,12 @@ return {
     require('nvim-treesitter.configs').setup({
       highlight = { enable = true },
       indent = { enable = true },
-      folding = { enable = true },  -- Enable Treesitter-based folding
-      ensure_installed = { "python", "dart", "c", "cpp" },
+      folding = { enable = true },  
+      ensure_installed = { "python", "dart", "c", "cpp", "rust" },
     })
 
-    -- Set fold method to use Treesitter
     vim.opt.foldmethod = "expr"
     vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
-    vim.opt.foldlevelstart = 99  -- Start with folds open
+    vim.opt.foldlevelstart = 99  
   end
 }
