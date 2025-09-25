@@ -14,7 +14,7 @@
         "custom/updates" = {
           format = "   ";
           interval = 7200;
-          on-click = "dolphin";
+          on-click = "ghostty -e btop";
           signal = 8;
         };
 
