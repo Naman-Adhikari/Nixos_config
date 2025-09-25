@@ -13,6 +13,7 @@
       # █▀▀ ▀▄▀ █▀▀ █▀▀
       # ██▄ █░█ ██▄ █▄▄
       exec-once = bash -c "${config.home.homeDirectory}/.dotfiles/home/scripts/lock.sh"
+      exec-once = bash -c "${config.home.homeDirectory}/.dotfiles/home/scripts/winsound.sh"
       exec-once = bash -c "sleep 0.9 && hyprpaper"
       exec-once = bash -c "swww init"
       exec-once = bash -c "swww img ~/.dotfiles/home/gias.png"
