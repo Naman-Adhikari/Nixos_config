@@ -166,7 +166,7 @@ hardware.bluetooth.enable = true;
   users.users.lostfromlight = {
     isNormalUser = true;
     description = "Naman Adhikari";
-    extraGroups = [ "networkmanager" "wheel" "audio" ];
+    extraGroups = [ "input"  "networkmanager" "wheel" "audio" ];
     packages = with pkgs; [
     ];
   };
