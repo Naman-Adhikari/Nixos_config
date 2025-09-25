@@ -17,6 +17,7 @@
   ];
 
   home.packages = with pkgs; [
+	unzip
 	swww
 	ffmpeg
 	qbittorrent

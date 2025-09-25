@@ -53,7 +53,6 @@
 
  #Enabling NIRI
  services.displayManager.sessionPackages = [ pkgs.niri ];
- programs.xwayland.enable = true;
 
 
 #Disable nvidia gpu to enter integrated mode (uncomment to enable nvidia)
