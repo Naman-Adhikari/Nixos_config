@@ -123,7 +123,7 @@
       bind = SUPER, B, exec, app.zen_browser.zen
       bind = SUPER, S, exec, com.spotify.Client
       bind = SUPER, escape, exec, shutdown now
-      bind = SUPER, L, exec, ${config.home.homeDirectory}/.dotfiles/home/scripts/lock.sh
+      bind = SUPER SHIFT, L, exec, ${config.home.homeDirectory}/.dotfiles/home/scripts/lock.sh
       bind = SUPER, 0,  exec, ${config.home.homeDirectory}/.dotfiles/home/scripts/ricetoggle.sh
       bind = SUPER, C,  exec, bongocat --config ~/.config/wayland-bongocat/bongocat.conf 
       bind = SUPER, U, exec, dbus-run-session -- steam-run $(which unityhub)
@@ -147,7 +147,7 @@
       # MULTIMEDIA & BRIGHTNESS
       binde=, XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
       binde=, XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
-      binde=, XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+      bind=, XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
       bind=, XF86AudioPlay, exec, playerctl play-pause
       bind=, XF86AudioPause, exec, playerctl play-pause
       bind=, XF86AudioNext, exec, playerctl next
@@ -161,7 +161,9 @@
 
       # WINDOW MANAGEMENT & WORKSPACES
       bind = SUPER, left, movefocus, l
+      bind = SUPER, L, movefocus, l
       bind = SUPER, right, movefocus, r
+      bind = SUPER, H, movefocus, r
       bind = SUPER, up, movefocus, u
       bind = SUPER, down, movefocus, d
 

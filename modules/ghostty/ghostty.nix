@@ -33,6 +33,7 @@ in {
 
 
     window-titlebar-background = #000000
+	window-show-tab-bar        = never
     background-opacity         = 0.2
     background-blur-radius     = 70
     mouse-hide-while-typing    = true

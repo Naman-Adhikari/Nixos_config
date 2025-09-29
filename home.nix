@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, pkgsUnstable, ... }:
 
 {
   home.username = "lostfromlight";
@@ -16,7 +16,9 @@
     ./modules/hyprland/hyprland.nix
   ];
 
-  home.packages = with pkgs; [
+  home.packages = 
+  (with pkgs; [
+	qutebrowser
 	unzip
 	swww
 	ffmpeg
@@ -67,7 +69,6 @@
     libnotify
     brightnessctl 
     imv         
-    ghostty     
     yazi        
     toipe        
     powertop     
@@ -84,7 +85,15 @@
     xdg-desktop-portal  
     xdg-desktop-portal-wlr  
     entr
-  ];
+  ])
+
+    ++
+
+   (with pkgsUnstable; [
+    ghostty   
+]);
+
+
 
   home.sessionVariables = {
 	wallpaper = "/home/lostfromlight/NMN/Luminarium";
