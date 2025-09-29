@@ -7,6 +7,7 @@
 
   imports = [
     ./modules/fish/fish.nix
+    ./modules/qutebrowser/qutebrowser.nix
     ./modules/bongocat/bongocat.nix
     ./modules/kitty/kitty.nix
     ./modules/ghostty/ghostty.nix
