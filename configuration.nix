@@ -98,6 +98,10 @@ nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
     nvidia.open = false;
     nvidia.nvidiaSettings = true;
 };
+hardware.opengl = {
+  enable = true;             # enable OpenGL
+  driSupport32Bit = true;    # required for Steam / 32-bit games
+};
 
 services.flatpak.enable = true;
 
@@ -173,7 +177,13 @@ hardware.bluetooth.enable = true;
 
 
   
-  nixpkgs.config.allowUnfree = true;
+nixpkgs.config = {
+  allowUnfree = true;
+  permittedInsecurePackages = [
+    "python3.12-youtube-dl-2021.12.17"
+  ];
+};
+
 
   environment.systemPackages = with pkgs; [
     wget
@@ -191,10 +201,9 @@ hardware.bluetooth.enable = true;
     glib
     mpd
 	os-prober
-
-
-
+	youtube-dl
  ];
+
 
 }
 

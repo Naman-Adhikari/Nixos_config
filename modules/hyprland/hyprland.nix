@@ -120,7 +120,7 @@
       bind = SUPER, W, exec, pkill waybar || waybar &
       bind = SUPER, X, exec, ghostty
       bind = SUPER, E, exec, dolphin
-      bind = SUPER, B, exec, app.zen_browser.zen
+      bind = SUPER, B, exec, qutebrowser
       bind = SUPER, S, exec, com.spotify.Client
       bind = SUPER, escape, exec, shutdown now
       bind = SUPER SHIFT, L, exec, ${config.home.homeDirectory}/.dotfiles/home/scripts/lock.sh
@@ -225,8 +225,8 @@
       env = GBM_BACKEND,nvidia-drm
       env = __GLX_VENDOR_LIBRARY_NAME,nvidia
       env = NVD_BACKEND,direct
-      env = BROWSER,floorp
-      env = DEFAULT_BROWSER,app.zen_browser.zen
+      env = BROWSER,qutebrowser
+      env = DEFAULT_BROWSER, qutebrowser
       env = XCURSOR_THEME=Bibata-Modern-Classic
       env = XCURSOR_SIZE, 24
     '';

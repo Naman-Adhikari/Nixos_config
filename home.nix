@@ -19,6 +19,9 @@
 
   home.packages = 
   (with pkgs; [
+	yt-dlp
+	localsend
+	steam
 	qutebrowser
 	unzip
 	swww

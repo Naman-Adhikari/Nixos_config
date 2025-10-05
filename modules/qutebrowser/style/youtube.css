@@ -1,0 +1,11 @@
+ytd-watch-flexy[flexy] #player {
+    width: 100vw !important;
+    height: 80vh !important;  
+    max-width: none !important;
+    margin: 0 auto !important;
+}
+#comments {
+    display: block !important;
+    margin-top: 10px;
+}
+
