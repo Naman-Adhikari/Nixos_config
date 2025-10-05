@@ -46,7 +46,8 @@ config.bind('<Ctrl-p>', 'open -p')
 config.bind('<Ctrl-b>', 'bookmark-add')
 config.bind('b', 'open -t qute://bookmarks')
 config.bind("<Ctrl-t>", "config-cycle tabs.position top left")
-config.bind("D", "hint links spawn ghostty -e yt-dlp -o '~/Videos/Youtube/%(title)s.%(ext)s' {hint-url}")
+config.bind("D", "hint links spawn ~/.dotfiles/modules/qutebrowser/userscripts/yt-down-compress.sh {hint-url}")
+config.bind("M", "hint links spawn mpv {hint-url}")
 
 
 
