@@ -48,6 +48,9 @@ config.bind('b', 'open -t qute://bookmarks')
 config.bind("<Ctrl-t>", "config-cycle tabs.position top left")
 config.bind("D", "hint links spawn ~/.dotfiles/modules/qutebrowser/userscripts/yt-down-compress.sh {hint-url}")
 config.bind("M", "hint links spawn mpv {hint-url}")
+config.bind('xt', 'config-cycle tabs.show always never')
+config.bind('<Ctrl-h>', 'open -t qute://history')
+
 
 
 

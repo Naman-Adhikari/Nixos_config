@@ -104,6 +104,15 @@
       # ▀▄▀▄▀ █ █░▀█ █▄▀ █▄█ ▀▄▀▄▀   █▀▄ █▄█ █▄▄ ██▄ ▄█
       windowrulev2 = float, class:^(com.mitchellh.ghostty)$
       windowrulev2 = size 70% 65%, class:^(com.mitchellh.ghostty)$
+	  windowrulev2 = float, initialTitle:^https://duckduckgo.com - qutebrowser$
+	  windowrulev2 = size 900 600, initialTitle:^https://duckduckgo.com - qutebrowser$
+	  windowrulev2 = center, initialTitle:^https://duckduckgo.com - qutebrowser$
+	  windowrulev2 = float, initialTitle:^https://chat.deepseek.com - qutebrowser$
+	  windowrulev2 = size 1000 700, initialTitle:^https://chat.deepseek.com - qutebrowser$
+	  windowrulev2 = center, initialTitle:^https://chat.deepseek.com - qutebrowser$
+
+
+
       windowrule = float, title:Open File
       windowrule = float, title:branchdialog
       windowrule = float, title:wlogout
@@ -113,6 +122,7 @@
 
       # █▄▀ █▀▀ █▄█ █▄▄ █ █▄░█ █▀▄
       # █░█ ██▄ ░█░ █▄█ █ █░▀█ █▄▀
+      bind = SUPER SHIFT, D, exec, yt-dlp -f 'bestvideo[height<=720]+bestaudio/best[height<=720]' -o "$HOME/Videos/Youtube/%(title)s.%(ext)s" "$(wl-paste)"
       bind = SUPER SHIFT, W, exec, bash/./hyprpaper.sh
       bind = SUPER , N, exec, hyprsunset --temperature 5000
       bind = SUPER SHIFT , N, exec, pkill hyprsunset 
@@ -133,7 +143,7 @@
       bind = SUPER, escape, exec, wlogout --protocol layer-shell -b 5 -T 400 -B 400
       bind = Ctrl SHIFT, R, exec, reboot
       bind = SUPER, O, exec, obsidian
-      bind = SUPER, D, exec, com.discordapp.Discord
+      bind = SUPER SHIFT, D, exec, com.discordapp.Discord
       bind = SUPER SHIFT, B, exec, ${config.home.homeDirectory}/blender/result/bin/blender-fhs
       bind = SUPER, M, exec, ghostty -e ncmpcpp
       bind = SUPER SHIFT, T, exec, floorp https://monkeytype.com
@@ -141,6 +151,11 @@
       bind = SUPER, TAB, exec, pypr expose
       bind = SUPER, Z, exec, pypr zoom ++0.5
       bind = SUPER SHIFT, Z, exec, pypr zoom --0.5
+	  bind = SUPER, D, exec, qutebrowser --target private-window --set tabs.show never --set scrolling.bar never "https://duckduckgo.com"
+	  bind = SUPER SHIFT, A, exec, qutebrowser --target window --set tabs.show never "https://chat.deepseek.com"
+
+
+
       # workspace for expose
       workspace = special:exposed,gapsout:60,gapsin:30,bordersize:2,border:true,shadow:false
 
