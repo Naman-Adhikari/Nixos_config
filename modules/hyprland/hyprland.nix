@@ -122,7 +122,7 @@
 
       # █▄▀ █▀▀ █▄█ █▄▄ █ █▄░█ █▀▄
       # █░█ ██▄ ░█░ █▄█ █ █░▀█ █▄▀
-      bind = SUPER SHIFT, D, exec, yt-dlp -f 'bestvideo[height<=720]+bestaudio/best[height<=720]' -o "$HOME/Videos/Youtube/%(title)s.%(ext)s" "$(wl-paste)"
+      bind = SUPER SHIFT, Y, exec, yt-dlp -f 'bestvideo[height<=720]+bestaudio/best[height<=720]' -o "$HOME/Videos/Youtube/%(title)s.%(ext)s" "$(wl-paste)"
       bind = SUPER SHIFT, W, exec, bash/./hyprpaper.sh
       bind = SUPER , N, exec, hyprsunset --temperature 5000
       bind = SUPER SHIFT , N, exec, pkill hyprsunset 

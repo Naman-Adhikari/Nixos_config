@@ -19,7 +19,6 @@
 
   home.packages = 
   (with pkgs; [
-	yt-dlp
 	localsend
 	steam
 	qutebrowser
@@ -95,6 +94,7 @@
 
    (with pkgsUnstable; [
     ghostty   
+	yt-dlp
 ]);
 
 
