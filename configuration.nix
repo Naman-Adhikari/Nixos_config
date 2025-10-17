@@ -33,16 +33,18 @@
     dns = "default";  
   };
 
+#networking.nameservers = [ "1.1.1.1" "8.8.8.8" ];
+
 # environment.etc."resolv.conf".text = ''
-#    nameserver 192.168.1.1
-#	nameserver 2407:1400:0:5::
 #	nameserver 1.1.1.1
 #	nameserver 8.8.8.8
-#	nameserver 2407:1400:1:5::
- #   options edns0
-  #'';
+#  '';
 
  services.passSecretService.enable = true;
+ networking.firewall = {
+    enable = true;
+    allowedTCPPorts = [ 7878 ];  
+  };
  
   
   programs.hyprland = {
@@ -147,9 +149,12 @@ services.tlp.settings = {
   };
 
 
-hardware.bluetooth.enable = true;
+  hardware.bluetooth.enable = true;
   services.printing.enable = true;
-  
+
+
+  virtualisation.docker.enable = true;
+
 
   services.power-profiles-daemon.enable = false;
 
@@ -170,7 +175,7 @@ hardware.bluetooth.enable = true;
   users.users.lostfromlight = {
     isNormalUser = true;
     description = "Naman Adhikari";
-    extraGroups = [ "input"  "networkmanager" "wheel" "audio" ];
+    extraGroups = [ "input"  "networkmanager" "wheel" "audio" "docker" ];
     packages = with pkgs; [
     ];
   };

@@ -16,6 +16,7 @@
       exec-once = bash -c "${config.home.homeDirectory}/.dotfiles/home/scripts/winsound.sh"
       exec-once = bash -c "sleep 0.9 && hyprpaper"
       exec-once = bash -c "swww init"
+      exec-once = bash -c "emacs --daemon"
       exec-once = bash -c "swww img ~/.dotfiles/home/gias.png"
       exec-once = waybar
       exec-once = dunst
@@ -129,7 +130,7 @@
       bind = SUPER, A, exec, pkill rofi || rofi -show drun
       bind = SUPER, W, exec, pkill waybar || waybar &
       bind = SUPER, X, exec, ghostty
-      bind = SUPER, E, exec, dolphin
+      bind = SUPER, E, exec, emacsclient -c 
       bind = SUPER, B, exec, qutebrowser
       bind = SUPER, S, exec, com.spotify.Client
       bind = SUPER, escape, exec, shutdown now

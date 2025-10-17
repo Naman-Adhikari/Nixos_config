@@ -50,6 +50,7 @@
 		tlp = "sudo tlp start";
 		rmgen = "python3 ~/Programming/python/pyprojects/homgenremover/homgenremover.py";
 		gen = "home-manager generations";
+		e = "emacsclient -nw";
 	  };
 
 	  functions = {

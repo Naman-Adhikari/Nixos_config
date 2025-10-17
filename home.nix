@@ -19,7 +19,8 @@
 
   home.packages = 
   (with pkgs; [
-	localsend
+	ispell
+	docker
 	steam
 	qutebrowser
 	unzip
@@ -36,11 +37,9 @@
     audacity
     vlc
 	ani-cli
-    obsidian
     libreoffice-qt6
     mpv
     kooha
-    floorp
     git
     tmux
     btop
@@ -82,7 +81,6 @@
     octaveFull 
     waypaper    
     wf-recorder  
-    floorp        
     bibata-cursors 
     desktop-file-utils 
     xdg-desktop-portal  
@@ -93,6 +91,7 @@
     ++
 
    (with pkgsUnstable; [
+	emacs
     ghostty   
 	yt-dlp
 ]);
@@ -113,16 +112,16 @@
     defaultApplications = {
       "application/pdf" = "org.pwmt.zathura.desktop";
       
-      "x-scheme-handler/http" = "floorp.desktop";
-      "x-scheme-handler/https" = "floorp.desktop";
-      "x-scheme-handler/chrome" = "floorp.desktop";
-      "text/html" = "floorp.desktop";
-      "application/x-extension-htm" = "floorp.desktop";
-      "application/x-extension-html" = "floorp.desktop";
-      "application/x-extension-shtml" = "floorp.desktop";
-      "application/xhtml+xml" = "floorp.desktop";
-      "application/x-extension-xhtml" = "floorp.desktop";
-      "application/x-extension-xht" = "floorp.desktop";
+      "x-scheme-handler/http" = "org.qutebrowser.qutebrowser";
+      "x-scheme-handler/https" = "org.qutebrowser.qutebrowser";
+      "x-scheme-handler/chrome" = "org.qutebrowser.qutebrowser";
+      "text/html" = "org.qutebrowser.qutebrowser";
+      "application/x-extension-htm" = "org.qutebrowser.qutebrowser";
+      "application/x-extension-html" = "org.qutebrowser.qutebrowser";
+      "application/x-extension-shtml" = "org.qutebrowser.qutebrowser";
+      "application/xhtml+xml" = "org.qutebrowser.qutebrowser";
+      "application/x-extension-xhtml" = "org.qutebrowser.qutebrowser";
+      "application/x-extension-xht" = "org.qutebrowser.qutebrowser";
       "x-scheme-handler/unityhub" = "unityhub.desktop";
 	  "image/png" = "imv.desktop";
       "image/jpeg" = "imv.desktop";

@@ -28,10 +28,27 @@ c.completion.open_categories = ['searchengines', 'quickmarks', 'bookmarks', 'his
 
 #---------------Ad-Block config----------------------
 c.content.blocking.enabled = True
-c.content.blocking.method = "adblock"
+c.content.blocking.method = "both"
 c.content.blocking.adblock.lists = [
-	"https://easylist.to/easylist/easylist.txt",        
-	"https://easylist.to/easylist/easyprivacy.txt"
+    "https://easylist.to/easylist/easylist.txt",
+    "https://easylist.to/easylist/easyprivacy.txt",
+    
+    "https://easylist-downloads.adblockplus.org/easylistgermany.txt", 
+    "https://easylist-downloads.adblockplus.org/liste_fr.txt",         
+    
+    "https://filterlists.com/cdn/filters/11.txt",  
+    "https://www.malwaredomains.com/files/justdomains",  
+    "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts",  
+    "https://mirror1.malwaredomains.com/files/justdomains",
+    
+    "https://easylist-downloads.adblockplus.org/antiadblockfilters.txt",
+    
+    "https://secure.fanboy.co.nz/fanboy-annoyance.txt",
+    "https://secure.fanboy.co.nz/fanboy-social.txt",
+	"https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.txt",
+    "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/badware.txt",
+    "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/quick-fixes.txt",
+    "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/unbreak.txt"
 ]
 
 

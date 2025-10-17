@@ -50,7 +50,7 @@ in {
     keybind = ctrl+right=goto_split:right
     keybind = ctrl+shift+left=resize_split:left,20
     keybind = ctrl+shift+right=resize_split:right,20
-    keybind = ctrl+w=close_surface
+    keybind = ctrl+z=close_surface
     keybind = ctrl+c=copy_to_clipboard
     keybind = ctrl+v=paste_from_clipboard
     keybind = ctrl+a=select_all
