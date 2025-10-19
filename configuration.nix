@@ -206,7 +206,6 @@ nixpkgs.config = {
     glib
     mpd
 	os-prober
-	youtube-dl
  ];
 
 

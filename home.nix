@@ -29,6 +29,7 @@
 	qbittorrent
 	caligula
 	zathura
+	rotating
 	texliveMedium
     waybar
     kitty
@@ -92,7 +93,7 @@
 
    (with pkgsUnstable; [
 	emacs
-    ghostty   
+	ghostty   
 	yt-dlp
 ]);
 

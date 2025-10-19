@@ -12,9 +12,9 @@
 	  '';
 
 	  interactiveShellInit = ''
-		if status is-interactive
-			${pkgs.fastfetch}/bin/fastfetch
-		  end
+		if test "$TERM_PROGRAM" = "ghostty"
+    fastfetch
+end
 
 		# Atuin (history)
 		${pkgs.atuin}/bin/atuin init fish | source
