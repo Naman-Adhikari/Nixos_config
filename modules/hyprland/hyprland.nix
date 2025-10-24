@@ -211,8 +211,8 @@
       bind = SUPER, 7, workspace, 7
       bind = SUPER, 8, workspace, 8
       bind = SUPER, 9, workspace, 9
-      bind = SUPER ALT, up, workspace, e+1
-      bind = SUPER ALT, down, workspace, e-1
+      bind = CTRL, L, workspace, e+1
+      bind = CTRL, H, workspace, e-1
 
       bind = SUPER SHIFT, 1, movetoworkspace, 1
       bind = SUPER SHIFT, 2, movetoworkspace, 2

@@ -19,6 +19,8 @@
 
   home.packages = 
   (with pkgs; [
+    logmein-hamachi
+    vips
 	ispell
 	docker
 	steam
@@ -29,7 +31,6 @@
 	qbittorrent
 	caligula
 	zathura
-	rotating
 	texliveMedium
     waybar
     kitty
@@ -145,7 +146,6 @@
 };
 
   nixpkgs.config.allowUnfree = true;
-
   xdg.portal = {
     enable = true;
     extraPortals = with pkgs; [
