@@ -27,7 +27,7 @@
 	qutebrowser
 	unzip
 	swww
-	ffmpeg
+	ffmpeg-full
 	qbittorrent
 	caligula
 	zathura

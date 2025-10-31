@@ -125,13 +125,14 @@
       # █░█ ██▄ ░█░ █▄█ █ █░▀█ █▄▀
       bind = SUPER SHIFT, Y, exec, yt-dlp -f 'bestvideo[height<=720]+bestaudio/best[height<=720]' -o "$HOME/Videos/Youtube/%(title)s.%(ext)s" "$(wl-paste)"
       bind = SUPER SHIFT, W, exec, bash/./hyprpaper.sh
+      bind = SUPER, K, exec, ghostty -e btop
       bind = SUPER , N, exec, hyprsunset --temperature 5000
       bind = SUPER SHIFT , N, exec, pkill hyprsunset 
       bind = SUPER, A, exec, pkill rofi || rofi -show drun
       bind = SUPER, W, exec, pkill waybar || waybar &
       bind = SUPER, X, exec, ghostty
       bind = SUPER, E, exec, emacsclient -c 
-      bind = SUPER, B, exec, qutebrowser
+      bind = SUPER, B, exec, app.zen_browser.zen
       bind = SUPER, S, exec, com.spotify.Client
       bind = SUPER, escape, exec, shutdown now
       bind = SUPER SHIFT, L, exec, ${config.home.homeDirectory}/.dotfiles/home/scripts/lock.sh
@@ -241,8 +242,8 @@
       env = GBM_BACKEND,nvidia-drm
       env = __GLX_VENDOR_LIBRARY_NAME,nvidia
       env = NVD_BACKEND,direct
-      env = BROWSER,qutebrowser
-      env = DEFAULT_BROWSER, qutebrowser
+      env = BROWSER, app.zen_browser.zen
+      env = DEFAULT_BROWSER, app.zen_browser.zen
       env = XCURSOR_THEME=Bibata-Modern-Classic
       env = XCURSOR_SIZE, 24
     '';
