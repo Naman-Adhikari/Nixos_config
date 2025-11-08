@@ -171,6 +171,8 @@
       bind=, XF86AudioPrev, exec, playerctl previous
       bind =, XF86MonBrightnessUp, exec, brightnessctl set 10%+
       bind =, XF86MonBrightnessDown, exec, brightnessctl set 10%-
+      bind = SUPER, f11, exec,  brightnessctl set 10%-
+      bind = SUPER, f12, exec,  brightnessctl set 10%+
 
       # SCREENSHOT
       bind =, Print, exec, grim -g "$(slurp)" - | wl-copy && wl-paste > ${config.home.homeDirectory}/Pictures/Screenshots/Screenshot-$(date +%F_%T).png | dunstify "Screenshot of the region taken" -t 1000
