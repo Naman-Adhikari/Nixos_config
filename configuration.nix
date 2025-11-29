@@ -57,7 +57,7 @@
  services.displayManager.sessionPackages = [ pkgs.niri ];
 
 
-#Disable nvidia gpu to enter integrated mode (uncomment to enable nvidia)
+#Disable nvidia gpu to enter integrated mode (uncomment to disnable nvidia)
 #boot.blacklistedKernelModules = [ "nvidia" "nvidia_drm" "nvidia_modeset" "nvidia_uvm" ];
 
 programs.fish.enable = true;
@@ -108,7 +108,7 @@ hardware.opengl = {
 services.flatpak.enable = true;
 
 
-services.tlp.enable = true;
+services.tlp.enable = false;
 services.tlp.settings = {
     CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
     CPU_SCALING_GOVERNOR_ON_AC = "performance";
@@ -188,6 +188,20 @@ nixpkgs.config = {
     "python3.12-youtube-dl-2021.12.17"
   ];
 };
+
+  services.auto-cpufreq.enable = true;
+  services.auto-cpufreq.settings = {
+    battery = {
+      governor = "powersave";
+      turbo = "never";
+    };
+    charger = {
+      governor = "performance";
+      turbo = "auto";
+    };
+  };
+
+
 
 
   environment.systemPackages = with pkgs; [

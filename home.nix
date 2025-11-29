@@ -19,8 +19,8 @@
 
   home.packages = 
   (with pkgs; [
-    logmein-hamachi
     vips
+  auto-cpufreq
 	ispell
 	docker
 	steam
@@ -75,8 +75,8 @@
     imv         
     yazi        
     toipe        
-    powertop     
-    pulseaudio    
+    pulseaudio
+    powertop
     mpc      
     ncmpcpp 
     protonup  
@@ -93,6 +93,7 @@
     ++
 
    (with pkgsUnstable; [
+  blender
 	emacs
 	ghostty   
 	yt-dlp
@@ -135,7 +136,6 @@
       "image/tiff" = "imv.desktop";
     };
   };
-
   programs.home-manager.enable = true;
   programs.neovim.enable = true;
   programs.fish.enable = true;
