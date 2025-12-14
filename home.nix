@@ -19,7 +19,9 @@
 
   home.packages = 
   (with pkgs; [
+    lsof
     vips
+  localsend
   auto-cpufreq
 	ispell
 	docker
@@ -31,7 +33,7 @@
 	qbittorrent
 	caligula
 	zathura
-	texliveMedium
+	texliveFull
     waybar
     kitty
     hyprsunset
@@ -94,7 +96,7 @@
 
    (with pkgsUnstable; [
   blender
-	emacs
+emacs
 	ghostty   
 	yt-dlp
 ]);
