@@ -69,6 +69,7 @@
               size = 5
               passes = 3
               vibrancy = 0.1696
+new_optimizations = true
           }
       }
 
@@ -103,8 +104,8 @@
 
       # █░█░█ █ █▄░█ █▀▄ █▀█ █░█░█   █▀█ █░█ █░░ █▀▀ █▀
       # ▀▄▀▄▀ █ █░▀█ █▄▀ █▄█ ▀▄▀▄▀   █▀▄ █▄█ █▄▄ ██▄ ▄█
-      windowrulev2 = float, class:^(com.mitchellh.ghostty)$
-      windowrulev2 = size 70% 65%, class:^(com.mitchellh.ghostty)$
+    windowrulev2 = float, class:^(com.mitchellh.ghostty)$
+    windowrulev2 = size 70% 65%, class:^(com.mitchellh.ghostty)$
 	  windowrulev2 = float, initialTitle:^https://duckduckgo.com - qutebrowser$
 	  windowrulev2 = size 900 600, initialTitle:^https://duckduckgo.com - qutebrowser$
 	  windowrulev2 = center, initialTitle:^https://duckduckgo.com - qutebrowser$

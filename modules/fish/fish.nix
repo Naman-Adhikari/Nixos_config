@@ -45,10 +45,10 @@ end
 		ais = "sudo systemctl stop ollama.service";
 		ai = "sudo systemctl start ollama.service";
 		qwen = "ollama run qwen2.5-coder:1.5b";
-		bluetooth = "python3 ~/Programming/python/pyprojects/bluetooth/bluetooth.py";
-		imgsort = "python3 ~/Programming/python/pyprojects/imagesorter/imagesorter.py";
+		bluetooth = "python3 ~/Programming/Noframe/python/pyprojects/bluetooth/bluetooth.py";
+		imgsort = "python3 ~/Programming/Noframe/python/pyprojects/imagesorter/imagesorter.py";
 		tlp = "sudo tlp start";
-		rmgen = "python3 ~/Programming/python/pyprojects/homgenremover/homgenremover.py";
+		rmgen = "python3 ~/Programming/Noframe/python/pyprojects/homgenremover/homgenremover.py";
 		gen = "home-manager generations";
 		e = "emacsclient -nw";
 	  };

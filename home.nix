@@ -1,5 +1,4 @@
 { config, pkgs, pkgsUnstable, ... }:
-
 {
   home.username = "lostfromlight";
   home.homeDirectory = "/home/lostfromlight";
@@ -33,6 +32,7 @@
 	qbittorrent
 	caligula
 	zathura
+    picom
 	texliveFull
     waybar
     kitty
@@ -90,6 +90,7 @@
     xdg-desktop-portal  
     xdg-desktop-portal-wlr  
     entr
+    tree
   ])
 
     ++
@@ -116,7 +117,6 @@ emacs
     enable = true;
     defaultApplications = {
       "application/pdf" = "org.pwmt.zathura.desktop";
-      
       "x-scheme-handler/http" = "org.qutebrowser.qutebrowser";
       "x-scheme-handler/https" = "org.qutebrowser.qutebrowser";
       "x-scheme-handler/chrome" = "org.qutebrowser.qutebrowser";

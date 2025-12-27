@@ -33,7 +33,7 @@
     dns = "default";  
   };
 
-#networking.nameservers = [ "1.1.1.1" "8.8.8.8" ];
+networking.nameservers = [ "1.1.1.1" "8.8.8.8" ];
 
 # environment.etc."resolv.conf".text = ''
 #	nameserver 1.1.1.1
@@ -153,7 +153,7 @@ services.tlp.settings = {
   services.printing.enable = true;
 
 
-  virtualisation.docker.enable = true;
+  virtualisation.docker.enable = false;
 
 
   services.power-profiles-daemon.enable = false;
