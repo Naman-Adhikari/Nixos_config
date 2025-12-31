@@ -91,6 +91,10 @@
     xdg-desktop-portal-wlr  
     entr
     tree
+    jdk17
+    steam-run
+    img2pdf
+    wine
   ])
 
     ++
