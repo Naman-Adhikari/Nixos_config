@@ -21,8 +21,8 @@ window#waybar.hidden {
   border: solid 1px #80c0ff;
   border-bottom : solid 3px #80c0ff;
   transition: all 0.3s ease;
-  color: #ffffff;
-  background: rgba(128, 192, 255, 0.1);
+  color: #7fd3db;
+  background: #172021;
 }
 
 #custom-updates:hover {
@@ -39,8 +39,8 @@ window#waybar.hidden {
   border: solid 1px #80c0ff;
   border-bottom : solid 3px #80c0ff;
   transition: all 0.3s ease-in-out;
-  color: #ffffff;
-  background: rgba(128, 192, 255, 0.1);
+  color: #7fd3db;
+  background: #172021;
 }
 
 #workspaces button {
@@ -73,8 +73,8 @@ window#waybar.hidden {
   border: solid 1px #80c0ff;
   border-bottom : solid 3px #80c0ff;
   transition: all 0.3s ease-in-out;
-  color: #ffffff;
-  background: rgba(128, 192, 255, 0.1);
+  color: #7fd3db;
+  background: #172021;
 }
 
 #custom-spotify:hover {
@@ -90,14 +90,14 @@ window#waybar.hidden {
   border: solid 1px #80c0ff;
   border-bottom : solid 3px #80c0ff;
   transition: all 0.3s ease;
-  color: #ffffff;
-  background: rgba(128, 192, 255, 0.1);
+  color: #7fd3db;
+  background: #172021;
 }
 
 #clock:hover {
   border-radius: 20px 20px 5px 5px;
   border-color: #a0d0ff;
-  color: #ffffff;
+  color: #7fd3db;
 }
 
 #custom-cava {
@@ -112,8 +112,8 @@ window#waybar.hidden {
   border: solid 1px #80c0ff;
   border-bottom : solid 3px #80c0ff;
   transition: all 0.3s ease;
-  color: #ffffff;
-  background: rgba(128, 192, 255, 0.1);
+  color: #7fd3db;
+  background: #172021;
 }
 
 #network:hover {
@@ -130,8 +130,8 @@ window#waybar.hidden {
   border: solid 1px #80c0ff;
   border-bottom : solid 3px #80c0ff;
   transition: all 0.3s ease;
-  color: #ffffff;
-  background: rgba(128, 192, 255, 0.1);
+  color: #7fd3db;
+  background: #172021;
 }
 
 #pulseaudio:hover {
@@ -148,8 +148,8 @@ window#waybar.hidden {
   border: solid 1px #80c0ff;
   border-bottom : solid 3px #80c0ff;
   transition: all 0.3s ease;
-  color: #ffffff;
-  background: rgba(128, 192, 255, 0.1);
+  color: #7fd3db;
+  background: #172021;
 }
 
 #backlight:hover {
@@ -166,8 +166,8 @@ window#waybar.hidden {
   border: solid 1px #80c0ff;
   border-bottom : solid 3px #80c0ff;
   transition: all 0.3s ease;
-  color: #ffffff;
-  background: rgba(128, 192, 255, 0.1);
+  color: #7fd3db;
+  background: #172021;
 }
 
 #battery:hover {
@@ -177,10 +177,10 @@ window#waybar.hidden {
 }
 
 #battery.charging {
-  color: #ffffff;
+  color: #7fd3db;
   padding-right: 9px;
   padding-left: 9px;
-  background: rgba(128, 192, 255, 0.1);
+  background: #172021;
   border: solid 1px #80ff80;
   border-bottom : solid 3px #80c0ff;
 }
@@ -204,7 +204,7 @@ window#waybar.hidden {
 
 #tooltip {
   background-color: rgba(30, 30, 30, 0.8);
-  color: #ffffff;
+  color: #7fd3db;
 }
 
 #tray {
@@ -215,8 +215,8 @@ window#waybar.hidden {
   border: solid 1px #80c0ff;
   border-bottom : solid 3px #80c0ff;
   transition: all 0.3s ease;
-  color: #ffffff;
-  background: rgba(128, 192, 255, 0.1);
+  color: #7fd3db;
+  background: #172021;
 }
 
 #tray:hover {
@@ -231,8 +231,8 @@ window#waybar.hidden {
   border-radius: 20px 20px 20px 20px;
   border: solid 1px #80c0ff;
   border-bottom : solid 3px #80c0ff;
-  color: #ffffff;
-  background: rgba(128, 192, 255, 0.1);
+  color: #7fd3db;
+  background: #172021;
 }
 
 #custom-recorder.recording {
@@ -246,7 +246,7 @@ window#waybar.hidden {
 @keyframes blink {
   to {
     background-color: #80c0ff;
-    color: #ffffff;
+    color: #7fd3db;
   }
 }
 
