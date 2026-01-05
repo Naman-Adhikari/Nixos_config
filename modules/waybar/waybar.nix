@@ -94,8 +94,8 @@
         };
 
         "custom/recorder" = {
-          exec = "~/.dotfiles/home/scripts/record-status.sh";
-          interval = 1;
+          "exec" = "~/.dotfiles/home/scripts/record-status.sh";
+          "interval" = 1;
           "on-click" = "~/.dotfiles/home/scripts/toggle-record.sh";
           "return-type" = "json";
         };

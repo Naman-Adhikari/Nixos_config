@@ -19,8 +19,8 @@ fi
 # Wallpaper toggle
 # --------------------------
 
-WALLPAPER1="$HOME/.dotfiles/home/ghost.jpg"
-WALLPAPER2="$HOME/.dotfiles/home/ponyo.jpg"
+WALLPAPER2="$HOME/.dotfiles/home/irithyl.jpg"
+WALLPAPER1="$HOME/.dotfiles/home/dawngate.jpg"
 CURRENT_FILE="$HOME/.config/fastfetch/current.png"
 GIAS="$HOME/.dotfiles/home/gias.png"
 TOTORO="$HOME/.dotfiles/home/totoro.png"
