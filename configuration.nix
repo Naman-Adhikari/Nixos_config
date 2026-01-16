@@ -1,6 +1,27 @@
 
-{lib, confit, pkgs,  ... }:
+{lib, config, pkgs,  ... }:
 
+let
+  nvidia-offload = pkgs.stdenv.mkDerivation {
+    pname = "nvidia-offload";
+    version = "1.0";
+
+    src = null;
+
+    buildCommand = ''
+      mkdir -p $out/bin
+      cat > $out/bin/nvidia-offload <<'EOF'
+      #!/bin/sh
+      export __NV_PRIME_RENDER_OFFLOAD=1
+      export __NV_PRIME_RENDER_OFFLOAD_PROVIDER=NVIDIA-G0
+      export __GLX_VENDOR_LIBRARY_NAME=nvidia
+      export __VK_LAYER_NV_optimus=NVIDIA_only
+      exec "$@"
+      EOF
+      chmod +x $out/bin/nvidia-offload
+    '';
+  };
+in
 {
   imports =
     [
@@ -57,8 +78,6 @@ networking.nameservers = [ "1.1.1.1" "8.8.8.8" ];
  services.displayManager.sessionPackages = [ pkgs.niri ];
 
 
-#Disable nvidia gpu to enter integrated mode (uncomment to disnable nvidia)
-#boot.blacklistedKernelModules = [ "nvidia" "nvidia_drm" "nvidia_modeset" "nvidia_uvm" ];
 
 programs.fish.enable = true;
 users.users.lostfromlight = {
@@ -67,20 +86,8 @@ users.users.lostfromlight = {
 
 
 
-services.xserver.videoDrivers = ["nvidia"];
 nix.settings.experimental-features = [ "nix-command" "flakes"];
 
-services.ollama.enable = true;
-#services.ollama.acceleration = "cuda";
-nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
-  "cuda_cudart"
-  "libcublas"
-  "cuda_cccl"
-  "cuda_nvcc"
-  "nvidia-x11"
-  "nvidia-settings"
-  "libnvoptix"
-];
 
 
   environment.sessionVariables = {
@@ -94,20 +101,56 @@ nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
       "\${HOME}/.steam/root/compatibilitytools.d";
  };
 
-  hardware = {
-    graphics.enable = true;
-    nvidia.modesetting.enable = true;
-    nvidia.open = false;
-    nvidia.nvidiaSettings = true;
+#---------------NVIDIA CONFIG------------------------------------#
+
+services.ollama.enable = true;
+#services.ollama.acceleration = "cuda";
+nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
+  "cuda_cudart"
+  "libcublas"
+  "cuda_cccl"
+  "cuda_nvcc"
+  "nvidia-x11"
+  "nvidia-settings"
+  "libnvoptix"
+];
+
+  services.xserver.videoDrivers = ["modesetting" "nvidia"];
+
+  hardware.nvidia = {
+
+    modesetting.enable = true;
+    powerManagement.enable = false;
+
+    powerManagement.finegrained = false;
+
+    open = false;
+
+    nvidiaSettings = true;
+
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
+  };
+
+hardware.nvidia.prime = {
+    offload = {
+      enable = true;
+      enableOffloadCmd = true;
+    };
+    intelBusId = "PCI:0:2:0";
+    nvidiaBusId = "PCI:1:0:0";
+  };
+
+hardware.graphics = {
+  enable = true;
+  enable32Bit = true;
 };
-hardware.opengl = {
-  enable = true;             # enable OpenGL
-  driSupport32Bit = true;    # required for Steam / 32-bit games
-};
+
+#Disable nvidia gpu to enter integrated mode (uncomment to disnable nvidia)
+#boot.blacklistedKernelModules = [ "nvidia" "nvidia_drm" "nvidia_modeset" "nvidia_uvm" ];
+
+#----------------------------------------------------------------------#
 
 services.flatpak.enable = true;
-
-
 services.tlp.enable = false;
 services.tlp.settings = {
     CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
@@ -201,9 +244,6 @@ nixpkgs.config = {
     };
   };
 
-
-
-
   environment.systemPackages = with pkgs; [
     wget
     fish
@@ -220,12 +260,9 @@ nixpkgs.config = {
     glib
     mpd
 	os-prober
+    lshw
+    nvidia-offload
+
  ];
 
-
 }
-
-
-
-
-

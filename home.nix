@@ -32,7 +32,6 @@
 	qbittorrent
 	caligula
 	zathura
-    picom
 	texliveFull
     waybar
     kitty
@@ -94,7 +93,10 @@
     jdk17
     steam-run
     img2pdf
-    wine
+    cliphist
+    wineWowPackages.full
+	winetricks
+	file
   ])
 
     ++

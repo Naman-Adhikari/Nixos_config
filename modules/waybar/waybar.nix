@@ -6,16 +6,17 @@
     settings = {
       mainBar = {
         margin = "5 20 0 20";
-        modules-left = [ "custom/updates" "hyprland/workspaces" "custom/spotify" "custom/cava" ];
+        modules-left = [ "custom/clipboard" "hyprland/workspaces" "custom/spotify" "custom/cava" ];
         modules-center = [ "clock" ];
         modules-right = [ "network" "pulseaudio" "backlight" "battery" "custom/ytube" "tray" "custom/recorder" ];
 
         # Module configurations
-        "custom/updates" = {
-          format = "   ";
-          interval = 7200;
-          on-click = "ghostty -e btop";
-          signal = 8;
+        "custom/clipboard" = {
+          exec = "cliphist list | wc -l";
+          interval = 2;
+          format = "📋";
+          tooltip = true;
+          on-click = "~/.dotfiles/home/scripts/clipboard-rofi.sh";
         };
 
         "hyprland/workspaces" = {

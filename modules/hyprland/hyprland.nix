@@ -14,6 +14,7 @@
       # ██▄ █░█ ██▄ █▄▄
       exec-once = bash -c "${config.home.homeDirectory}/.dotfiles/home/scripts/lock.sh"
       exec-once = bash -c "${config.home.homeDirectory}/.dotfiles/home/scripts/winsound.sh"
+      exec-once = wl-paste --watch cliphist store
       exec-once = bash -c "sleep 0.9 && hyprpaper"
       exec-once = bash -c "swww init"
       exec-once = bash -c "emacs --daemon"
@@ -53,7 +54,7 @@
         gaps_out= 10
         border_size= 1
         resize_on_border = true
-        col.active_border = rgba(068787ff) rgba(6b0104ff) 90deg
+        col.active_border = rgba(ffffffff) rgba(000000ff) 90deg
         col.inactive_border = rgba(000000aa)
         allow_tearing = false 
         layout = dwindle
@@ -140,7 +141,8 @@ new_optimizations = true
       bind = SUPER, escape, exec, shutdown now
       bind = SUPER SHIFT, L, exec, ${config.home.homeDirectory}/.dotfiles/home/scripts/lock.sh
       bind = SUPER, 0,  exec, ${config.home.homeDirectory}/.dotfiles/home/scripts/ricetoggle.sh
-      bind = SUPER, C,  exec, bongocat --config ~/.config/wayland-bongocat/bongocat.conf 
+      bind = SUPER SHIFT, C,  exec, bongocat --config ~/.config/wayland-bongocat/bongocat.conf
+      bind = SUPER, C,  exec, ~/.dotfiles/home/scripts/clipboard-rofi.sh
       bind = SUPER, U, exec, dbus-run-session -- steam-run $(which unityhub)
       bind = SUPER, F, fullscreen,
       bind = SUPER, Q, killactive,
@@ -243,6 +245,7 @@ new_optimizations = true
 
       # Nvidia
       env = LIBVA_DRIVER_NAME,nvidia
+      env = AQ_DRM_DEVICES,/dev/dri/card1
       env = XDG_SESSION_TYPE,wayland
       env = GBM_BACKEND,nvidia-drm
       env = __GLX_VENDOR_LIBRARY_NAME,nvidia
