@@ -50,7 +50,7 @@
     jq
     atuin
     zoxide
-    direnv
+    nix-direnv
     starship
     fastfetch
     hyprpaper
