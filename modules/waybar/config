@@ -1,0 +1,122 @@
+[
+  {
+    "backlight": {
+      "device": "intel_backlight",
+      "format": "{percent}% {icon}",
+      "format-icons": [
+        "🌑",
+        "🌒",
+        "🌓",
+        "🌔",
+        "🌕"
+      ],
+      "min-length": 5
+    },
+    "battery": {
+      "format": " {capacity}% {icon} ",
+      "format-alt": "{time} {icon}",
+      "format-charging": "{capacity}% ",
+      "format-icons": [
+        "▁",
+        "▂",
+        "▃",
+        "▄",
+        "▅"
+      ],
+      "format-plugged": "{capacity}% ",
+      "states": {
+        "critical": 15,
+        "warning": 30
+      }
+    },
+    "clock": {
+      "format": "{:%a | %d %b | %I:%M %p}",
+      "tooltip-format": "<big>{:%y %b}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+    "custom/clipboard": {
+      "exec": "cliphist list | wc -l",
+      "format": "📋",
+      "interval": 2,
+      "on-click": "~/.dotfiles/home/scripts/clipboard-rofi.sh",
+      "tooltip": true
+    },
+    "custom/recorder": {
+      "exec": "~/.dotfiles/home/scripts/record-status.sh",
+      "interval": 1,
+      "on-click": "~/.dotfiles/home/scripts/toggle-record.sh",
+      "return-type": "json"
+    },
+    "custom/spotify": {
+      "exec": "~/.dotfiles/home/scripts/spotify.sh",
+      "format": "  {}",
+      "interval": 5,
+      "on-click": "flatpak run com.spotify.client"
+    },
+    "hyprland/workspaces": {
+      "all-outputs": true,
+      "format": "{icon}",
+      "format-icons": {
+        "1": "•",
+        "2": "•",
+        "3": "•",
+        "4": "•",
+        "5": "•",
+        "active": "",
+        "default": ""
+      },
+      "on-click": "activate",
+      "persistent-workspaces": {
+        "*": [
+          2,
+          3
+        ]
+      }
+    },
+    "margin": "5 20 0 20",
+    "modules-center": [
+      "clock"
+    ],
+    "modules-left": [
+      "custom/clipboard",
+      "hyprland/workspaces",
+      "custom/spotify",
+      "custom/cava"
+    ],
+    "modules-right": [
+      "network",
+      "pulseaudio",
+      "backlight",
+      "battery",
+      "custom/ytube",
+      "tray",
+      "custom/recorder"
+    ],
+    "network": {
+      "format-disconnected": "󰤭 Disconnected",
+      "format-ethernet": "󰈁 Ethernet",
+      "format-wifi": "󰤨  {essid} ({signalStrength}%)",
+      "on-click": "~/.dotfiles/home/scripts/nmtui.sh"
+    },
+    "pulseaudio": {
+      "format": "{volume}% {icon}",
+      "format-bluetooth": "{volume}% {icon}",
+      "format-icons": {
+        "default": [
+          "🕨",
+          "🕩",
+          "🕪"
+        ],
+        "headphone": ""
+      },
+      "format-muted": " {format_source}",
+      "format-source-muted": "Mute 🚫",
+      "min-length": 13,
+      "on-click": "pavucontrol",
+      "reverse-scrolling": 1
+    },
+    "tray": {
+      "icon-size": 16,
+      "spacing": 4
+    }
+  }
+]

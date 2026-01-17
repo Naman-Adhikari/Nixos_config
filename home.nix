@@ -5,15 +5,6 @@
   home.stateVersion = "25.05"; 
 
   imports = [
-    ./modules/fish/fish.nix
-    ./modules/qutebrowser/qutebrowser.nix
-    ./modules/bongocat/bongocat.nix
-    ./modules/kitty/kitty.nix
-    ./modules/ghostty/ghostty.nix
-    ./modules/waybar/waybar.nix
-    ./modules/rofi/rofi.nix
-    ./modules/fastfetch/fastfetch.nix
-    ./modules/hyprland/hyprland.nix
   ];
 
   home.packages = 
@@ -51,6 +42,7 @@
     atuin
     zoxide
     nix-direnv
+    direnv
     starship
     fastfetch
     hyprpaper
@@ -146,12 +138,56 @@ emacs
   };
   programs.home-manager.enable = true;
   programs.neovim.enable = true;
-  programs.fish.enable = true;
 
   xdg.configFile."nvim" = {
   source = config.lib.file.mkOutOfStoreSymlink "/home/lostfromlight/.dotfiles/modules/nvim";
   recursive = true;
 };
+#-------------------mkOutOfSymlink for my dotfiles-------------------------------#
+home.file.".config/hypr/hyprland.conf".source =
+  config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/modules/hyprland/hyprland.conf";
+
+home.file.".config/hypr/hyprlock.conf".source=
+  config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/modules/hyprland/hyprlock.conf";
+
+home.file.".config/hypr/pyprland.toml".source=
+  config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/modules/hyprland/pyprland.toml";
+
+home.file.".config/wayland-bongocat/bongocat.conf".source=
+  config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/modules/bongocat/bongocat.conf";
+
+home.file.".config/fastfetch/config.jsonc".source=
+  config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/modules/fastfetch/config.jsonc";
+
+home.file.".config/fish/config.fish".source=
+  config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/modules/fish/config.fish";
+
+home.file.".config/ghostty/config".source=
+  config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/modules/ghostty/config";
+
+home.file.".config/starship.toml".source=
+  config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/modules/ghostty/starship.toml";
+
+home.file.".config/qutebrowser/config.py".source=
+  config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/modules/qutebrowser/config.py";
+
+home.file.".config/rofi/config.rasi".source=
+  config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/modules/rofi/config.rasi";
+
+  home.file.".config/waybar/config".source =
+    config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/modules/waybar/config";
+
+  home.file.".config/waybar/style1.css".source =
+    config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/modules/waybar/style1.css";
+
+  home.file.".config/waybar/style2.css".source =
+    config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/modules/waybar/style2.css";
+
+  home.file.".config/waybar/scripts".source =
+    config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/home/scripts";
+
+  home.file.".config/kitty/kitty.conf".source =
+    config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/modules/kitty.conf";
 
   nixpkgs.config.allowUnfree = true;
   xdg.portal = {

@@ -5,7 +5,7 @@ cliphist list \
   | rofi -dmenu \
       -p "Clipboard" \
       -theme-str '
-        window { width: 450px; }
+        window { width: 750px; }
         listview { lines: 10; }
       ' \
   | cliphist decode \

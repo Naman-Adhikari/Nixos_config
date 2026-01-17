@@ -1,9 +1,3 @@
-{ pkgs, ... }:
-
-let
-  shaderPath = toString ../home/shaders/matrixhall.glsl;
-in {
-  xdg.configFile."ghostty/config".text = ''
     font-family = JetbrainsMono
     font-size = 14
 
@@ -42,7 +36,7 @@ in {
 
     # Uncomment if needed:
     # custom-shader-animation = always
-    # custom-shader           = ${shaderPath}
+    # custom-shader           = /nix/store/xxwcdndk9igr5igay9s3fkzv0ckqglnl-source/modules/home/shaders/matrixhall.glsl
 
     ## KEYBINDS ##
     keybind = ctrl+s=new_split:right
@@ -63,7 +57,3 @@ in {
     keybind = ctrl+i=inspector:toggle
     keybind = ctrl+shift+plus=increase_font_size:1
     keybind = ctrl+shift+minus=decrease_font_size:1
-  '';
-home.file.".config/starship.toml".source = ./starship.toml;
-
-}

@@ -1,17 +1,12 @@
-{config, pkgs, ...}:
-
-{
-  xdg.configFile."qutebrowser/config.py".text = ''
 config.load_autoconfig()
 
-
 #-------------------Colors-------------------------
-fg = "#d8dee9"     
-bg = "#1e1e2e"      
-accent = "#81a1c1"  
-accent2 = "#bf616a" 
+fg = "#d8dee9"
+bg = "#1e1e2e"
+accent = "#81a1c1"
+accent2 = "#bf616a"
 red = "#bf616a"
-green = "#a3be8c"    
+green = "#a3be8c"
 
 
 
@@ -32,17 +27,17 @@ c.content.blocking.method = "both"
 c.content.blocking.adblock.lists = [
     "https://easylist.to/easylist/easylist.txt",
     "https://easylist.to/easylist/easyprivacy.txt",
-    
-    "https://easylist-downloads.adblockplus.org/easylistgermany.txt", 
-    "https://easylist-downloads.adblockplus.org/liste_fr.txt",         
-    
-    "https://filterlists.com/cdn/filters/11.txt",  
-    "https://www.malwaredomains.com/files/justdomains",  
-    "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts",  
+
+    "https://easylist-downloads.adblockplus.org/easylistgermany.txt",
+    "https://easylist-downloads.adblockplus.org/liste_fr.txt",
+
+    "https://filterlists.com/cdn/filters/11.txt",
+    "https://www.malwaredomains.com/files/justdomains",
+    "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts",
     "https://mirror1.malwaredomains.com/files/justdomains",
-    
+
     "https://easylist-downloads.adblockplus.org/antiadblockfilters.txt",
-    
+
     "https://secure.fanboy.co.nz/fanboy-annoyance.txt",
     "https://secure.fanboy.co.nz/fanboy-social.txt",
 "https://github.com/uBlockOrigin/uAssets/raw/master/filters/legacy.txt",
@@ -68,7 +63,7 @@ c.content.blocking.adblock.lists = [
 #---------------Some keybinds-----------------------
 config.bind('j', 'scroll-px 0 80')
 config.bind('k', 'scroll-px 0 -80')
-config.bind('J', 'tab-prev')  
+config.bind('J', 'tab-prev')
 config.bind('K', 'tab-next')
 config.bind('<Ctrl-d>', 'scroll-px 0 300')
 config.bind('<Ctrl-u>', 'scroll-px 0 -300')
@@ -111,14 +106,14 @@ c.colors.completion.scrollbar.bg = "#000000"
 c.colors.completion.scrollbar.fg = "#938f90"
 
 #------------------Tabs---------------------------------
-c.colors.tabs.bar.bg = "#000000" 
-c.colors.tabs.even.bg = "rgba(30, 30, 46, 150)" 
-c.colors.tabs.odd.bg = "rgba(30, 30, 46, 150)"   
+c.colors.tabs.bar.bg = "#000000"
+c.colors.tabs.even.bg = "rgba(30, 30, 46, 150)"
+c.colors.tabs.odd.bg = "rgba(30, 30, 46, 150)"
 c.colors.tabs.even.fg = "#d8dee9"
 c.colors.tabs.odd.fg = "#d8dee9"
 
-c.colors.tabs.selected.even.bg = "#81a1c1"       
-c.colors.tabs.selected.odd.bg = "#bf616a"         
+c.colors.tabs.selected.even.bg = "#81a1c1"
+c.colors.tabs.selected.odd.bg = "#bf616a"
 c.colors.tabs.selected.even.fg = "#1e1e2e"
 c.colors.tabs.selected.odd.fg = "#1e1e2e"
 
@@ -141,7 +136,7 @@ c.colors.completion.category.fg = fg
 
 #------------------Hints----------------------
 c.colors.hints.bg = bg
-c.colors.hints.fg = "#81a1c1"  
+c.colors.hints.fg = "#81a1c1"
 c.hints.border = "#ffffff"
 
 #----------------Messages-------------------
@@ -173,7 +168,3 @@ c.fonts.web.family.fixed = "CaskaydiaCove"
 
 #--------------Custom Css-----------------
 c.content.user_stylesheets = ["~/.dotfiles/modules/qutebrowser/style/youtube.css"]
-
-'';
-}
-	 
