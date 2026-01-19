@@ -43,7 +43,7 @@ window {
     cursor:                      "default";
 
     background-color:            @bg;
-    background-image:            url("~/.dotfiles/home/kanjivine.jpg", width);
+background-image: url("/home/lostfromlight/.dotfiles/home/wallpapers/cynic.png", none);
 }
 
 /*****----- Main Box -----*****/
