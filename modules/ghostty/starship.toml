@@ -21,15 +21,15 @@ palette = 'noctech'
 add_newline = true
 
 [palettes.noctech]
-foreground = "#f4f4f4"
-background = "#000000"
-current_line = "#333333"
-primary = "#111111"
-box = "#1e1e1e"
-gray = "#7f8c8d"
-highlight = "#ffffff"
-dim = "#444444"
-subtle = "#b0b0b0"
+box = '#0f1417'          # muted frame/separators
+background = '#1c2024' # neutral background
+current_line = '#91cef5'    # accent line highlight
+primary = '#ccc1e9'        # main accent for keys
+foreground = '#dfe3e7'   # readable text values
+gray = '#c1c7ce' # subtle secondary info
+highlight = '#91cef5' # softer accent highlight
+dim = '#0f1417'             # neutral dim tone
+subtle = '#00344b'       # bright readable overlay
 
 [os]
 format = "(fg:current_line)[](fg:gray)[$symbol ](fg:primary bg:gray)[](fg:gray)"
@@ -38,11 +38,11 @@ disabled = false
 NixOS = ""
 
 [directory]
-format = "[─](fg:current_line)[](fg:foreground)[󰷏 ](fg:primary bg:highlight)[](fg:foreground bg:box)[ $read_only$truncation_symbol$path](fg:foreground bg:box)[](fg:box)"
+format = "[─](fg:current_line)[](fg:foreground)[ ](fg:primary bg:highlight)[](fg:foreground bg:box)[ $read_only$truncation_symbol$path](fg:foreground bg:box)[](fg:box)"
 home_symbol = " ~/"
 truncation_symbol = " "
 truncation_length = 2
-read_only = "󱧵 "
+read_only = " "
 read_only_style = ""
 
 [git_branch]
@@ -79,7 +79,7 @@ format = "[─](fg:current_line)[](fg:gray)[ ](fg:primary bg:gray)[](fg
 disabled = true
 
 [time]
-format = "[─](fg:current_line)[](fg:gray)[󰦖 ](fg:primary bg:gray)[](fg:gray bg:box)[ $time](fg:foreground bg:box)[](fg:box)"
+format = "[─](fg:current_line)[](fg:gray)[ ](fg:primary bg:gray)[](fg:gray bg:box)[ $time](fg:foreground bg:box)[](fg:box)"
 time_format = "%H:%M"
 disabled = false
 
@@ -93,4 +93,3 @@ format = """
 [╰─$symbol](fg:current_line) """
 success_symbol = "[](fg:#e4e4e4)"
 error_symbol = "[](fg:#ff6666)"
-

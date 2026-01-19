@@ -84,7 +84,10 @@ users.users.lostfromlight = {
   shell = pkgs.fish;
 };
 
-
+services.angrr = {
+  enable=true;
+  period="7d";
+};
 
 nix.settings.experimental-features = [ "nix-command" "flakes"];
 

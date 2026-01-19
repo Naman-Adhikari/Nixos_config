@@ -1,0 +1,279 @@
+@import "colors.css";
+
+* {
+  border: none;
+  border-radius: 0;
+  font-family: JetBrainsMono Nerd Font, monospace;
+  font-size: 14px;
+  min-height: 0px;
+}
+
+window#waybar {
+  background: transparent;
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+window > box {
+  background: transparent;
+}
+
+#custom-clipboard {
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px 20px 5px 20px;
+  border: solid 1px;
+  border-color: @on_surface;
+  border-bottom: 4px solid @primary;
+  transition: background 0.3s ease, color 0.3s ease, border-radius 0.3s ease, border-bottom 0.3s ease;
+  color: @on_surface;
+  background: @on_primary;
+}
+
+#custom-updates:hover {
+  border-radius: 20px 5px 20px 5px;
+  color: @on_primary;
+  border-bottom: 4px solid @primary;
+  background: @inverse_primary;
+}
+
+#workspaces {
+  margin-left: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px 20px 5px 20px;
+  border: solid 1px;
+  border-color: @on_surface;
+  border-bottom: 4px solid @primary;
+  transition: all 0.3s ease-in-out;
+  color: @on_surface;
+  background: @on_primary;
+}
+
+#workspaces button {
+  padding: 0 5px;
+  color: inherit;
+  background: transparent;
+  border: none;
+}
+
+#workspaces button.active {
+  color: @on_surface;
+  text-shadow: 0 0 5px @primary;
+}
+
+#workspaces button:hover {
+  color: @on_primary;
+  background: @inverse_primary;
+}
+
+#workspaces:hover {
+  border-radius: 20px 5px 20px 5px;
+  color: @on_primary;
+  border-bottom: 4px solid @primary;
+  background: @inverse_primary;
+}
+
+#custom-spotify {
+  margin-left: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px 20px 5px 20px;
+  border: solid 1px;
+  border-color: @on_surface;
+  border-bottom: 4px solid @primary;
+  transition: background 0.3s ease-in-out, color 0.3s ease, border-radius 0.3s ease-in-out, border-bottom 0.3s ease;
+  color: @on_surface;
+  background: @on_primary;
+}
+
+#custom-spotify:hover {
+  border-radius: 20px 5px 20px 5px;
+  color: @on_primary;
+  border-bottom: 4px solid @primary;
+  background: @inverse_primary;
+}
+
+#clock {
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 5px 5px 20px 20px;
+  border: solid 1px;
+  border-color: @on_surface;
+  border-bottom: 4px solid @primary;
+  transition: background 0.3s ease, color 0.3s ease, border-radius 0.3s ease, border-bottom 0.3s ease;
+  color: @on_surface;
+  background: @on_primary;
+}
+
+#clock:hover {
+  border-radius: 20px 20px 5px 5px;
+  color: @on_primary;
+  border-bottom: 4px solid @primary;
+  background: @inverse_primary;
+}
+
+#custom-cava {
+  margin-left: 8px;
+}
+
+#network {
+  margin-right: 8px;
+  padding-right: 15px;
+  padding-left: 15px;
+  border-radius: 20px 5px 20px 5px;
+  border: solid 1px;
+  border-color: @on_surface;
+  border-bottom: 4px solid @primary;
+  transition: background 0.3s ease, color 0.3s ease, border-radius 0.3s ease, border-bottom 0.3s ease;
+  color: @on_surface;
+  background: @on_primary;
+}
+
+#network:hover {
+  border-radius: 5px 20px 5px 20px;
+  color: @on_primary;
+  border-bottom: 4px solid @primary;
+  background: @inverse_primary;
+}
+
+#pulseaudio {
+  margin-right: 8px;
+  border-radius: 20px 5px 20px 5px;
+  padding-left: 0px;
+  padding-right: 0px;
+  border: solid 1px;
+  border-color: @on_surface;
+  border-bottom: 4px solid @primary;
+  transition: background 0.3s ease, color 0.3s ease, border-radius 0.3s ease, border-bottom 0.3s ease;
+  color: @on_surface;
+  background: @on_primary;
+}
+
+#pulseaudio:hover {
+  border-radius: 5px 20px 5px 20px;
+  color: @on_primary;
+  border-bottom: 4px solid @primary;
+  background: @inverse_primary;
+}
+
+#backlight {
+  margin-right: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 20px 5px 20px 5px;
+  border: solid 1px;
+  border-color: @on_surface;
+  border-bottom: 4px solid @primary;
+  transition: background 0.3s ease, color 0.3s ease, border-radius 0.3s ease, border-bottom 0.3s ease;
+  color: @on_surface;
+  background: @on_primary;
+}
+
+#backlight:hover {
+  border-radius: 5px 20px 5px 20px;
+  color: @on_primary;
+  border-bottom: 4px solid @primary;
+  background: @inverse_primary;
+}
+
+#battery {
+  margin-right: 8px;
+  padding-left: 1px;
+  padding-right: 1px;
+  border-radius: 20px 5px 20px 5px;
+  border: solid 1px;
+  border-color: @on_surface;
+  border-bottom: 4px solid @primary;
+  transition: background 0.3s ease, color 0.3s ease, border-radius 0.3s ease, border-bottom 0.3s ease;
+  color: @on_surface;
+  background: @on_primary;
+}
+
+#battery:hover {
+  border-radius: 5px 20px 5px 20px;
+  color: @on_primary;
+  border-bottom: 4px solid @primary;
+  background: @inverse_primary;
+}
+
+#battery.charging {
+  color: @on_surface;
+  padding-right: 9px;
+  padding-left: 9px;
+  background-color: @on_primary;
+  border: solid 1px;
+  border-color: @primary;
+  border-bottom: 4px solid @primary;
+}
+
+#battery.warning:not(.charging) {
+  background-color: @on_primary;
+  color: #ff0000;
+  border-color: #ff0000;
+}
+
+#battery.critical:not(.charging) {
+  background-color: @on_primary;
+  color: @on_surface;
+  border-color: #ad2626;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#tooltip {
+  background-color: @on_primary;
+  color: @on_surface;
+  border: 2px solid @inverse_primary;
+}
+
+#tray {
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-right: 8px;
+  border-radius: 20px 10px 10px 5px;
+  border: solid 1px;
+  border-color: @on_surface;
+  border-bottom: 4px solid @primary;
+  transition: background 0.3s ease, color 0.3s ease, border-radius 0.3s ease, border-bottom 0.3s ease;
+  color: @on_surface;
+  background: @on_primary;
+}
+
+#tray:hover {
+  border-radius: 5px 20px 5px 20px;
+  color: @on_primary;
+  border-bottom: 4px solid @primary;
+  background: @inverse_primary;
+}
+
+#custom-recorder {
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 20px 20px 20px 20px;
+  border: solid 1px;
+  border-color: @on_surface;
+  border-bottom: 4px solid @primary;
+  color: @on_surface;
+  background: @on_primary;
+}
+
+#custom-recorder.recording {
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes blink {
+  to {
+    background-color: #eb4034;
+    color: @on_surface;
+  }
+}

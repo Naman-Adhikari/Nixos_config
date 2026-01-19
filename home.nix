@@ -46,7 +46,7 @@
     starship
     fastfetch
     hyprpaper
-    rofi-wayland
+    rofi
     pyprland
     grim
     slurp
@@ -72,7 +72,7 @@
     powertop
     mpc      
     ncmpcpp 
-    protonup  
+    protonup-ng
     octaveFull 
     waypaper    
     wf-recorder  
@@ -94,10 +94,11 @@
     ++
 
    (with pkgsUnstable; [
-  blender
-emacs
-	ghostty   
-	yt-dlp
+    blender
+    matugen
+    emacs
+    ghostty
+    yt-dlp
 ]);
 
 
@@ -143,6 +144,7 @@ emacs
   source = config.lib.file.mkOutOfStoreSymlink "/home/lostfromlight/.dotfiles/modules/nvim";
   recursive = true;
 };
+
 #-------------------mkOutOfSymlink for my dotfiles-------------------------------#
 home.file.".config/hypr/hyprland.conf".source =
   config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/modules/hyprland/hyprland.conf";
@@ -177,8 +179,8 @@ home.file.".config/rofi/config.rasi".source=
   home.file.".config/waybar/config".source =
     config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/modules/waybar/config";
 
-  home.file.".config/waybar/style1.css".source =
-    config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/modules/waybar/style1.css";
+  home.file.".config/waybar/style.css".source =
+    config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/modules/waybar/style.css";
 
   home.file.".config/waybar/style2.css".source =
     config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/modules/waybar/style2.css";
@@ -187,7 +189,13 @@ home.file.".config/rofi/config.rasi".source=
     config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/home/scripts";
 
   home.file.".config/kitty/kitty.conf".source =
-    config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/modules/kitty.conf";
+    config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/modules/kitty/kitty.conf";
+
+  home.file.".config/matugen/config.toml".source =
+    config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/modules/matugen/config.toml";
+
+home.file.".config/matugen/templates".source =
+  config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/modules/matugen/templates";
 
   nixpkgs.config.allowUnfree = true;
   xdg.portal = {

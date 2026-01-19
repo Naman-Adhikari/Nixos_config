@@ -3,9 +3,6 @@
   "display": {
     "separator": "➜   "
   },
-  "general": {
-    "multithreading": true
-  },
   "logo": {
     "height": 20,
     "padding": {
@@ -15,7 +12,7 @@
       "top": 4
     },
     "source": "~/.config/fastfetch/current.png",
-    "type": "kitty-direct",
+    "type": "none",
     "width": 27
   },
   "modules": [
@@ -26,84 +23,92 @@
     },
     "break",
     {
-      "format": "┌──────────────────────────────────────────────────────────────────────────────┐",
+      "format": "                         ┌──────────────────────────────────────────────────────────────────────────────┐",
       "type": "custom"
     },
     "break",
     {
-      "key": "     OS           ",
-      "keyColor": "green",
+      "key": "                              OS          ",
+      "keyColor": "#91cef5",
+      "outputColor":"#ccc1e9",
       "type": "os"
     },
     {
-      "key": "    󰌢 Machine      ",
-      "keyColor": "cyan",
+      "key": "                             Machine       ",
+      "keyColor": "#c1c7ce",
+      "outputColor":"#ccc1e9",
       "type": "host"
     },
     {
-      "key": "     Kernel       ",
-      "keyColor": "white",
+      "key": "                              Kernel      ",
+      "keyColor": "#ccc1e9",
+      "outputColor":"#ccc1e9",
       "type": "kernel"
     },
     {
-      "key": "    󰅐 Uptime       ",
-      "keyColor": "green",
+      "key": "                             Uptime        ",
+      "keyColor": "#91cef5",
+      "outputColor":"#ccc1e9",
       "type": "uptime"
     },
     {
-      "key": "     Packages     ",
-      "keyColor": "cyan",
+      "key": "                              Packages    ",
+      "keyColor": "#ccc1e9",
+      "outputColor":"#ccc1e9",
       "type": "packages"
     },
     {
-      "key": "     WM           ",
-      "keyColor": "white",
+      "key": "                              WM          ",
+      "keyColor": "#91cef5",
+      "outputColor":"#ccc1e9",
       "type": "wm"
     },
     {
-      "key": "     Shell        ",
-      "keyColor": "green",
+      "key": "                              Shell       ",
+      "keyColor": "#91cef5",
+      "outputColor":"#ccc1e9",
       "type": "shell"
     },
     {
-      "key": "     Terminal     ",
-      "keyColor": "cyan",
+      "key": "                              Terminal    ",
+      "keyColor": "#ccc1e9",
+      "outputColor":"#ccc1e9",
       "type": "terminal"
     },
     {
-      "key": "     Font         ",
-      "keyColor": "white",
+      "key": "                              Font        ",
+      "keyColor": "#91cef5",
+      "outputColor":"#ccc1e9",
       "type": "terminalfont"
     },
     {
-      "key": "    󰻠 CPU          ",
-      "keyColor": "green",
+      "key": "                             CPU           ",
+      "keyColor": "#91cef5",
+      "outputColor":"#ccc1e9",
       "type": "cpu"
     },
     {
-      "key": "    󰍛 GPU          ",
-      "keyColor": "cyan",
+      "key": "                             GPU           ",
+      "keyColor": "#ccc1e9",
+      "outputColor":"#ccc1e9",
       "type": "gpu"
     },
     {
-      "key": "    󰑭 Memory       ",
-      "keyColor": "white",
-      "type": "memory"
-    },
-    {
-      "key": "      Wifi        ",
-      "keyColor": "green",
+      "key": "                              Wifi        ",
+      "keyColor": "#91cef5",
+      "outputColor":"#ccc1e9",
       "type": "wifi"
     },
     {
       "compact": true,
-      "key": "    󰩟 Local IP     ",
-      "keyColor": "cyan",
+      "key": "                             Local IP      ",
+      "keyColor": "#ccc1e9",
+      "outputColor":"#ccc1e9",
       "type": "localip"
     },
     "break",
     {
-      "format": "└──────────────────────────────────────────────────────────────────────────────┘",
+      "format": "                         └──────────────────────────────────────────────────────────────────────────────┘",
       "type": "custom"
     },
     "break",
