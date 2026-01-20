@@ -43,7 +43,7 @@ window {
     cursor:                      "default";
 
     background-color:            @bg;
-background-image: url("/home/lostfromlight/.dotfiles/home/wallpapers/cynic.png", none);
+background-image: url("/home/lostfromlight/.dotfiles/home/wallpapers/rosepeak.png", none);
 }
 
 /*****----- Main Box -----*****/
