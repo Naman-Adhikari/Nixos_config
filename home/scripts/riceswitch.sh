@@ -27,3 +27,4 @@ sed -i "s|^background-image = .*|background-image = \"$WALL\"|" "$GHOSTTY_CONFIG
 sed -i "s|^background-image: .*|background-image: url(\"$WALL\", none);|" "$ROFI_CONFIG"
 sleep 0.8
 pkill -USR2 ghostty
+emacsclient -e "(progn (mapc #'disable-theme custom-enabled-themes) (load-theme 'doom-custom t))"

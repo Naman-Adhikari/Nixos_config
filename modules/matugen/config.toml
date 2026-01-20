@@ -13,6 +13,14 @@ output_path = '~/.config/starship.toml'
 input_path = '~/.config/matugen/templates/fast.jsonc'
 output_path = '~/.config/fastfetch/config.jsonc'
 
+[templates.ghostty]
+input_path = '~/.config/matugen/templates/ghostty'
+output_path = '~/.config/ghostty/themes/Matugen'
+
+[templates.yazi]
+input_path = '~/.config/matugen/templates/yazi-theme.toml'
+output_path = '~/.config/yazi/theme.toml'
+
 [templates.waybar]
 input_path = '~/.config/matugen/templates/waybar.css'
 output_path = '~/.config/waybar/colors.css'
@@ -27,3 +35,6 @@ post_hook = 'gsettings set org.gnome.desktop.interface gtk-theme ""; gsettings s
 input_path = '~/.config/matugen/templates/gtk-colors.css'
 output_path = '~/.config/gtk-4.0/colors.css'
 
+[templates.doom]
+input_path = '~/.config/matugen/templates/doom.el'
+output_path = '~/.config/doom/theme/doom-custom-theme.el'

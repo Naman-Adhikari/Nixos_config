@@ -1,7 +1,8 @@
 font-family = JetbrainsMono
 font-size = 14
+theme = "Matugen"
 
-background-image = "/home/lostfromlight/.dotfiles/home/wallpapers/rosepeak.png"
+background-image = "/home/lostfromlight/.dotfiles/home/wallpapers/floathouse.jpg"
 background-image-opacity = 6.5
 background-image-fit = cover
 foreground = e0e0e0
