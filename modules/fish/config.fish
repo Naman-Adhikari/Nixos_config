@@ -6,8 +6,10 @@ end
 set -e fish_command_not_found
 
 # Run fastfetch only inside Ghostty
-if test "$TERM_PROGRAM" = "ghostty"
-    fastfetch
+if set -q TERM
+    if test "$TERM" = "xterm-ghostty"
+        fastfetch
+    end
 end
 
 # Atuin (history)

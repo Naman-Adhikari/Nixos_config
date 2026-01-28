@@ -10,6 +10,8 @@
   home.packages = 
   (with pkgs; [
     lsof
+    openssh_hpn
+kdePackages.kdenlive
     vips
   localsend
   auto-cpufreq

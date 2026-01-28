@@ -38,3 +38,4 @@ output_path = '~/.config/gtk-4.0/colors.css'
 [templates.doom]
 input_path = '~/.config/matugen/templates/doom.el'
 output_path = '~/.config/doom/theme/doom-custom-theme.el'
+
