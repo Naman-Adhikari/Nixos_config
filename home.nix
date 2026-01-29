@@ -9,30 +9,31 @@
 
   home.packages = 
   (with pkgs; [
+    quickshell
     lsof
     openssh_hpn
-kdePackages.kdenlive
+    kdePackages.kdenlive
     vips
-  localsend
-  auto-cpufreq
-	ispell
-	docker
-	steam
-	qutebrowser
-	unzip
-	swww
-	ffmpeg-full
-	qbittorrent
-	caligula
-	zathura
-	texliveFull
+    localsend
+    auto-cpufreq
+    ispell
+    docker
+    steam
+    qutebrowser
+    unzip
+    swww
+    ffmpeg-full
+    qbittorrent
+    caligula
+    zathura
+    texliveFull
     waybar
     kitty
     hyprsunset
     gimp
     audacity
     vlc
-	ani-cli
+    ani-cli
     libreoffice-qt6
     mpv
     kooha
@@ -66,22 +67,22 @@ kdePackages.kdenlive
     copyq
     dunst
     libnotify
-    brightnessctl 
-    imv         
-    yazi        
-    toipe        
+    brightnessctl
+    imv
+    yazi
+    toipe
     pulseaudio
     powertop
-    mpc      
-    ncmpcpp 
+    mpc
+    ncmpcpp
     protonup-ng
-    octaveFull 
-    waypaper    
-    wf-recorder  
-    bibata-cursors 
-    desktop-file-utils 
-    xdg-desktop-portal  
-    xdg-desktop-portal-wlr  
+    octaveFull
+    waypaper
+    wf-recorder
+    bibata-cursors
+    desktop-file-utils
+    xdg-desktop-portal
+    xdg-desktop-portal-wlr
     entr
     tree
     jdk17
@@ -89,8 +90,8 @@ kdePackages.kdenlive
     img2pdf
     cliphist
     wineWowPackages.full
-	winetricks
-	file
+    winetricks
+    file
   ])
 
     ++
@@ -196,8 +197,11 @@ home.file.".config/rofi/config.rasi".source=
   home.file.".config/matugen/config.toml".source =
     config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/modules/matugen/config.toml";
 
-home.file.".config/matugen/templates".source =
-  config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/modules/matugen/templates";
+  home.file.".config/matugen/templates".source =
+    config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/modules/matugen/templates";
+
+  home.file.".config/quickshell/shell.qml".source=
+    config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/modules/quickshell/shell.qml";
 
   nixpkgs.config.allowUnfree = true;
   xdg.portal = {

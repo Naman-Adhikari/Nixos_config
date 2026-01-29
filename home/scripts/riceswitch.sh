@@ -17,14 +17,11 @@ swww img "$WALL" --transition-type grow --transition-step 25 --transition-fps 15
 
 matugen image "$WALL"
 
-GHOSTTY_CONFIG="$HOME/.dotfiles/modules/ghostty/config";
-ROFI_CONFIG="$HOME/.dotfiles/modules/rofi/config.rasi";
-
-cp "$GHOSTTY_CONFIG" "$GHOSTTY_CONFIG.bak"
-cp "$ROFI_CONFIG" "$ROFI_CONFIG.bak"
-
-sed -i "s|^background-image = .*|background-image = \"$WALL\"|" "$GHOSTTY_CONFIG"
-sed -i "s|^background-image: .*|background-image: url(\"$WALL\", none);|" "$ROFI_CONFIG"
 sleep 0.8
 pkill -USR2 ghostty
+
+for pid in $(pgrep -x fish); do
+    kill -USR1 "$pid"
+done
+
 emacsclient -e "(progn (mapc #'disable-theme custom-enabled-themes) (load-theme 'doom-custom t))"

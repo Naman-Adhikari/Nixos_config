@@ -4,111 +4,108 @@
     "separator": "➜   "
   },
   "logo": {
-    "height": 20,
-    "padding": {
-      "bottom": 2,
-      "left": 5,
-      "right": 5,
-      "top": 4
-    },
-    "source": "~/.config/fastfetch/current.png",
-    "type": "none",
-    "width": 27
+    "source": "~/.dotfiles/modules/fastfetch/logo.txt",
+    "type": "file",
+    "color": {
+                "1": "#fbb974",
+                "2": "#bfcc9b",
+                "3": "#fbb974"
+            }
   },
   "modules": [
     "break",
     {
-      "format": "                                {6}{7}{8}",
+      "format": "                             {6}{7}{8}",
       "type": "title"
     },
     "break",
     {
-      "format": "                         ┌──────────────────────────────────────────────────────────────────────────────┐",
+      "format": "┌────────────────────────────────────────────────────────────────────┐",
       "type": "custom"
     },
     "break",
     {
-      "key": "                              OS          ",
-      "keyColor": "#91d5ad",
-      "outputColor":"#a4cddd",
+      "key": "  OS",
+      "keyColor": "#fbb974",
+      "outputColor": "#bfcc9b",
       "type": "os"
     },
     {
-      "key": "                             Machine       ",
-      "keyColor": "#c0c9c1",
-      "outputColor":"#a4cddd",
+      "key": "  Machine",
+      "keyColor": "#d5c3b5",
+      "outputColor": "#bfcc9b",
       "type": "host"
     },
     {
-      "key": "                              Kernel      ",
-      "keyColor": "#a4cddd",
-      "outputColor":"#a4cddd",
+      "key": "  Kernel",
+      "keyColor": "#bfcc9b",
+      "outputColor": "#bfcc9b",
       "type": "kernel"
     },
     {
-      "key": "                             Uptime        ",
-      "keyColor": "#91d5ad",
-      "outputColor":"#a4cddd",
+      "key": "  Uptime",
+      "keyColor": "#fbb974",
+      "outputColor": "#bfcc9b",
       "type": "uptime"
     },
     {
-      "key": "                              Packages    ",
-      "keyColor": "#a4cddd",
-      "outputColor":"#a4cddd",
+      "key": "  Packages",
+      "keyColor": "#bfcc9b",
+      "outputColor": "#bfcc9b",
       "type": "packages"
     },
     {
-      "key": "                              WM          ",
-      "keyColor": "#91d5ad",
-      "outputColor":"#a4cddd",
+      "key": "  WM",
+      "keyColor": "#fbb974",
+      "outputColor": "#bfcc9b",
       "type": "wm"
     },
     {
-      "key": "                              Shell       ",
-      "keyColor": "#91d5ad",
-      "outputColor":"#a4cddd",
+      "key": "  Shell",
+      "keyColor": "#fbb974",
+      "outputColor": "#bfcc9b",
       "type": "shell"
     },
     {
-      "key": "                              Terminal    ",
-      "keyColor": "#a4cddd",
-      "outputColor":"#a4cddd",
+      "key": "  Terminal",
+      "keyColor": "#bfcc9b",
+      "outputColor": "#bfcc9b",
       "type": "terminal"
     },
     {
-      "key": "                              Font        ",
-      "keyColor": "#91d5ad",
-      "outputColor":"#a4cddd",
+      "key": "  Font",
+      "keyColor": "#fbb974",
+      "outputColor": "#bfcc9b",
       "type": "terminalfont"
     },
     {
-      "key": "                             CPU           ",
-      "keyColor": "#91d5ad",
-      "outputColor":"#a4cddd",
+      "key": "  CPU",
+      "keyColor": "#fbb974",
+      "outputColor": "#bfcc9b",
       "type": "cpu"
     },
     {
-      "key": "                             GPU           ",
-      "keyColor": "#a4cddd",
-      "outputColor":"#a4cddd",
+      "key": "  GPU",
+      "keyColor": "#bfcc9b",
+      "outputColor": "#bfcc9b",
       "type": "gpu"
     },
     {
-      "key": "                              Wifi        ",
-      "keyColor": "#91d5ad",
-      "outputColor":"#a4cddd",
+      "key": "  Wifi",
+      "keyColor": "#fbb974",
+      "outputColor": "#bfcc9b",
       "type": "wifi"
     },
     {
       "compact": true,
-      "key": "                             Local IP      ",
-      "keyColor": "#a4cddd",
-      "outputColor":"#a4cddd",
+      "key": "  Local IP",
+      "keyColor": "#bfcc9b",
+      "outputColor": "#bfcc9b",
       "type": "localip"
     },
     "break",
     {
-      "format": "                         └──────────────────────────────────────────────────────────────────────────────┘",
+      "format": "└────────────────────────────────────────────────────────────────────┘",
       "type": "custom"
     },
     "break",

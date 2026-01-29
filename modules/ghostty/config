@@ -2,9 +2,10 @@ font-family = JetbrainsMono
 font-size = 14
 theme = "Matugen"
 
-background-image = "/home/lostfromlight/.dotfiles/home/wallpapers/cynic.png"
-background-image-opacity = 6.5
-background-image-fit = cover
+#background-image = "/home/lostfromlight/.dotfiles/home/blackwave.jpg"
+#background-image-opacity = 4.2
+#background-image-fit = cover
+background = 000000
 foreground = e0e0e0
 cursor-color = ffffff
 selection-background = 303030
@@ -30,14 +31,14 @@ palette=15=ffffff
 
 
 window-show-tab-bar = auto
-background-opacity = 0.2
-background-blur = 70
+background-opacity = 1.0
+background-blur = 190
 window-decoration = none
 confirm-close-surface = false
 
 # Uncomment if needed:
-# custom-shader-animation = always
-# custom-shader           = /nix/store/xxwcdndk9igr5igay9s3fkzv0ckqglnl-source/modules/home/shaders/matrixhall.glsl
+ custom-shader-animation = true
+ custom-shader           = /home/lostfromlight/.dotfiles/home/shaders/water.glsl
 
 ## KEYBINDS ##
 keybind = ctrl+s=new_split:right

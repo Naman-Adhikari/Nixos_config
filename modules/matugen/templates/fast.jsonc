@@ -4,111 +4,108 @@
     "separator": "➜   "
   },
   "logo": {
-    "height": 20,
-    "padding": {
-      "bottom": 2,
-      "left": 5,
-      "right": 5,
-      "top": 4
-    },
-    "source": "~/.config/fastfetch/current.png",
-    "type": "none",
-    "width": 27
+    "source": "~/.dotfiles/modules/fastfetch/logo.txt",
+    "type": "file",
+    "color": {
+                "1": "{{colors.primary.default.hex}}",
+                "2": "{{colors.tertiary.default.hex}}",
+                "3": "{{colors.primary_fixed_dim.default.hex}}"
+            }
   },
   "modules": [
     "break",
     {
-      "format": "                                {6}{7}{8}",
+      "format": "                             {6}{7}{8}",
       "type": "title"
     },
     "break",
     {
-      "format": "                         ┌──────────────────────────────────────────────────────────────────────────────┐",
+      "format": "┌────────────────────────────────────────────────────────────────────┐",
       "type": "custom"
     },
     "break",
     {
-      "key": "                              OS          ",
+      "key": "  OS",
       "keyColor": "{{colors.primary.default.hex}}",
-      "outputColor":"{{colors.tertiary.default.hex}}",
+      "outputColor": "{{colors.tertiary.default.hex}}",
       "type": "os"
     },
     {
-      "key": "                             Machine       ",
+      "key": "  Machine",
       "keyColor": "{{colors.on_surface_variant.default.hex}}",
-      "outputColor":"{{colors.tertiary.default.hex}}",
+      "outputColor": "{{colors.tertiary.default.hex}}",
       "type": "host"
     },
     {
-      "key": "                              Kernel      ",
+      "key": "  Kernel",
       "keyColor": "{{colors.tertiary.default.hex}}",
-      "outputColor":"{{colors.tertiary.default.hex}}",
+      "outputColor": "{{colors.tertiary.default.hex}}",
       "type": "kernel"
     },
     {
-      "key": "                             Uptime        ",
+      "key": "  Uptime",
       "keyColor": "{{colors.primary_fixed_dim.default.hex}}",
-      "outputColor":"{{colors.tertiary.default.hex}}",
+      "outputColor": "{{colors.tertiary.default.hex}}",
       "type": "uptime"
     },
     {
-      "key": "                              Packages    ",
+      "key": "  Packages",
       "keyColor": "{{colors.tertiary.default.hex}}",
-      "outputColor":"{{colors.tertiary.default.hex}}",
+      "outputColor": "{{colors.tertiary.default.hex}}",
       "type": "packages"
     },
     {
-      "key": "                              WM          ",
+      "key": "  WM",
       "keyColor": "{{colors.primary.default.hex}}",
-      "outputColor":"{{colors.tertiary.default.hex}}",
+      "outputColor": "{{colors.tertiary.default.hex}}",
       "type": "wm"
     },
     {
-      "key": "                              Shell       ",
+      "key": "  Shell",
       "keyColor": "{{colors.primary.default.hex}}",
-      "outputColor":"{{colors.tertiary.default.hex}}",
+      "outputColor": "{{colors.tertiary.default.hex}}",
       "type": "shell"
     },
     {
-      "key": "                              Terminal    ",
+      "key": "  Terminal",
       "keyColor": "{{colors.tertiary.default.hex}}",
-      "outputColor":"{{colors.tertiary.default.hex}}",
+      "outputColor": "{{colors.tertiary.default.hex}}",
       "type": "terminal"
     },
     {
-      "key": "                              Font        ",
+      "key": "  Font",
       "keyColor": "{{colors.primary_fixed_dim.default.hex}}",
-      "outputColor":"{{colors.tertiary.default.hex}}",
+      "outputColor": "{{colors.tertiary.default.hex}}",
       "type": "terminalfont"
     },
     {
-      "key": "                             CPU           ",
+      "key": "  CPU",
       "keyColor": "{{colors.primary.default.hex}}",
-      "outputColor":"{{colors.tertiary.default.hex}}",
+      "outputColor": "{{colors.tertiary.default.hex}}",
       "type": "cpu"
     },
     {
-      "key": "                             GPU           ",
+      "key": "  GPU",
       "keyColor": "{{colors.tertiary.default.hex}}",
-      "outputColor":"{{colors.tertiary.default.hex}}",
+      "outputColor": "{{colors.tertiary.default.hex}}",
       "type": "gpu"
     },
     {
-      "key": "                              Wifi        ",
+      "key": "  Wifi",
       "keyColor": "{{colors.primary_fixed_dim.default.hex}}",
-      "outputColor":"{{colors.tertiary.default.hex}}",
+      "outputColor": "{{colors.tertiary.default.hex}}",
       "type": "wifi"
     },
     {
       "compact": true,
-      "key": "                             Local IP      ",
+      "key": "  Local IP",
       "keyColor": "{{colors.tertiary.default.hex}}",
-      "outputColor":"{{colors.tertiary.default.hex}}",
+      "outputColor": "{{colors.tertiary.default.hex}}",
       "type": "localip"
     },
     "break",
     {
-      "format": "                         └──────────────────────────────────────────────────────────────────────────────┘",
+      "format": "└────────────────────────────────────────────────────────────────────┘",
       "type": "custom"
     },
     "break",

@@ -42,8 +42,8 @@ window {
     border-radius:               20px;
     cursor:                      "default";
 
-    background-color:            @bg;
-background-image: url("/home/lostfromlight/.dotfiles/home/wallpapers/cynic.png", none);
+    background-color:            #000000;
+    /*background-image: url("/home/lostfromlight/.dotfiles/home/blackwave.jpg", none);*/
 }
 
 /*****----- Main Box -----*****/

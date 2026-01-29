@@ -24,6 +24,10 @@ direnv hook fish | source
 # Starship prompt
 starship init fish | source
 
+function __reload_theme --on-signal USR1
+    clear
+    fastfetch
+end
 
 # -------------------------------
 # Abbreviations

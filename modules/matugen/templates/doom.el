@@ -36,7 +36,7 @@ Can be an integer to determine the exact padding."
   "A Doom theme powered by Matugen palette."
 
   ;; name        default   256       16
-  ((bg         '("{{colors.surface.default.hex}}" nil nil))
+  ((bg         '("#000000" nil nil))
    (fg         '("{{colors.on_surface.default.hex}}" nil nil))
 
    (bg-alt     '("{{colors.surface_container.default.hex}}" nil nil))

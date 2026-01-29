@@ -39,3 +39,6 @@ output_path = '~/.config/gtk-4.0/colors.css'
 input_path = '~/.config/matugen/templates/doom.el'
 output_path = '~/.config/doom/theme/doom-custom-theme.el'
 
+[templates.quickshell]
+input_path = "~/.config/matugen/templates/qs.qml"
+output_path = "~/.config/quickshell/theme/Colors.qml"
