@@ -9,6 +9,10 @@
 
   home.packages = 
   (with pkgs; [
+    poppler-utils
+    satty
+    mangohud
+    gamemode
     quickshell
     lsof
     openssh_hpn
@@ -51,8 +55,7 @@
     hyprpaper
     rofi
     pyprland
-    grim
-    slurp
+    hyprshot
     wl-clipboard
     hyprlock
     hypridle
@@ -148,6 +151,10 @@
   recursive = true;
 };
 
+  #xdg.configFile."quickshell" = {
+  #source = config.lib.file.mkOutOfStoreSymlink "/home/lostfromlight/.dotfiles/modules/quickshell";
+  #recursive = true;
+#};
 #-------------------mkOutOfSymlink for my dotfiles-------------------------------#
 home.file.".config/hypr/hyprland.conf".source =
   config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/modules/hyprland/hyprland.conf";
@@ -200,8 +207,6 @@ home.file.".config/rofi/config.rasi".source=
   home.file.".config/matugen/templates".source =
     config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/modules/matugen/templates";
 
-  home.file.".config/quickshell/shell.qml".source=
-    config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/modules/quickshell/shell.qml";
 
   nixpkgs.config.allowUnfree = true;
   xdg.portal = {

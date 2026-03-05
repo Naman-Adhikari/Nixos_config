@@ -221,7 +221,7 @@ services.tlp.settings = {
   users.users.lostfromlight = {
     isNormalUser = true;
     description = "Naman Adhikari";
-    extraGroups = [ "input"  "networkmanager" "wheel" "audio" "docker" ];
+    extraGroups = [ "input"  "networkmanager" "wheel" "audio" "docker" "video" ];
     packages = with pkgs; [
     ];
   };
