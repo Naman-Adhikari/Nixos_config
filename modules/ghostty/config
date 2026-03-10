@@ -37,8 +37,8 @@ window-decoration = none
 confirm-close-surface = false
 
 # Uncomment if needed:
- custom-shader-animation = true
- custom-shader           = /home/lostfromlight/.dotfiles/home/shaders/water.glsl
+# custom-shader-animation = true
+# custom-shader           = /home/lostfromlight/.dotfiles/home/shaders/water.glsl
 
 ## KEYBINDS ##
 keybind = ctrl+s=new_split:right
