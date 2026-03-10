@@ -47,6 +47,7 @@
     curl
     jq
     atuin
+    imagemagick
     zoxide
     nix-direnv
     direnv
