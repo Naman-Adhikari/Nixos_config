@@ -1,0 +1,90 @@
+
+* {
+    font:                        "JetBrains Mono Nerd Font 10";
+    background:                  #131D1F;
+    background-alt:              #183A43;
+    foreground:                  #FFFFFF;
+    selected:                    #649094;
+    active:                      #E9CC9D;
+    urgent:                      #FEA861;
+}
+
+window {
+    transparency:                "real";
+    location:                    center;
+    anchor:                      center;
+    fullscreen:                  false;
+    width:                       1500px;
+    x-offset:                    0px;
+    y-offset:                    0px;
+
+    enabled:                     true;
+    cursor:                      "default";
+    background-color:            transparent;
+}
+
+mainbox {
+    enabled:                     true;
+    spacing:                     0px;
+    background-color:            transparent;
+    orientation:                 vertical;
+    children:                    [ "listbox" ];
+}
+
+listbox {
+    spacing:                     20px;
+    padding:                     20px;
+    background-color:            transparent;
+    orientation:                 vertical;
+    children:                    [ "listview" ];
+}
+
+
+listview {
+    enabled:                     true;
+    columns:                     3;
+    lines:                       1;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+
+    spacing:                     10px;
+    background-color:            transparent;
+    text-color:                  transparent;
+    cursor:                      "default";
+}
+
+element {
+    enabled:                     true;
+    spacing:                     0px;
+    padding:                     0px 0px;
+    border-radius:               20px;
+    background-color:            transparent;
+    text-color:                  transparent;
+    cursor:                      pointer;
+    orientation:                 vertical;
+}
+
+
+element selected.normal {
+    background-color:            transparent;
+    border:                      1px;
+    border-color:                #ffffff;
+    border-radius:               20px;
+    padding:                     0px;
+    text-color:                  transparent;
+}
+
+element-icon {
+    background-color:            transparent;
+    border-radius:               20px;
+    size:                        500px;
+}
+
+element-text {
+    enabled:                     false;
+}

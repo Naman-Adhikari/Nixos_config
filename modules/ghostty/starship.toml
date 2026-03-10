@@ -21,15 +21,15 @@ palette = 'noctech'
 add_newline = true
 
 [palettes.noctech]
-box = '#12140e'          # muted frame/separators
-background = '#1e2019' # neutral background
-current_line = '#b3d088'    # accent line highlight
-primary = '#a0d0ca'        # main accent for keys
-foreground = '#e2e3d8'   # readable text values
-gray = '#c5c8b9' # subtle secondary info
-highlight = '#b3d088' # softer accent highlight
-dim = '#12140e'             # neutral dim tone
-subtle = '#213600'       # bright readable overlay
+box = '#17130b'          # muted frame/separators
+background = '#231f17' # neutral background
+current_line = '#e7c26c'    # accent line highlight
+primary = '#afcfab'        # main accent for keys
+foreground = '#ebe1d4'   # readable text values
+gray = '#d0c5b4' # subtle secondary info
+highlight = '#e7c26c' # softer accent highlight
+dim = '#17130b'             # neutral dim tone
+subtle = '#3f2e00'       # bright readable overlay
 
 [os]
 format = "(fg:current_line)[](fg:gray)[$symbol ](fg:primary bg:gray)[](fg:gray)"

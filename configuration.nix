@@ -1,5 +1,5 @@
 
-{lib, config, pkgs,  ... }:
+{lib, config, pkgs, pkgsUnstable, inputs,  ... }:
 
 let
   nvidia-offload = pkgs.stdenv.mkDerivation {
@@ -70,6 +70,7 @@ networking.nameservers = [ "1.1.1.1" "8.8.8.8" ];
   
   programs.hyprland = {
    enable = true;
+   package = pkgsUnstable.hyprland;
    xwayland.enable = true;
  };
 

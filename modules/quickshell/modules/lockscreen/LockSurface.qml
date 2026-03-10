@@ -97,7 +97,7 @@ Rectangle {
         font.weight: 300
         font.family: "Adwaita Sans"
         renderType: Text.NativeRendering
-        text: "hi, "  + SystemDetails.username + "!"
+        text: "Youkoso, "  + SystemDetails.username + "!"
     }
 
     Foreground {

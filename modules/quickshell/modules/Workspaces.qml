@@ -8,7 +8,7 @@ Item {
     id: root
     property int maxWorkspaces: 8
 
-    // Sizes for workspace indicators
+    // Sizes 
     property int sizeSmall: 12
     property int sizeMedium: 12
     property int sizeLarge: 28  // focused pill width
@@ -46,34 +46,50 @@ Item {
                     id: wsBox
                     property int wid: index + 1
 
-                    property bool isFocused: Hyprland.focusedWorkspace && Hyprland.focusedWorkspace.id === wid
+                    property bool isFocused:
+                        Hyprland.focusedWorkspace
+                        && Hyprland.focusedWorkspace.id === wid
+
                     property bool isOccupied: occupiedMap[wid] === true
 
                     // size logic
                     property int prefHeight: 12
-                    property int prefWidth: isFocused ? root.sizeLarge : isOccupied ? root.sizeMedium : root.sizeSmall
+                    property int prefWidth:
+                        isFocused ? root.sizeLarge
+                        : isOccupied ? root.sizeMedium
+                        : root.sizeSmall
 
                     width: prefWidth
                     height: prefHeight
                     radius: prefHeight / 2
 
-                    Behavior on width { NumberAnimation { duration: 400; easing.type: Easing.OutCubic } }
+                    Behavior on width {
+                        NumberAnimation {
+                            duration: 400
+                            easing.type: Easing.OutCubic
+                        }
+                    }
 
                     // colors based on state
                     property color workspaceStateColor: {
-                        if (isFocused) return Theme.Theme.accent
-                        if (isOccupied) return "#e8e8e8ff"
+                        if (isFocused)
+                            return Theme.Theme.accent
+                        if (isOccupied)
+                            return "#e8e8e8ff"
                         return "#7a7a7a"
                     }
 
                     color: workspaceStateColor
-                    border.width: 1
+
+                    border.width: isOccupied ? 1 : 1
                     border.color: isFocused ? Theme.Theme.accent : "#a2a2a2"
-                    Behavior on color { ColorAnimation { duration: 150 } }
+
+                    Behavior on color {
+                        ColorAnimation { duration: 150 }
+                    }
 
                     property bool hovered: false
 
-                    // hover overlay
                     Rectangle {
                         anchors.fill: parent
                         radius: parent.radius
@@ -82,7 +98,6 @@ Item {
                         Behavior on opacity { NumberAnimation { duration: 150 } }
                     }
 
-                    // bounce animation for focus
                     SequentialAnimation {
                         id: bounceAnim
                         running: false
@@ -93,10 +108,9 @@ Item {
                         NumberAnimation { target: wsBox; property: "scale"; to: 1.0; duration: 130; easing.type: Easing.OutBounce }
                     }
 
-                    // Signal connection (new syntax)
                     Connections {
                         target: Hyprland
-                        function onFocusedWorkspaceChanged() {
+                        onFocusedWorkspaceChanged: {
                             if (wsBox.isFocused) {
                                 wsBox.scale = 1
                                 bounceAnim.start()

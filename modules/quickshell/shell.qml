@@ -10,16 +10,6 @@ import "modules/menus"
 ShellRoot {
     id: root
 
-    ThemeMenu { id: themeMenu }
-
-    AppLauncher {
-        id: appLauncher
-    }
-
-
-    Variants {
-        model: Quickshell.screens
-    }
 
     Variants {
         model: Quickshell.screens

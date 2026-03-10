@@ -152,10 +152,10 @@
   recursive = true;
 };
 
-  #xdg.configFile."quickshell" = {
-  #source = config.lib.file.mkOutOfStoreSymlink "/home/lostfromlight/.dotfiles/modules/quickshell";
-  #recursive = true;
-#};
+  xdg.configFile."quickshell" = {
+  source = config.lib.file.mkOutOfStoreSymlink "/home/lostfromlight/.dotfiles/modules/quickshell";
+  recursive = true;
+};
 #-------------------mkOutOfSymlink for my dotfiles-------------------------------#
 home.file.".config/hypr/hyprland.conf".source =
   config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/modules/hyprland/hyprland.conf";
@@ -186,6 +186,9 @@ home.file.".config/qutebrowser/config.py".source=
 
 home.file.".config/rofi/config.rasi".source=
   config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/modules/rofi/config.rasi";
+
+home.file.".config/rofi/wallpaper.rasi".source=
+  config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/modules/rofi/wallpaper.rasi";
 
   home.file.".config/waybar/config".source =
     config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/modules/waybar/config";

@@ -1,27 +1,45 @@
 #!/bin/sh
 
-
 WALL_DIR="$HOME/.dotfiles/home/wallpapers"
-LIST_FILE="$HOME/.cache/wallpaper_list"
+THUMB_DIR="$HOME/.cache/wall-thumbs"
 
-if [ ! -s "$LIST_FILE" ]; then
-    find "$WALL_DIR" -type f | shuf > "$LIST_FILE"
-fi
+mkdir -p "$THUMB_DIR"
 
-WALL=$(head -n 1 "$LIST_FILE")
+# generate thumbnails if missing
+for img in "$WALL_DIR"/*; do
+    [ -f "$img" ] || continue
+    thumb="$THUMB_DIR/$(basename "$img")"
 
-sed -i '1d' "$LIST_FILE"
+    if [ ! -f "$thumb" ]; then
+        magick "$img" -thumbnail 256x256^ -gravity center -extent 256x256 "$thumb"
+    fi
+done
 
+# build rofi menu
+CHOICE=$(
+for img in "$WALL_DIR"/*; do
+    name=$(basename "$img")
+    echo -en "$name\0icon\x1f$THUMB_DIR/$name\n"
+done | shuf | rofi -dmenu -show-icons -theme ~/.config/rofi/wallpaper.rasi -p "Wallpaper"
+)
 
+[ -z "$CHOICE" ] && exit
+
+WALL="$WALL_DIR/$CHOICE"
+
+# set wallpaper
 swww img "$WALL" --transition-type grow --transition-step 25 --transition-fps 155
 
+# regenerate colors
 matugen image "$WALL"
 
 sleep 0.8
 pkill -USR2 ghostty
 
-for pid in $(pgrep -x fish); do
+# reload fish colors
+pgrep -x fish | while read -r pid; do
     kill -USR1 "$pid"
 done
 
+# reload emacs theme
 emacsclient -e "(progn (mapc #'disable-theme custom-enabled-themes) (load-theme 'doom-custom t))"

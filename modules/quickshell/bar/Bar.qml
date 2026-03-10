@@ -18,7 +18,7 @@ PanelWindow {
     }
 
     implicitHeight: 40
-    color: "#000000"
+    color: "transparent"
     anchors { top: true; left: true; right: true }
     WlrLayershell.layer: WlrLayershell.Top
     WlrLayershell.exclusiveZone: implicitHeight
@@ -59,7 +59,7 @@ PanelWindow {
                 spacing: 6
 
                 Memory {}
-                Temperature {}
+                Recorder{}
 
                 Power {
                     powerIcon:    Qt.resolvedUrl("../assets/power_icons/power-1.svg")

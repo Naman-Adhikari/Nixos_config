@@ -27,7 +27,7 @@ Rectangle {
 
     function updateDateTime() {
         const d = new Date()
-        currentTime = Qt.formatDateTime(d, "HH:mm • ddd, MM/dd")
+        currentTime = Qt.formatDateTime(d, "HH:mm • ddd")
     }
 
     function ensurePanel() {

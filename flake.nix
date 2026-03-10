@@ -19,6 +19,9 @@
       nixosConfigurations = {
         proxy-pc = lib.nixosSystem {
           inherit system;
+          specialArgs = {
+              inherit pkgsUnstable inputs;
+            };
           modules = [
             ./configuration.nix
           ];
