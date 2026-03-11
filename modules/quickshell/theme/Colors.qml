@@ -3,104 +3,104 @@ import QtQuick
 
 QtObject {
 	
-		readonly property color background: "#101418"
+		readonly property color background: "#ffffff"
 	
-		readonly property color error: "#ffb4ab"
+		readonly property color error: "#ff5555"
 	
-		readonly property color error_container: "#93000a"
+		readonly property color error_container: "#ff9999"
 	
-		readonly property color inverse_on_surface: "#2d3135"
+		readonly property color inverse_on_surface: "#dcdcdc"
 	
-		readonly property color inverse_primary: "#34618d"
+		readonly property color inverse_primary: "#666666"
 	
-		readonly property color inverse_surface: "#e1e2e8"
+		readonly property color inverse_surface: "#f0f0f0"
 	
-		readonly property color on_background: "#e1e2e8"
+		readonly property color on_background: "#222222"
 	
-		readonly property color on_error: "#690005"
+		readonly property color on_error: "#990000"
 	
-		readonly property color on_error_container: "#ffdad6"
+		readonly property color on_error_container: "#ffe6e6"
 	
-		readonly property color on_primary: "#003257"
+		readonly property color on_primary: "#004422"
 	
-		readonly property color on_primary_container: "#d0e4ff"
+		readonly property color on_primary_container: "#ccffdd"
 	
-		readonly property color on_primary_fixed: "#001d35"
+		readonly property color on_primary_fixed: "#001100"
 	
-		readonly property color on_primary_fixed_variant: "#164974"
+		readonly property color on_primary_fixed_variant: "#003322"
 	
-		readonly property color on_secondary: "#243140"
+		readonly property color on_secondary: "#334433"
 	
-		readonly property color on_secondary_container: "#d6e4f7"
+		readonly property color on_secondary_container: "#e6f0e6"
 	
-		readonly property color on_secondary_fixed: "#0f1d2a"
+		readonly property color on_secondary_fixed: "#112211"
 	
-		readonly property color on_secondary_fixed_variant: "#3b4857"
+		readonly property color on_secondary_fixed_variant: "#223322"
 	
-		readonly property color on_surface: "#e1e2e8"
+		readonly property color on_surface: "#222222"
 	
-		readonly property color on_surface_variant: "#c2c7cf"
+		readonly property color on_surface_variant: "#888888"
 	
-		readonly property color on_tertiary: "#3a2948"
+		readonly property color on_tertiary: "#003344"
 	
-		readonly property color on_tertiary_container: "#f1daff"
+		readonly property color on_tertiary_container: "#bfe9f9"
 	
-		readonly property color on_tertiary_fixed: "#241432"
+		readonly property color on_tertiary_fixed: "#001f28"
 	
-		readonly property color on_tertiary_fixed_variant: "#514060"
+		readonly property color on_tertiary_fixed_variant: "#234c59"
 	
-		readonly property color outline: "#8c9199"
+		readonly property color outline: "#cccccc"
 	
-		readonly property color outline_variant: "#42474e"
+		readonly property color outline_variant: "#888888"
 	
-		readonly property color primary: "#9fcafc"
+		readonly property color primary: "#99ddbb"
 	
-		readonly property color primary_container: "#164974"
+		readonly property color primary_container: "#33aa77"
 	
-		readonly property color primary_fixed: "#d0e4ff"
+		readonly property color primary_fixed: "#ccffdd"
 	
-		readonly property color primary_fixed_dim: "#9fcafc"
+		readonly property color primary_fixed_dim: "#99ddbb"
 	
 		readonly property color scrim: "#000000"
 	
-		readonly property color secondary: "#bac8db"
+		readonly property color secondary: "#ddeedd"
 	
-		readonly property color secondary_container: "#3b4857"
+		readonly property color secondary_container: "#334433"
 	
-		readonly property color secondary_fixed: "#d6e4f7"
+		readonly property color secondary_fixed: "#e6f0e6"
 	
-		readonly property color secondary_fixed_dim: "#bac8db"
+		readonly property color secondary_fixed_dim: "#ddeedd"
 	
 		readonly property color shadow: "#000000"
 	
-		readonly property color source_color: "#7695b9"
+		readonly property color source_color: "#666666"
 	
-		readonly property color surface: "#101418"
+		readonly property color surface: "#ffffff"
 	
-		readonly property color surface_bright: "#36393e"
+		readonly property color surface_bright: "#f0f0f0"
 	
-		readonly property color surface_container: "#1d2024"
+		readonly property color surface_container: "#f7f7f7"
 	
-		readonly property color surface_container_high: "#272a2f"
+		readonly property color surface_container_high: "#e6e6e6"
 	
-		readonly property color surface_container_highest: "#32353a"
+		readonly property color surface_container_highest: "#dddddd"
 	
-		readonly property color surface_container_low: "#191c20"
+		readonly property color surface_container_low: "#f5f5f5"
 	
-		readonly property color surface_container_lowest: "#0b0e12"
+		readonly property color surface_container_lowest: "#f0f0f0"
 	
-		readonly property color surface_dim: "#101418"
+		readonly property color surface_dim: "#f7f7f7"
 	
-		readonly property color surface_tint: "#9fcafc"
+		readonly property color surface_tint: "#99ddbb"
 	
-		readonly property color surface_variant: "#42474e"
+		readonly property color surface_variant: "#cccccc"
 	
-		readonly property color tertiary: "#d5bee5"
+		readonly property color tertiary: "#a4cddd"
 	
-		readonly property color tertiary_container: "#514060"
+		readonly property color tertiary_container: "#234c59"
 	
-		readonly property color tertiary_fixed: "#f1daff"
+		readonly property color tertiary_fixed: "#bfe9f9"
 	
-		readonly property color tertiary_fixed_dim: "#d5bee5"
+		readonly property color tertiary_fixed_dim: "#a4cddd"
 	
 }

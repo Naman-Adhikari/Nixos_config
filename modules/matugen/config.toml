@@ -13,10 +13,6 @@ output_path = '~/.config/starship.toml'
 input_path = '~/.config/matugen/templates/fast.jsonc'
 output_path = '~/.config/fastfetch/config.jsonc'
 
-[templates.ghostty]
-input_path = '~/.config/matugen/templates/ghostty'
-output_path = '~/.config/ghostty/themes/Matugen'
-
 [templates.yazi]
 input_path = '~/.config/matugen/templates/yazi-theme.toml'
 output_path = '~/.config/yazi/theme.toml'
