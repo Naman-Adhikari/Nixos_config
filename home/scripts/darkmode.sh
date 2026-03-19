@@ -120,3 +120,6 @@ s/^(.*readonly property color tertiary_container: ).*/\1"#222222"/
 s/^(.*readonly property color tertiary_fixed: ).*/\1"#cccccc"/
 s/^(.*readonly property color tertiary_fixed_dim: ).*/\1"#222222"/
 ' "$QUICKSHELL_FILE"
+
+pkill -USR1 quickshell
+quickshell &

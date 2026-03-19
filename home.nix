@@ -9,6 +9,10 @@
 
   home.packages = 
   (with pkgs; [
+    #for emacs everywhere for wayland
+    wtype
+
+    wordnet
     poppler-utils
     satty
     mangohud

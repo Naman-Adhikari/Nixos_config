@@ -68,10 +68,11 @@ networking.nameservers = [ "1.1.1.1" "8.8.8.8" ];
   };
  
   
-  programs.hyprland = {
-   enable = true;
-   xwayland.enable = true;
- };
+programs.hyprland = {
+  enable = true;
+  package = pkgsUnstable.hyprland;
+  xwayland.enable = true;
+};
 
 
  #Enabling NIRI
