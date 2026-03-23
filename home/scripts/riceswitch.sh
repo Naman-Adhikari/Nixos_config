@@ -1,5 +1,6 @@
 #!/bin/sh
-
+export XDG_RUNTIME_DIR="/run/user/$UID"
+export HYPRLAND_INSTANCE_SIGNATURE=$(ls /run/user/$UID/hypr | head -n1)
 WALL_DIR="$HOME/.dotfiles/home/wallpapers"
 THUMB_DIR="$HOME/.cache/wall-thumbs"
 
@@ -50,7 +51,7 @@ elif [ "$CHOICE" = "black.jpg" ] || [ "$CHOICE" = "black.png" ]; then
     ~/.dotfiles/home/scripts/darkmode.sh
 
 else
-    matugen image "$WALL"
+    matugen image "$WALL" --source-color-index 0
 fi
 ################################
 # reload apps

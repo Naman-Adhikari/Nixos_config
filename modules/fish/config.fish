@@ -23,7 +23,6 @@ direnv hook fish | source
 
 # Starship prompt
 starship init fish | source
-set -gx HYPRLAND_INSTANCE_SIGNATURE (ls /run/user/$UID/hypr | head -n1)
 function __reload_theme --on-signal USR1
     clear
     fastfetch

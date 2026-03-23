@@ -6,10 +6,10 @@ theme = "Matugen"
 #background-image-opacity = 4.2
 #background-image-fit = cover
 background = 000000
-foreground = ffffff
-cursor-color = ffffff
-selection-background = 333333
-selection-foreground = ffffff
+foreground = 000000
+cursor-color = 000000
+selection-background = e6e6e6
+selection-foreground = 000000
 
 palette=0=1b1b1b
 palette=1=ff5555
