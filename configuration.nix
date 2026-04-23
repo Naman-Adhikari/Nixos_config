@@ -25,6 +25,7 @@ in
 {
   imports =
     [
+      ./nbfc.nix
       ./hardware-configuration.nix
     ];
 

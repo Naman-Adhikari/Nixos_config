@@ -27,8 +27,9 @@
     ispell
     docker
     steam
-    qutebrowser
     unzip
+    iw
+    firefox
     swww
     ffmpeg-full
     qbittorrent
