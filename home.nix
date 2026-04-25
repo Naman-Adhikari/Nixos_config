@@ -12,8 +12,12 @@
     #for emacs everywhere for wayland
     wtype
 
+	poppler
+	# for nvim live grep
+	ripgrep
+	nodejs_24
     wordnet
-    poppler-utils
+	zathura
     satty
     mangohud
     gamemode
@@ -34,7 +38,6 @@
     ffmpeg-full
     qbittorrent
     caligula
-    zathura
     texliveFull
     waybar
     kitty
@@ -61,7 +64,8 @@
     hyprpaper
     rofi
     pyprland
-    hyprshot
+    grim
+    slurp
     wl-clipboard
     hyprlock
     hypridle
@@ -101,6 +105,7 @@
     wineWowPackages.full
     winetricks
     file
+    zathuraPkgs.zathura_pdf_poppler
   ])
 
     ++
@@ -112,7 +117,6 @@
     ghostty
     yt-dlp
 ]);
-
 
 
   home.sessionVariables = {
@@ -216,6 +220,8 @@ home.file.".config/rofi/wallpaper.rasi".source=
   home.file.".config/matugen/templates".source =
     config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/modules/matugen/templates";
 
+  home.file.".config/zathura/zathurarc".source =
+    config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/modules/zathura/zathurarc";
 
   nixpkgs.config.allowUnfree = true;
   xdg.portal = {

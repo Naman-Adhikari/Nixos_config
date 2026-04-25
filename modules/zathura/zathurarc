@@ -1,0 +1,18 @@
+set pdf-poppler true
+set pdf-mupdf false
+
+set adjust-open "fit-width"
+
+set zoom 1.0
+
+map <C-f> search-forward
+map <C-b> search-backward
+
+set bookmark-path "~/.config/zathura/bookmarks"
+
+map <S-j> scroll-page-down
+map <S-k> scroll-page-up
+
+map <C-c> copy-to-clipboard
+map c recolor
+map p print

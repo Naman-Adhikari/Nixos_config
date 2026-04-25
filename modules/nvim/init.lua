@@ -1,6 +1,6 @@
 require "options"
 
-vim.g.maplocalleader = ','
+vim.g.maplocalleader = ' '
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -32,6 +32,50 @@ vim.opt.fillchars = {
   foldopen = "",  
   foldclose = "", 
 }
+
+--keys for opening specific files
+vim.keymap.set("n", "<leader>oh", function()
+  vim.cmd("edit ~/.dotfiles/home.nix")
+end)
+
+vim.keymap.set("n", "<leader>oc", function()
+  vim.cmd("edit ~/.dotfiles/configuration.nix")
+end)
+
+vim.keymap.set("n", "<leader>op", function()
+  vim.cmd("edit ~/.dotfiles/modules/hyprland/hyprland.conf")
+end)
+
+-- keys for saving and quitting files
+vim.keymap.set("n", "<leader>wq", "<cmd>wq<CR>", { desc = "Save and quit" })
+vim.keymap.set("n", "<leader>fs", "<cmd>w<CR>", { desc = "Save" })
+vim.keymap.set("n", "<leader>q", "<cmd>q<CR>", { desc = "Quit" })
+
+-- for caps instead of esc
+vim.keymap.set("i", "jk", "<Esc>")
+
+-- for splitting and navigating windows
+vim.keymap.set("n", "<leader>h", "<C-w>h")
+vim.keymap.set("n", "<leader>j", "<C-w>j")
+vim.keymap.set("n", "<leader>k", "<C-w>k")
+vim.keymap.set("n", "<leader>l", "<C-w>l")
+vim.keymap.set("n", "<leader>wv", "<cmd>vsplit<CR>", { desc = "Vertical split" })
+vim.keymap.set("n", "<leader>wh", "<cmd>split<CR>", { desc = "Horizontal split" })
+vim.keymap.set("n", "<leader>bk", "<cmd>bd<CR>", { desc = "Killing buffer" })
+
+-- for deleting all buffers except the current one
+ vim.keymap.set("n", "<leader>bo", function()
+  local current = vim.api.nvim_get_current_buf()
+  for _, buf in ipairs(vim.api.nvim_list_bufs()) do
+    if buf ~= current and vim.api.nvim_buf_is_loaded(buf) then
+      vim.api.nvim_buf_delete(buf, { force = false })
+    end
+  end
+end, { desc = "Delete all buffers except current" })
+
+-- For buffer navigation
+vim.keymap.set("n", "<Tab>", ":bnext<CR>")
+vim.keymap.set("n", "<S-Tab>", ":bprev<CR>")
 
 vim.api.nvim_set_keymap('n', 'tc', '<cmd>VimtexTocToggle<CR>', {noremap = true, silent = true})
 vim.keymap.set("n", "<A-t>", ":TransparentToggle<CR>", { noremap = true, silent = true, desc = "Toggle transparency" })
