@@ -29,6 +29,7 @@ in
       ./hardware-configuration.nix
     ];
 
+programs.nix-ld.enable = true;
 #  boot.loader.systemd-boot.enable = true;
  # boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelParams = ["mem_sleep_default=deep"];
@@ -45,6 +46,8 @@ in
       gfxmodeEfi = "1920x1080";
     };
   };
+
+  boot.kernelModules = [ ];
 
   networking.hostName = "proxy-pc"; 
   system.stateVersion = "25.05";
@@ -68,6 +71,8 @@ networking.nameservers = [ "1.1.1.1" "8.8.8.8" ];
     allowedTCPPorts = [ 7878 ];  
   };
  
+ services.fstrim.enable = true;
+ services.fstrim.interval = "weekly"; 
   
 programs.hyprland = {
   enable = true;
@@ -108,7 +113,7 @@ nix.settings.experimental-features = [ "nix-command" "flakes"];
 
 #---------------NVIDIA CONFIG------------------------------------#
 
-services.ollama.enable = true;
+#services.ollama.enable = true;
 #services.ollama.acceleration = "cuda";
 nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
   "cuda_cudart"

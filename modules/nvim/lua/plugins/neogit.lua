@@ -2,13 +2,11 @@ return {
   "NeogitOrg/neogit",
   lazy = true,
   dependencies = {
-    "nvim-lua/plenary.nvim",         -- required
+    "nvim-lua/plenary.nvim",         
 
     "esmuellert/codediff.nvim",      
 
-
-    -- Only one of these is needed.
-    "nvim-telescope/telescope.nvim", -- optional
+    "nvim-telescope/telescope.nvim", 
   },
   cmd = "Neogit",
   keys = {

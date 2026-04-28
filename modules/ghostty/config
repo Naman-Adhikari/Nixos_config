@@ -30,7 +30,7 @@ palette=15=ffffff
 
 
 
-window-show-tab-bar = auto
+window-show-tab-bar = never
 background-opacity = 1.0
 background-blur = 190
 window-decoration = none

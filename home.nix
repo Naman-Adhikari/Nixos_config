@@ -12,10 +12,16 @@
     #for emacs everywhere for wayland
     wtype
 
-	poppler
-	# for nvim live grep
-	ripgrep
+	#for lsps in nvim
+	lua-language-server
+	pyright
 	nodejs_24
+	nil
+	cargo
+	rust-analyzer
+	rustfmt
+
+	poppler
     wordnet
 	zathura
     satty
@@ -232,4 +238,5 @@ home.file.".config/rofi/wallpaper.rasi".source=
     ];
     config.common.default = "*"; 
   };
+
 }

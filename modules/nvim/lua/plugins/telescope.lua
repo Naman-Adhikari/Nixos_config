@@ -12,8 +12,11 @@ return {
 	  },
   			})   
 
+		local home = vim.fn.expand("~")
+
     vim.keymap.set("n", "<C-p>", function()
       builtin.find_files({
+		cwd = home,
         hidden = true,
 	file_ignore_patterns = {
 		  "node_modules",
@@ -34,6 +37,8 @@ return {
 		  "%.tlauncher/",
 		  "%.icons/",
 		  "%.var/",
+		  "%.cargo/",
+		  "%.javacpp/",
 		},
       })
     end, { silent = true })

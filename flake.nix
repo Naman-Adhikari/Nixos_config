@@ -6,6 +6,10 @@
     home-manager.url = "github:nix-community/home-manager/release-25.11";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+	nvf = {
+	  url = "github:NotAShelf/nvf";
+	  inputs.nixpkgs.follows = "nixpkgs";
+	};
 
   };
 
@@ -31,7 +35,7 @@
       homeConfigurations = {
         lostfromlight = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
-          extraSpecialArgs = { inherit pkgsUnstable; };
+          extraSpecialArgs = { inherit pkgsUnstable inputs; };
           modules = [
             ./home.nix
           ];
