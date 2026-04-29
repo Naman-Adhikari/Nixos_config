@@ -1,0 +1,15 @@
+[opener]  
+pdf = [  
+  { run = 'zathura "$@"', desc = "zathura" },  
+  { run = 'okular "$@"', desc = "okular" }  
+]  
+image = [  
+  { run = 'imv "$@"', desc = "imv" },  
+  { run = 'gimp "$@"', desc = "gimp" }  
+]  
+  
+[open]  
+prepend_rules = [  
+  { mime = "application/pdf", use = [ "pdf" ] },  
+  { mime = "image/*", use = [ "image" ] },  
+]
