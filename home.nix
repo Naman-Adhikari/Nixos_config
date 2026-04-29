@@ -35,7 +35,6 @@
     localsend
     auto-cpufreq
     ispell
-    docker
     steam
     unzip
     iw
@@ -50,7 +49,6 @@
     hyprsunset
     gimp
     audacity
-    vlc
     ani-cli
     libreoffice-qt6
     mpv
@@ -67,7 +65,6 @@
     direnv
     starship
     fastfetch
-    hyprpaper
     rofi
     pyprland
     grim
@@ -75,11 +72,8 @@
     wl-clipboard
     hyprlock
     hypridle
-    waypaper
     python311
     gcc
-    lua-language-server
-    luajit
     pavucontrol
     cava
     playerctl
@@ -95,8 +89,6 @@
     mpc
     ncmpcpp
     protonup-ng
-    octaveFull
-    waypaper
     wf-recorder
     bibata-cursors
     desktop-file-utils
@@ -108,10 +100,9 @@
     steam-run
     img2pdf
     cliphist
-    wineWowPackages.full
+    #wineWowPackages.full
     winetricks
     file
-    zathuraPkgs.zathura_pdf_poppler
   ])
 
     ++
@@ -121,7 +112,6 @@
     matugen
     emacs
     ghostty
-    yt-dlp
 ]);
 
 
@@ -228,6 +218,9 @@ home.file.".config/rofi/wallpaper.rasi".source=
 
   home.file.".config/zathura/zathurarc".source =
     config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/modules/zathura/zathurarc";
+
+  home.file.".config/yazi/yazi.toml".source =
+    config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/modules/yazi/yazi.toml";
 
   nixpkgs.config.allowUnfree = true;
   xdg.portal = {

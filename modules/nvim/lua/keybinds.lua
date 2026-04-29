@@ -62,3 +62,19 @@ vim.keymap.set("n", "<leader>[", "<cmd>vertical resize -10<CR>")
 -- increase / decrease horizontal size
 vim.keymap.set("n", "<C-Up>", "<cmd>resize +10<CR>")
 vim.keymap.set("n", "<C-Down>", "<cmd>resize -10<CR>")
+
+--org fold keybinds
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "org",
+	callback = function()
+		vim.keymap.set(
+			"n",
+			"<Leader>za",
+			"<Cmd>lua require('orgmode').action('org_mappings.cycle')<CR>",
+			{ buffer = true, desc = "Toggle org fold" }
+		)
+	end,
+})
+
+-- ctrl bs removes word
+vim.keymap.set("i", "<C-BS>", "<C-w>", { noremap = true })

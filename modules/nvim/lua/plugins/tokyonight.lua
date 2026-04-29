@@ -5,13 +5,17 @@ return {
 vim.cmd.colorscheme "carbonfox"
 end
 }
-	]]--
---[[return {
-    "rebelot/kanagawa.nvim", lazy = false, priority = 1000,
-	config= function()
-vim.cmd.colorscheme "kanagawa-dragon"
-end
-}]]--
+	]]
+--
+return {
+	"rebelot/kanagawa.nvim",
+	lazy = false,
+	priority = 1000,
+	config = function()
+		vim.cmd.colorscheme("kanagawa-dragon")
+	end,
+}
+--
 
 --[[return{
   "scottmckendry/cyberdream.nvim",
@@ -20,7 +24,8 @@ end
   config = function()
     vim.cmd("colorscheme cyberdream")
   end,
-}]]--
+}]]
+--
 
 --[[return {
     "ellisonleao/gruvbox.nvim",
@@ -36,15 +41,8 @@ end
         vim.cmd("colorscheme gruvbox")
     end
 }
-]]--
-
-
---[[return {
-    "folke/tokyonight.nvim", lazy = false, priority = 1000,
-	config= function()
-vim.cmd.colorscheme "tokyonight-night" 
-end
-}]]--	
+]]
+--
 
 --[[
 return {
@@ -55,7 +53,8 @@ return {
     vim.cmd.colorscheme "doom-one"
   end
 }
-]]--
+]]
+--
 
 --[[
 return {
@@ -66,8 +65,10 @@ return {
     vim.cmd.colorscheme "monochrome"
   end
 }
-]]--
+]]
+--
 
+--[[
 return {
   "neko-night/nvim",
   lazy = false,
@@ -76,3 +77,6 @@ return {
      vim.cmd.colorscheme "nekonight-fire-obsidian"
   end
 }
+
+]]
+--
