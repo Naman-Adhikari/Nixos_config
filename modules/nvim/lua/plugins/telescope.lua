@@ -12,12 +12,15 @@ return {
 
 		telescope.setup({
 			defaults = {
+				preview = false,
 				path_display = { "truncate" },
 				layout_strategy = "center",
 				layout_config = {
 					center = {
 						width = 0.4,
-						height = 0.3,
+						height = 0.2,
+						anchor = "N",
+						anchor_padding = 0,
 						prompt_position = "top",
 					},
 				},
@@ -30,46 +33,39 @@ return {
 					limit_entries = 1000,
 				},
 				sorting_strategy = "ascending",
-			},
-			pickers = {
-				find_files = {
-					hidden = true,
-					file_ignore_patterns = {
-						"node_modules",
-						"%.git/",
-						"dist/",
-						"build/",
-						"target/",
-						"%.cache/",
-						"%.minecraft/",
-						"%.pub%-cache/",
-						"%.steam/",
-						"%.android/",
-						"%.ssh/",
-						"%.local/",
-						"%.java/",
-						"%.pki/",
-						"%.zoom/",
-						"%.tlauncher/",
-						"%.icons/",
-						"%.var/",
-						"%.cargo/",
-						"%.javacpp/",
-						"%.jpg$",
-						"%.jpeg$",
-						"%.png$",
+				mappings = {
+					i = {
+						["<C-n>"] = false,
+						["<C-c>"] = false,
+						["<C-p>"] = false,
+						["<S-j>"] = require("telescope.actions").move_selection_next,
+						["<S-k>"] = require("telescope.actions").move_selection_previous,
+						["<S-c>"] = require("telescope.actions").close,
 					},
 				},
 			},
+
+			extensions = {
+				fzf = {},
+			},
 		})
 
-		-- Safely load extension if available
 		pcall(telescope.load_extension, "fzf")
 
-		local home = vim.fn.expand("~")
+		vim.keymap.set("n", "<leader>fg", function()
+			builtin.git_files({})
+		end, { silent = true })
 
-		vim.keymap.set("n", "<C-p>", function()
-			builtin.find_files({ cwd = home })
+		vim.keymap.set("n", "<leader>ff", function()
+			builtin.find_files({})
+		end, { silent = true })
+
+		vim.keymap.set("n", "<leader>fb", function()
+			builtin.buffers({})
+		end, { silent = true })
+
+		vim.keymap.set("n", "<leader>fo", function()
+			builtin.oldfiles({})
 		end, { silent = true })
 
 		vim.keymap.set("n", "<C-g>", function()

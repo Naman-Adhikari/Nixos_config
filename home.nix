@@ -21,6 +21,7 @@
 	rust-analyzer
 	rustfmt
 
+	ripgrep
 	poppler
     wordnet
 	zathura
