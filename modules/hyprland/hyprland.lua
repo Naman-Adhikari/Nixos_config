@@ -1,0 +1,5 @@
+require("general")
+require("execs")
+require("env")
+require("windowrules")
+require("keybinds")

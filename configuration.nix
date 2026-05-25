@@ -27,6 +27,7 @@ in
     [
       ./nbfc.nix
       ./hardware-configuration.nix
+	  inputs.mangowm.nixosModules.mango
     ];
 
 programs.nix-ld.enable = true;
@@ -84,6 +85,8 @@ programs.hyprland = {
  #Enabling NIRI
  services.displayManager.sessionPackages = [ pkgs.niri ];
 
+# Enable MangoWM
+programs.mango.enable = true;
 
 
 programs.fish.enable = true;

@@ -21,6 +21,10 @@
 	rust-analyzer
 	rustfmt
 
+	octaveFull
+	heroic
+	davinci-resolve
+	obs-studio
 	ripgrep
 	poppler
     wordnet
@@ -53,7 +57,6 @@
     ani-cli
     libreoffice-qt6
     mpv
-    kooha
     git
     tmux
     btop
@@ -109,7 +112,6 @@
     ++
 
    (with pkgsUnstable; [
-    blender
     matugen
     emacs
     ghostty
@@ -162,15 +164,12 @@
   source = config.lib.file.mkOutOfStoreSymlink "/home/lostfromlight/.dotfiles/modules/quickshell";
   recursive = true;
 };
+
+  xdg.configFile."hypr" = {
+  source = config.lib.file.mkOutOfStoreSymlink "/home/lostfromlight/.dotfiles/modules/hyprland";
+  recursive = true;
+};
 #-------------------mkOutOfSymlink for my dotfiles-------------------------------#
-home.file.".config/hypr/hyprland.conf".source =
-  config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/modules/hyprland/hyprland.conf";
-
-home.file.".config/hypr/hyprlock.conf".source=
-  config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/modules/hyprland/hyprlock.conf";
-
-home.file.".config/hypr/pyprland.toml".source=
-  config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/modules/hyprland/pyprland.toml";
 
 home.file.".config/wayland-bongocat/bongocat.conf".source=
   config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/modules/bongocat/bongocat.conf";

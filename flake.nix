@@ -6,10 +6,10 @@
     home-manager.url = "github:nix-community/home-manager/release-25.11";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
-	nvf = {
-	  url = "github:NotAShelf/nvf";
-	  inputs.nixpkgs.follows = "nixpkgs";
-	};
+	mangowm = {
+      url = "github:mangowm/mango";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
 
   };
 

@@ -3,12 +3,16 @@ vim.keymap.set("n", "<leader>oh", function()
 	vim.cmd("edit ~/.dotfiles/home.nix")
 end)
 
+vim.keymap.set("n", "<leader>oe", function()
+	vim.cmd("edit ~/.dotfiles/modules/hyprland/env.lua")
+end)
+
 vim.keymap.set("n", "<leader>oc", function()
 	vim.cmd("edit ~/.dotfiles/configuration.nix")
 end)
 
 vim.keymap.set("n", "<leader>op", function()
-	vim.cmd("edit ~/.dotfiles/modules/hyprland/hyprland.conf")
+	vim.cmd("edit ~/.dotfiles/modules/hyprland/general.lua")
 end)
 
 -- keys for saving and quitting files

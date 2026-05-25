@@ -7,14 +7,12 @@ end
 }
 	]]
 --
-return {
-	"rebelot/kanagawa.nvim",
-	lazy = false,
-	priority = 1000,
-	config = function()
-		vim.cmd.colorscheme("kanagawa-dragon")
-	end,
-}
+--[[return {
+    "rebelot/kanagawa.nvim", lazy = false, priority = 1000,
+	config= function()
+vim.cmd.colorscheme "kanagawa-dragon"
+end
+}]]
 --
 
 --[[return{
@@ -27,22 +25,20 @@ return {
 }]]
 --
 
---[[return {
-    "ellisonleao/gruvbox.nvim",
-    priority = 1000,
-    opts = {
-        contrast = "medium", -- or "soft", "medium"
-        palette_overrides = {},
-        overrides = {},
-        transparent_mode = true,
-    },
-    config = function(_, opts)
-        require("gruvbox").setup(opts)
-        vim.cmd("colorscheme gruvbox")
-    end
+return {
+	"ellisonleao/gruvbox.nvim",
+	priority = 1000,
+	opts = {
+		contrast = "medium", -- or "soft", "medium"
+		palette_overrides = {},
+		overrides = {},
+		transparent_mode = true,
+	},
+	config = function(_, opts)
+		require("gruvbox").setup(opts)
+		vim.cmd("colorscheme gruvbox")
+	end,
 }
-]]
---
 
 --[[
 return {
