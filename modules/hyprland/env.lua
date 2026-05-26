@@ -1,6 +1,6 @@
 hl.env("LIBVA_DRIVER_NAME", "nvidia")
---hl.env("AQ_DRM_DEVICES", "/dev/dri/card0:/dev/dri/card1")
-hl.env("AQ_DRM_DEVICES", "/dev/dri/card1")
+hl.env("AQ_DRM_DEVICES", "/dev/dri/card0:/dev/dri/card1")
+--hl.env("AQ_DRM_DEVICES", "/dev/dri/card1")
 hl.env("XDG_SESSION_TYPE", "wayland")
 hl.env("GBM_BACKEND", "nvidia-drm")
 hl.env("__GLX_VENDOR_LIBRARY_NAME", "nvidia")

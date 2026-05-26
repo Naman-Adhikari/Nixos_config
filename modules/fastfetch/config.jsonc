@@ -7,9 +7,9 @@
     "source": "~/.dotfiles/modules/fastfetch/logo.txt",
     "type": "file",
     "color": {
-                "1": "#9fcafc",
-                "2": "#d5bee5",
-                "3": "#9fcafc"
+                "1": "#e9c16c",
+                "2": "#b0cfaa",
+                "3": "#e9c16c"
             }
   },
   "modules": [
@@ -26,81 +26,81 @@
     "break",
     {
       "key": "  OS",
-      "keyColor": "#9fcafc",
-      "outputColor": "#d5bee5",
+      "keyColor": "#e9c16c",
+      "outputColor": "#b0cfaa",
       "type": "os"
     },
     {
       "key": "  Machine",
-      "keyColor": "#c2c7cf",
-      "outputColor": "#d5bee5",
+      "keyColor": "#d0c5b4",
+      "outputColor": "#b0cfaa",
       "type": "host"
     },
     {
       "key": "  Kernel",
-      "keyColor": "#d5bee5",
-      "outputColor": "#d5bee5",
+      "keyColor": "#b0cfaa",
+      "outputColor": "#b0cfaa",
       "type": "kernel"
     },
     {
       "key": "  Uptime",
-      "keyColor": "#9fcafc",
-      "outputColor": "#d5bee5",
+      "keyColor": "#e9c16c",
+      "outputColor": "#b0cfaa",
       "type": "uptime"
     },
     {
       "key": "  Packages",
-      "keyColor": "#d5bee5",
-      "outputColor": "#d5bee5",
+      "keyColor": "#b0cfaa",
+      "outputColor": "#b0cfaa",
       "type": "packages"
     },
     {
       "key": "  WM",
-      "keyColor": "#9fcafc",
-      "outputColor": "#d5bee5",
+      "keyColor": "#e9c16c",
+      "outputColor": "#b0cfaa",
       "type": "wm"
     },
     {
       "key": "  Shell",
-      "keyColor": "#9fcafc",
-      "outputColor": "#d5bee5",
+      "keyColor": "#e9c16c",
+      "outputColor": "#b0cfaa",
       "type": "shell"
     },
     {
       "key": "  Terminal",
-      "keyColor": "#d5bee5",
-      "outputColor": "#d5bee5",
+      "keyColor": "#b0cfaa",
+      "outputColor": "#b0cfaa",
       "type": "terminal"
     },
     {
       "key": "  Font",
-      "keyColor": "#9fcafc",
-      "outputColor": "#d5bee5",
+      "keyColor": "#e9c16c",
+      "outputColor": "#b0cfaa",
       "type": "terminalfont"
     },
     {
       "key": "  CPU",
-      "keyColor": "#9fcafc",
-      "outputColor": "#d5bee5",
+      "keyColor": "#e9c16c",
+      "outputColor": "#b0cfaa",
       "type": "cpu"
     },
     {
       "key": "  GPU",
-      "keyColor": "#d5bee5",
-      "outputColor": "#d5bee5",
+      "keyColor": "#b0cfaa",
+      "outputColor": "#b0cfaa",
       "type": "gpu"
     },
     {
       "key": "  Wifi",
-      "keyColor": "#9fcafc",
-      "outputColor": "#d5bee5",
+      "keyColor": "#e9c16c",
+      "outputColor": "#b0cfaa",
       "type": "wifi"
     },
     {
       "compact": true,
       "key": "  Local IP",
-      "keyColor": "#d5bee5",
-      "outputColor": "#d5bee5",
+      "keyColor": "#b0cfaa",
+      "outputColor": "#b0cfaa",
       "type": "localip"
     },
     "break",

@@ -1,29 +1,29 @@
---[[
-return {
-    "EdenEast/nightfox.nvim", lazy = false, priority = 1000,
-	config= function()
-vim.cmd.colorscheme "carbonfox"
-end
-}
-	]]
+--return {
+--"EdenEast/nightfox.nvim",
+--lazy = false,
+--priority = 1000,
+--config = function()
+--vim.cmd.colorscheme("carbonfox")
+--end,
+--}
 --
---[[return {
-    "rebelot/kanagawa.nvim", lazy = false, priority = 1000,
-	config= function()
-vim.cmd.colorscheme "kanagawa-dragon"
-end
-}]]
+--return {
+--"rebelot/kanagawa.nvim",
+--lazy = false,
+--priority = 1000,
+--config = function()
+--vim.cmd.colorscheme("kanagawa-dragon")
+--end,
+--}
 --
-
---[[return{
-  "scottmckendry/cyberdream.nvim",
-  lazy = false,
-  priority = 1000,
-  config = function()
-    vim.cmd("colorscheme cyberdream")
-  end,
-}]]
---
+--return {
+--"scottmckendry/cyberdream.nvim",
+--lazy = false,
+--priority = 1000,
+--config = function()
+--vim.cmd("colorscheme cyberdream")
+--end,
+--}
 
 return {
 	"ellisonleao/gruvbox.nvim",
@@ -40,39 +40,38 @@ return {
 	end,
 }
 
---[[
-return {
-  "NTBBloodbath/doom-one.nvim",
-  lazy = false,
-  priority = 1000,
-  config = function()
-    vim.cmd.colorscheme "doom-one"
-  end
-}
-]]
---
+--return {
+--"folke/tokyonight.nvim",
+--lazy = false,
+--priority = 1000,
+--config = function()
+--vim.cmd.colorscheme("tokyonight-night")
+--end,
+--}
 
---[[
-return {
-  "kdheepak/monochrome.nvim",
-  lazy = false,
-  priority = 1000,
-  config = function()
-    vim.cmd.colorscheme "monochrome"
-  end
-}
-]]
---
+--return {
+--"NTBBloodbath/doom-one.nvim",
+--lazy = false,
+--priority = 1000,
+--config = function()
+--vim.cmd.colorscheme("doom-one")
+--end,
+--}
 
---[[
-return {
-  "neko-night/nvim",
-  lazy = false,
-  priority = 1000,
-  config = function()
-     vim.cmd.colorscheme "nekonight-fire-obsidian"
-  end
-}
+--return {
+--"kdheepak/monochrome.nvim",
+--lazy = false,
+--priority = 1000,
+--config = function()
+--vim.cmd.colorscheme("monochrome")
+--end,
+--}
 
-]]
---
+--return {
+--"neko-night/nvim",
+--lazy = false,
+--priority = 1000,
+--config = function()
+--vim.cmd.colorscheme("nekonight-fire-obsidian")
+--end,
+--}

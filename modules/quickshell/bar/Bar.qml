@@ -18,7 +18,7 @@ PanelWindow {
     }
 
     implicitHeight: 40
-    color: "transparent"
+    color: "black"
     anchors { top: true; left: true; right: true }
     WlrLayershell.layer: WlrLayershell.Top
     WlrLayershell.exclusiveZone: implicitHeight
